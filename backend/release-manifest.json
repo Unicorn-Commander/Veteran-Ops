@@ -4,8 +4,8 @@
   "version": "1.9.33",
   "release_id": "1.9.33-raider-chat-history.20260727",
   "schema_revision": "2026-07-20-durable-analysis-v1",
-  "rule_version": "38cfr-2026.07.25.1",
-  "rule_content_sha256": "e1ecd4f075a4ebb6c2262dbe54c8d1eb1f7604eb06bc15fb893dfe5425cdf246",
+  "rule_version": "38cfr-2026.07.27.1",
+  "rule_content_sha256": "abe085626f36b6735b38f1677fea6f4c1683e4b1120d9b786f64286aed967f02",
   "rule_files": [
     "app/kb/data/corrections.json",
     "app/kb/data/dbq.json",

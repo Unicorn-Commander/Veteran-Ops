@@ -1,6 +1,17 @@
 {
-  "current_version": "38cfr-2026.07.25.1",
+  "current_version": "38cfr-2026.07.27.1",
   "changes": [
+    {
+      "version": "38cfr-2026.07.27.1",
+      "released_on": "2026-07-27",
+      "verified_as_of": "2026-07-25",
+      "change_type": "editorial_product_name",
+      "summary": "Editorial only. One process card named the application 'Rating Raider', which is the in-product agent; the software is Veteran-Ops (see docs/BRANDING.md). Corrected the product name in that card's prose. No rating criteria, diagnostic code, percentage, presumptive, secondary mapping, or eligibility rule was added, removed, or altered, and no criteria were re-verified against eCFR in this release, so verified_as_of is unchanged from 2026-07-25. The rule content fingerprint changes because it covers the byte content of every rule file.",
+      "review_status": "pending_legal_review",
+      "sources": [
+        "https://www.ecfr.gov/current/title-38/chapter-I/part-14"
+      ]
+    },
     {
       "version": "38cfr-2026.07.25.1",
       "released_on": "2026-07-25",

@@ -71,7 +71,7 @@
     "body_system": "process",
     "diagnostic_code": null,
     "source": "38 CFR §14.629–14.636; VA Office of General Counsel accreditation search (va.gov/ogc/apps/accreditation)",
-    "content": "Only VA-ACCREDITED representatives (VSO representatives, accredited agents, attorneys) may legally prepare or prosecute a VA claim for you. VSOs (VFW, DAV, American Legion, state/county veterans offices) represent veterans FREE at every stage. Accredited agents/attorneys may charge fees only AFTER an initial decision, for reviews/appeals, under VA fee rules. Unaccredited companies charging a cut of your benefits ('claim sharks') operate outside this system. Rating Raider is self-help software — it is not a representative and never files for you; verify any human helper in VA's accreditation directory.",
+    "content": "Only VA-ACCREDITED representatives (VSO representatives, accredited agents, attorneys) may legally prepare or prosecute a VA claim for you. VSOs (VFW, DAV, American Legion, state/county veterans offices) represent veterans FREE at every stage. Accredited agents/attorneys may charge fees only AFTER an initial decision, for reviews/appeals, under VA fee rules. Unaccredited companies charging a cut of your benefits ('claim sharks') operate outside this system. Veteran-Ops is self-help software — it is not a representative and never files for you; verify any human helper in VA's accreditation directory.",
     "data": {
       "order": 7
     }
