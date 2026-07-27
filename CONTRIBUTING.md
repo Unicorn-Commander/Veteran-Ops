@@ -2,6 +2,32 @@
 
 Thanks for helping make Veteran-Ops clearer, safer, and more useful.
 
+## Where this project actually lives
+
+Veteran-Ops is developed on our own **Forgejo** instance at
+`git.unicorncommander.ai/UnicornCommander/veteran-ops-oss`. That is the canonical
+repository. Self-hosted, sovereign infrastructure is the point — this is software for
+veterans' records, and we would rather not have its home depend on a platform we do not
+control.
+
+**GitHub is a downstream mirror.** It exists because that is where people look. It is
+kept in sync automatically, one-way, from Forgejo.
+
+**One consequence you need to know:** because the mirror force-syncs, *anything pushed
+directly to the GitHub repository is overwritten on the next sync.* A branch created on
+GitHub disappears; a pull request merged on GitHub is undone. This is not a policy
+preference, it is how the mirror works. So:
+
+| What you want to do | Where |
+|---|---|
+| **Report a bug, ask a question, propose an idea** | **GitHub Issues** — open to everyone, no account request needed. This is the fastest way to reach us. |
+| **Send a code change** | **Open a PR on GitHub.** We will review it there and land it through Forgejo, then the mirror republishes it with your authorship intact. Do not be alarmed when the PR closes rather than showing as merged — your commit is in `master`. |
+| **Work directly in the canonical repo** | Ask for a Forgejo account in a GitHub issue. Registration is invite-based, so this is a manual step, not a signup form. |
+
+If you would rather your contribution never touch GitHub at all, say so in an issue and
+we will arrange a Forgejo account or take a patch by email. That preference is
+respected, not argued with.
+
 ## Before you start
 
 - Read the project [README](README.md), legal boundary, and relevant docs.

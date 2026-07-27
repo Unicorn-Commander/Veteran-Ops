@@ -345,6 +345,19 @@ Read the full [legal accuracy audit](docs/LEGAL-ACCURACY-AUDIT-2026-07-26.md), t
 
 ## Contributing
 
+This project is developed on our own **Forgejo** instance — self-hosted, sovereign
+infrastructure, which for software that touches veterans' records is a deliberate choice
+rather than a preference. **GitHub is a one-way mirror** of that canonical repository.
+
+Practically: **open issues and pull requests here on GitHub** — that is the fastest way to
+reach us and no account request is needed. Code changes are landed through Forgejo and
+republished by the mirror, so a merged PR may show as *closed* rather than *merged* while
+your commit sits in `master`. If you would prefer to work in the canonical repo directly,
+ask for a Forgejo account in an issue.
+
+Anything pushed straight to the GitHub repo is overwritten on the next sync, so please do
+route changes through a PR rather than a direct push.
+
 Read [CONTRIBUTING.md](CONTRIBUTING.md) and [SECURITY.md](SECURITY.md). Keep changes small, legal
 language precise, tests behavior-level, and all data synthetic or de-identified. Explain what was
 verified and which operator or human gates remain.
