@@ -1,0 +1,30 @@
+{
+  "current_version": "38cfr-2026.07.25.1",
+  "changes": [
+    {
+      "version": "38cfr-2026.07.25.1",
+      "released_on": "2026-07-25",
+      "verified_as_of": "2026-07-25",
+      "change_type": "currency_reverification",
+      "summary": "Re-verified authored rating criteria, process rules, presumptives, secondary mappings, DBQ guidance, and corrections guidance against eCFR Title 38 after the 2026-07-13 title amendment. That amendment (FR 2026-14084) was a Loan Guaranty civil monetary penalties inflation notice with no Part 3/4 rating or eligibility impact; rule content fingerprint unchanged.",
+      "review_status": "engineering_reverification",
+      "sources": [
+        "https://www.ecfr.gov/current/title-38",
+        "https://www.federalregister.gov/documents/2026/07/13/2026-14084/loan-guaranty-federal-civil-penalties-inflation-adjustment-act-amendments",
+        "https://www.va.gov/disability/"
+      ]
+    },
+    {
+      "version": "38cfr-2026.07.05.1",
+      "released_on": "2026-07-20",
+      "verified_as_of": "2026-07-05",
+      "change_type": "governance_baseline",
+      "summary": "Established the first fingerprinted release baseline for authored rating criteria, process rules, presumptives, secondary mappings, DBQ guidance, corrections guidance, and vendor rule tables.",
+      "review_status": "engineering_baseline",
+      "sources": [
+        "https://www.ecfr.gov/current/title-38",
+        "https://www.va.gov/disability/"
+      ]
+    }
+  ]
+}

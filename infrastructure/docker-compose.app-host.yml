@@ -1,0 +1,120 @@
+# Valor-Ops — app-host app-host deploy (serves valor.magicunicorn.dev).
+#
+# Topology: the edge Traefik lives on edge-host and terminates TLS, then forwards
+# cross-host over the tailnet to this host's published frontend port:
+#
+#   internet -> DNS(valor.magicunicorn.dev -> edge-host) -> edge-host Traefik (LE TLS)
+#            -> (tailnet) -> app-host.internal:8400  [frontend nginx]
+#            -> nginx serves the SPA and reverse-proxies /api -> backend:8000
+#
+# So — unlike infrastructure/docker-compose.edge-host.yml (which assumed a LOCAL
+# Traefik on the `web` network via docker labels) — this file publishes the
+# frontend on the tailnet IP and carries NO Traefik labels / web network. The
+# matching edge route is edge-host:.../dynamic/valor-ops.yml (file provider).
+#
+# Run from this directory, pinned to the `valor-ops` project so the existing
+# migrated data volumes (valor-ops_valor-pgdata / valor-ops_valor-uploads) are
+# reused verbatim:
+#
+#   docker compose -p valor-ops -f docker-compose.app-host.yml up -d
+#
+# Secrets come from infrastructure/.env (NOT committed).
+
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: valor-ops-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: valor
+      APP_DB_PASSWORD: ${APP_DB_PASSWORD}
+    volumes:
+      - valor-pgdata:/var/lib/postgresql/data
+      - ../db/init:/docker-entrypoint-initdb.d:ro
+    networks: [valor-internal]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d valor"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  backend:
+    build: ../backend
+    image: valor-ops-backend:latest
+    container_name: valor-ops-backend
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql+asyncpg://valor_app:${APP_DB_PASSWORD}@db:5432/valor
+      UPLOAD_DIR: /app/uploads
+      ANALYSIS_WORKER_ENABLED: "false"
+      ANALYSIS_WORKER_REQUIRED: "true"
+    volumes:
+      - valor-uploads:/app/uploads
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks: [valor-internal]
+
+  analysis-worker:
+    build: ../backend
+    image: valor-ops-backend:latest
+    container_name: valor-ops-analysis-worker
+    command: ["python", "-m", "app.analysis.worker"]
+    restart: unless-stopped
+    # The backend image probes its HTTP server; this process is intentionally a
+    # worker only. Worker health is reported through the API's /readyz heartbeat.
+    healthcheck:
+      disable: true
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql+asyncpg://valor_app:${APP_DB_PASSWORD}@db:5432/valor
+      UPLOAD_DIR: /app/uploads
+      ANALYSIS_WORKER_ENABLED: "false"
+    volumes:
+      - valor-uploads:/app/uploads
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks: [valor-internal]
+
+  frontend:
+    build: ../frontend
+    image: valor-ops-frontend:latest
+    container_name: valor-ops-frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    # Published on the tailnet IP ONLY (<tailnet-host> == app-host.internal)
+    # so the edge-host edge reaches it but the port is NOT exposed on the public NIC.
+    ports:
+      - "127.0.0.1:8400:80"
+    networks: [valor-internal]
+
+  mcp:
+    build: ../mcp
+    image: valor-ops-mcp:latest
+    container_name: valor-ops-mcp
+    restart: unless-stopped
+    environment:
+      VALOR_API_URL: http://backend:8000
+      VALOR_TOKEN: ${MCP_SERVICE_TOKEN:-}
+      MCP_TRANSPORT: sse
+      MCP_PORT: "8766"
+    depends_on:
+      - backend
+    networks: [valor-internal]
+
+networks:
+  valor-internal:
+    driver: bridge
+
+volumes:
+  valor-pgdata:
+  valor-uploads:

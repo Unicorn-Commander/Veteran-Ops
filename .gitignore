@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node / frontend
+node_modules/
+dist/
+.vite/
+*.tsbuildinfo
+frontend/playwright-report/
+frontend/test-results/
+
+# Env & secrets
+.env
+.env.*
+*.env
+!.env.example
+!.env.example.*
+!.env.*.example
+*.local
+*.bak*
+*.pem
+*.key
+secrets*
+
+# Data (root-level scratch only — backend/app/kb/data is SOURCE, keep it)
+*.sqlite*
+*.db
+/data/
+uploads/
+backend/uploads/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+.claude/

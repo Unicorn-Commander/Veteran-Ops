@@ -1,0 +1,479 @@
+[
+  {
+    "card_type": "rating_criteria",
+    "title": "Mental disorders (incl. PTSD, depression, anxiety) — General Rating Formula",
+    "body_system": "mental",
+    "diagnostic_code": "9411",
+    "source": "38 CFR §4.130, General Rating Formula for Mental Disorders (DC 9201–9440; PTSD = DC 9411, major depressive disorder = DC 9434, generalized anxiety = DC 9400)",
+    "content": "All mental disorders are rated under ONE general formula keyed to occupational and social impairment — the diagnosis matters less than the level of impairment. Ratings: 0, 10, 30, 50, 70, 100. Evidence that moves tiers: frequency/severity of symptoms, effect on work and relationships, treatment records, and credible lay statements. Only one mental-disorder rating may be assigned (no pyramiding separate mental diagnoses).",
+    "data": {
+      "tiers": [
+        {
+          "percent": 0,
+          "criteria": "Diagnosis established, but symptoms not severe enough to interfere with occupational/social functioning or to require continuous medication."
+        },
+        {
+          "percent": 10,
+          "criteria": "Mild or transient symptoms which decrease work efficiency only during periods of significant stress, or symptoms controlled by continuous medication."
+        },
+        {
+          "percent": 30,
+          "criteria": "Occasional decrease in work efficiency with intermittent inability to perform occupational tasks: depressed mood, anxiety, suspiciousness, panic attacks (weekly or less often), chronic sleep impairment, mild memory loss."
+        },
+        {
+          "percent": 50,
+          "criteria": "Reduced reliability and productivity: flattened affect; panic attacks more than once a week; difficulty understanding complex commands; impaired judgment/abstract thinking; disturbances of motivation and mood; difficulty maintaining effective work and social relationships."
+        },
+        {
+          "percent": 70,
+          "criteria": "Deficiencies in MOST areas (work, school, family, judgment, thinking, mood): suicidal ideation; obsessional rituals; illogical speech; near-continuous panic or depression affecting ability to function; impaired impulse control; neglect of personal appearance; inability to establish and maintain effective relationships."
+        },
+        {
+          "percent": 100,
+          "criteria": "TOTAL occupational and social impairment: gross impairment in thought processes or communication; persistent delusions or hallucinations; grossly inappropriate behavior; persistent danger of hurting self or others; inability to perform activities of daily living; disorientation; memory loss for names of close relatives or own name."
+        }
+      ]
+    }
+  },
+  {
+    "card_type": "rating_criteria",
+    "title": "Back and neck — General Rating Formula for the Spine",
+    "body_system": "musculoskeletal",
+    "diagnostic_code": "5237",
+    "source": "38 CFR §4.71a, General Rating Formula for Diseases and Injuries of the Spine (DC 5235–5243); IVDS alternative under the Formula for Incapacitating Episodes",
+    "content": "Spine conditions (strain DC 5237, degenerative arthritis/disc disease DC 5242/5243, etc.) are rated on range of motion measured in degrees (with or WITHOUT pain — but painful motion merits at least the minimum compensable rating per §4.59), ankylosis, and for intervertebral disc syndrome an ALTERNATIVE formula based on physician-prescribed bed rest ('incapacitating episodes'), whichever is higher. Radiculopathy into a limb is rated SEPARATELY under the nerve codes (see sciatic nerve card) — a commonly missed separate rating. Normal thoracolumbar forward flexion is 0–90°; combined ROM 240°.",
+    "data": {
+      "tiers": [
+        {
+          "percent": 10,
+          "criteria": "Thoracolumbar forward flexion 60–85°, or combined ROM 120–235°; or muscle spasm/guarding/localized tenderness not altering gait or spinal contour; or vertebral body fracture with loss of 50% or more of the height."
+        },
+        {
+          "percent": 20,
+          "criteria": "Thoracolumbar forward flexion 30–60°, or combined ROM ≤120°; or muscle spasm/guarding severe enough to cause abnormal gait or abnormal spinal contour (e.g., scoliosis, reversed lordosis)."
+        },
+        {
+          "percent": 40,
+          "criteria": "Thoracolumbar forward flexion ≤30°, or favorable ankylosis of the entire thoracolumbar spine. (Cervical: 30% at flexion ≤15°; 40% at unfavorable cervical ankylosis.)"
+        },
+        {
+          "percent": 50,
+          "criteria": "Unfavorable ankylosis of the entire thoracolumbar spine."
+        },
+        {
+          "percent": 100,
+          "criteria": "Unfavorable ankylosis of the entire spine."
+        }
+      ],
+      "ivds_alternative": [
+        {
+          "percent": 10,
+          "criteria": "Incapacitating episodes totaling 1–2 weeks in the past 12 months."
+        },
+        {
+          "percent": 20,
+          "criteria": "2–4 weeks in the past 12 months."
+        },
+        {
+          "percent": 40,
+          "criteria": "4–6 weeks in the past 12 months."
+        },
+        {
+          "percent": 60,
+          "criteria": "At least 6 weeks in the past 12 months."
+        }
+      ]
+    }
+  },
+  {
+    "card_type": "rating_criteria",
+    "title": "Tinnitus (recurrent)",
+    "body_system": "auditory",
+    "diagnostic_code": "6260",
+    "source": "38 CFR §4.87, DC 6260",
+    "content": "Recurrent tinnitus is rated 10% — the maximum schedular rating — as a SINGLE evaluation whether it affects one ear or both. Because it is subjective, the veteran's own competent lay testimony of ringing plus a plausible noise-exposure history (MOS with high probability of hazardous noise exposure helps) is central evidence. Often claimed with hearing loss; the two are rated separately (no pyramiding issue). One of the most commonly granted VA disabilities.",
+    "data": {
+      "tiers": [
+        {
+          "percent": 10,
+          "criteria": "Recurrent tinnitus (maximum schedular; one evaluation regardless of one or both ears)."
+        }
+      ]
+    }
+  },
+  {
+    "card_type": "rating_criteria",
+    "title": "Hearing loss",
+    "body_system": "auditory",
+    "diagnostic_code": "6100",
+    "source": "38 CFR §4.85–4.86, DC 6100 (Tables VI, VIA, VII)",
+    "content": "Hearing loss is rated MECHANICALLY: a VA audiology exam yields puretone thresholds (average of 1000/2000/3000/4000 Hz) and Maryland CNC speech-discrimination scores; Table VI converts each ear to a Roman-numeral level (I–XI); Table VII crosses the two ears' levels for the percentage. Exceptional patterns (§4.86: all four thresholds ≥55 dB, or 30 dB@1000 & 70 dB@2000) may use Table VIA (puretone only), whichever is better for the veteran. Most compensable grants are 0–10%; severe bilateral loss rates higher. A 0% (noncompensable) grant still establishes service connection — valuable for future increases and healthcare.",
+    "data": {
+      "tiers": [
+        {
+          "percent": 0,
+          "criteria": "Level I/I through the table crossing — mild loss usually rates 0%."
+        },
+        {
+          "percent": 10,
+          "criteria": "E.g., Level II/IV or III/III crossings."
+        },
+        {
+          "percent": 100,
+          "criteria": "Level XI/XI (profound bilateral)."
+        }
+      ],
+      "note": "Percentage comes only from the tables — symptoms narrative cannot move it; the audiogram numbers are everything."
+    }
+  },
+  {
+    "card_type": "rating_criteria",
+    "title": "Migraine headaches",
+    "body_system": "neurological",
+    "diagnostic_code": "8100",
+    "source": "38 CFR §4.124a, DC 8100",
+    "content": "Rated on frequency of 'prostrating' attacks (attacks that force you to stop and lie down / are incapacitating). Maximum schedular is 50%. Key evidence: a headache log (frequency, duration, need to lie down in a dark room), pharmacy records for abortives, work absence records, lay statements from family/coworkers. 'Severe economic inadaptability' for 50% does not require unemployment — it means substantial work interference.",
+    "data": {
+      "tiers": [
+        {
+          "percent": 0,
+          "criteria": "Less frequent attacks."
+        },
+        {
+          "percent": 10,
+          "criteria": "Characteristic prostrating attacks averaging one in 2 months over the last several months."
+        },
+        {
+          "percent": 30,
+          "criteria": "Characteristic prostrating attacks occurring on average once a month over the last several months."
+        },
+        {
+          "percent": 50,
+          "criteria": "Very frequent completely prostrating and prolonged attacks productive of severe economic inadaptability (maximum schedular)."
+        }
+      ]
+    }
+  },
+  {
+    "card_type": "rating_criteria",
+    "title": "Sleep apnea",
+    "body_system": "respiratory",
+    "diagnostic_code": "6847",
+    "source": "38 CFR §4.97, DC 6847 (sleep apnea syndromes: obstructive, central, mixed)",
+    "content": "Requires a sleep study for diagnosis. The 50% tier keys on REQUIRED use of a breathing-assistance device such as CPAP. Frequently claimed SECONDARY to PTSD/mental health (weight gain, disturbed sleep architecture — medical nexus opinion needed) or to deviated septum/rhinitis. NOTE: VA has proposed revising these criteria to key on treatment effectiveness rather than device use — verify the current version at eCFR before filing.",
+    "data": {
+      "tiers": [
+        {
+          "percent": 0,
+          "criteria": "Asymptomatic but with documented sleep disorder breathing."
+        },
+        {
+          "percent": 30,
+          "criteria": "Persistent day-time hypersomnolence."
+        },
+        {
+          "percent": 50,
+          "criteria": "Requires use of breathing assistance device such as CPAP machine."
+        },
+        {
+          "percent": 100,
+          "criteria": "Chronic respiratory failure with carbon dioxide retention or cor pulmonale, or requires tracheostomy."
+        }
+      ]
+    }
+  },
+  {
+    "card_type": "rating_criteria",
+    "title": "GERD (gastroesophageal reflux disease)",
+    "body_system": "digestive",
+    "diagnostic_code": "7206",
+    "source": "38 CFR §4.114, DC 7206 (GERD — added in the May 19, 2024 digestive-system revision; older claims were rated by analogy to hiatal hernia DC 7346)",
+    "content": "Since the May 2024 digestive revision, GERD has its own code (DC 7206) rated using the esophageal stricture criteria (DC 7203 general formula), keyed to dysphagia severity and the treatment it requires (daily medication → dilatations → stent/surgery). Claims pending before May 19, 2024 may use whichever criteria (old DC 7346 analogy: 10/30/60) are more favorable. Common secondary theory: GERD aggravated/caused by NSAIDs taken for service-connected musculoskeletal pain, or secondary to PTSD medications. Verify current tiers at eCFR — this schedule changed recently.",
+    "data": {
+      "tiers": [
+        {
+          "percent": 0,
+          "criteria": "Documented history without daily symptoms or requiring daily medication."
+        },
+        {
+          "percent": 10,
+          "criteria": "Esophageal stricture that requires daily medication to control dysphagia (difficulty swallowing), otherwise asymptomatic."
+        },
+        {
+          "percent": 30,
+          "criteria": "Recurrent esophageal stricture causing dysphagia, requiring dilatation no more than 2 times per year."
+        },
+        {
+          "percent": 50,
+          "criteria": "Recurrent or refractory stricture causing dysphagia requiring at least one of: dilatation 3+ times per year, dilatation with steroid injection, or esophageal stent placement."
+        },
+        {
+          "percent": 80,
+          "criteria": "Recurrent or refractory stricture causing dysphagia with at least one of: aspiration, undernutrition, or substantial weight loss, requiring surgical correction or percutaneous gastrostomy tube (highest tier)."
+        }
+      ]
+    }
+  },
+  {
+    "card_type": "rating_criteria",
+    "title": "IBS (irritable bowel syndrome)",
+    "body_system": "digestive",
+    "diagnostic_code": "7319",
+    "source": "38 CFR §4.114, DC 7319 (as revised May 19, 2024)",
+    "content": "The May 2024 revision set a MINIMUM 10% for diagnosed IBS (the old 0% 'mild' tier is gone) and a 30% maximum. IBS is a Gulf War presumptive as a medically-unexplained chronic multisymptom illness (functional GI disorder) under 38 CFR §3.317 for Southwest Asia service. Evidence: diagnosis (Rome criteria), symptom/bathroom logs, treatment records.",
+    "data": {
+      "tiers": [
+        {
+          "percent": 10,
+          "criteria": "Abdominal pain related to defecation at least ONCE during the prior 3 months, plus 2+ of: change in stool frequency, change in stool form/appearance, change in passage (straining/urgency), mucorrhea, or bloating/abdominal distension."
+        },
+        {
+          "percent": 20,
+          "criteria": "Abdominal pain related to defecation at least 3 DAYS PER MONTH during the prior 3 months, plus 2+ of the associated symptoms."
+        },
+        {
+          "percent": 30,
+          "criteria": "Abdominal pain related to defecation at least ONCE A WEEK during the prior 3 months, plus 2+ of the associated symptoms (maximum schedular)."
+        }
+      ]
+    }
+  },
+  {
+    "card_type": "rating_criteria",
+    "title": "Radiculopathy / sciatica (sciatic nerve)",
+    "body_system": "neurological",
+    "diagnostic_code": "8520",
+    "source": "38 CFR §4.124a, DC 8520 (paralysis of sciatic nerve); 8620 (neuritis); 8720 (neuralgia); upper-extremity radiculopathy uses DC 8510–8519",
+    "content": "Radiculopathy radiating from a service-connected spine condition is rated SEPARATELY from the spine's ROM rating, per extremity — one of the most commonly MISSED ratings on VA decisions. Rated on severity of incomplete paralysis ('mild / moderate / moderately severe / severe with marked muscular atrophy'). If both legs are affected, the BILATERAL FACTOR (§4.26) applies. Evidence: EMG/NCS studies, documented numbness/weakness/reflex changes, straight-leg-raise findings.",
+    "data": {
+      "tiers": [
+        {
+          "percent": 10,
+          "criteria": "Mild incomplete paralysis (subjective symptoms: intermittent numbness/tingling)."
+        },
+        {
+          "percent": 20,
+          "criteria": "Moderate incomplete paralysis (consistent sensory findings)."
+        },
+        {
+          "percent": 40,
+          "criteria": "Moderately severe incomplete paralysis (objective weakness/motor involvement)."
+        },
+        {
+          "percent": 60,
+          "criteria": "Severe incomplete paralysis with marked muscular atrophy."
+        },
+        {
+          "percent": 80,
+          "criteria": "Complete paralysis: foot dangles and drops, no active movement of muscles below the knee."
+        }
+      ]
+    }
+  },
+  {
+    "card_type": "rating_criteria",
+    "title": "Scars",
+    "body_system": "skin",
+    "diagnostic_code": "7804",
+    "source": "38 CFR §4.118, DC 7800–7805",
+    "content": "Painful or unstable scars are the most commonly compensable: DC 7804 gives 10% for 1–2 scars that are unstable OR painful, 20% for 3–4, 30% for 5+; add 10% if any scar is BOTH unstable and painful. Head/face/neck scars rate on disfigurement characteristics (DC 7800: 10–80%). Deep nonlinear scars rate by area (DC 7801: 10–40%); superficial nonlinear ≥144 sq in = 10% (DC 7802). Scars with other effects (limiting motion, nerve damage) rate under the affected function (DC 7805). Surgical scars from service-connected surgeries are almost always ratable — check every decision for missed scar ratings.",
+    "data": {
+      "tiers": [
+        {
+          "percent": 10,
+          "criteria": "DC 7804: one or two scars unstable or painful; DC 7800: one disfigurement characteristic; DC 7802: superficial nonlinear ≥144 sq in."
+        },
+        {
+          "percent": 20,
+          "criteria": "DC 7804: three or four scars unstable or painful."
+        },
+        {
+          "percent": 30,
+          "criteria": "DC 7804: five or more scars unstable or painful; DC 7800: visible tissue loss + 2–3 characteristics."
+        }
+      ],
+      "note": "§7804 Note: add 10% when at least one scar is BOTH unstable and painful — effective ceiling 40% per VA's max-ratings dataset."
+    }
+  },
+  {
+    "card_type": "rating_criteria",
+    "title": "Hypertension",
+    "body_system": "cardiovascular",
+    "diagnostic_code": "7101",
+    "source": "38 CFR §4.104, DC 7101",
+    "content": "Rated on diastolic/systolic readings; the 10% minimum also applies when continuous medication is required for a documented HISTORY of diastolic ≥100. Hypertension was added to the Agent Orange presumptive list by the PACT Act (2022) — Vietnam-era and other herbicide-exposed veterans should claim it presumptively. Evidence: serial BP readings (three readings on at least three different days for initial diagnosis confirmation), pharmacy records.",
+    "data": {
+      "tiers": [
+        {
+          "percent": 10,
+          "criteria": "Diastolic predominantly 100+; or systolic predominantly 160+; or minimum rating with history of diastolic 100+ requiring continuous medication."
+        },
+        {
+          "percent": 20,
+          "criteria": "Diastolic predominantly 110+; or systolic predominantly 200+."
+        },
+        {
+          "percent": 40,
+          "criteria": "Diastolic predominantly 120+."
+        },
+        {
+          "percent": 60,
+          "criteria": "Diastolic predominantly 130+."
+        }
+      ]
+    }
+  },
+  {
+    "card_type": "rating_criteria",
+    "title": "Diabetes mellitus (type 2)",
+    "body_system": "endocrine",
+    "diagnostic_code": "7913",
+    "source": "38 CFR §4.119, DC 7913",
+    "content": "Rated on the treatment burden and 'regulation of activities' (medical need to avoid strenuous activity). Type 2 diabetes is an Agent Orange presumptive. COMPLICATIONS are rated SEPARATELY unless noncompensable (peripheral neuropathy, retinopathy, nephropathy, erectile dysfunction — the latter usually via SMC-K): always inventory complications, they are frequently missed.",
+    "data": {
+      "tiers": [
+        {
+          "percent": 10,
+          "criteria": "Manageable by restricted diet only."
+        },
+        {
+          "percent": 20,
+          "criteria": "Requiring insulin OR oral hypoglycemic agent, plus restricted diet."
+        },
+        {
+          "percent": 40,
+          "criteria": "Requiring insulin, restricted diet, AND regulation of activities."
+        },
+        {
+          "percent": 60,
+          "criteria": "Insulin, restricted diet, regulation of activities PLUS ketoacidosis/hypoglycemic episodes requiring 1–2 yearly hospitalizations or twice-monthly provider visits, plus complications not separately compensable."
+        },
+        {
+          "percent": 100,
+          "criteria": "More than one daily insulin injection, restricted diet, regulation of activities with episodes requiring 3+ hospitalizations/year or weekly visits, plus progressive complications."
+        }
+      ]
+    }
+  },
+  {
+    "card_type": "rating_criteria",
+    "title": "Shoulder and arm — limitation of motion",
+    "body_system": "musculoskeletal",
+    "diagnostic_code": "5201",
+    "source": "38 CFR §4.71a, DC 5200–5203; §4.69 (major/minor hand)",
+    "content": "Rated differently for the DOMINANT (major) vs non-dominant (minor) arm. DC 5201 limitation of arm motion: at shoulder level = 20%; midway between side and shoulder = 30% major/20% minor; to 25° from side = 40% major/30% minor. Painful motion merits the minimum compensable rating (§4.59). If both arms are affected, the bilateral factor applies.",
+    "data": {
+      "tiers": [
+        {
+          "percent": 20,
+          "criteria": "Arm motion limited to shoulder level (either arm)."
+        },
+        {
+          "percent": 30,
+          "criteria": "Major arm limited to midway between side and shoulder (minor: 20%)."
+        },
+        {
+          "percent": 40,
+          "criteria": "Major arm limited to 25° from side (minor: 30%)."
+        }
+      ]
+    }
+  },
+  {
+    "card_type": "rating_criteria",
+    "title": "Ankle — limited motion and ankylosis",
+    "body_system": "musculoskeletal",
+    "diagnostic_code": "5271",
+    "source": "38 CFR §4.71a, DC 5270–5274",
+    "content": "DC 5271: moderate limitation of ankle motion = 10%; marked limitation = 20%. Ankylosis (DC 5270) rates 20–40% by position. Normal ankle ROM: dorsiflexion 0–20°, plantar flexion 0–45°. Painful motion merits the minimum compensable rating (§4.59); instability from lateral ligament injury may rate by analogy.",
+    "data": {
+      "tiers": [
+        {
+          "percent": 10,
+          "criteria": "Moderate limitation of motion."
+        },
+        {
+          "percent": 20,
+          "criteria": "Marked limitation of motion; ankylosis in plantar flexion <30°."
+        }
+      ]
+    }
+  },
+  {
+    "card_type": "rating_criteria",
+    "title": "Sinusitis and rhinitis (chronic)",
+    "body_system": "respiratory",
+    "diagnostic_code": "6510",
+    "source": "38 CFR §4.97, DC 6510–6514 (General Rating Formula for Sinusitis) and DC 6522 (allergic/vasomotor rhinitis)",
+    "content": "Chronic sinusitis (all forms, DC 6510–6514) rates under one general formula keyed to the frequency of incapacitating episodes (ones requiring bed rest and treatment prescribed by a physician) and non-incapacitating episodes (headaches, pain, purulent discharge or crusting). Chronic sinusitis and rhinitis are PACT Act burn-pit presumptives — veterans with qualifying Gulf War / post-9/11 service claim them without a nexus opinion. Rhinitis (DC 6522): 10% without polyps but with greater than 50% obstruction of both nasal passages or complete obstruction of one side; 30% with polyps. Key evidence: ENT/imaging findings, antibiotic courses (dates and durations), a log of episodes.",
+    "data": {
+      "tiers": [
+        {
+          "percent": 0,
+          "criteria": "Detected by X-ray only."
+        },
+        {
+          "percent": 10,
+          "criteria": "One or two incapacitating episodes per year requiring prolonged (4–6 weeks) antibiotic treatment, OR 3–6 non-incapacitating episodes per year of sinusitis characterized by headaches, pain, and purulent discharge or crusting."
+        },
+        {
+          "percent": 30,
+          "criteria": "Three or more incapacitating episodes per year requiring prolonged antibiotics, OR more than six non-incapacitating episodes per year."
+        },
+        {
+          "percent": 50,
+          "criteria": "Following radical surgery with chronic osteomyelitis, OR near-constant sinusitis (headaches, pain and tenderness of affected sinus, purulent discharge or crusting) after repeated surgeries."
+        }
+      ]
+    }
+  },
+  {
+    "card_type": "rating_criteria",
+    "title": "Knee — limitation of flexion (DC 5260)",
+    "body_system": "musculoskeletal",
+    "diagnostic_code": "5260",
+    "source": "38 CFR §4.71a, DC 5260; §4.59 (painful motion); VAOPGCPREC 23-97, 9-2004",
+    "content": "Limitation of knee FLEXION. The knee is commonly UNDER-rated: flexion (5260) and extension (5261) can EACH be rated when both are compensably limited (VAOPGCPREC 9-2004), and instability (5257) is rated SEPARATELY from motion (VAOPGCPREC 23-97). Painful or repetitive motion and flare-ups (§4.59; DeLuca) can support the next tier. Get range of motion measured in degrees.",
+    "data": {
+      "tiers": [
+        {"percent": 0, "criteria": "Flexion limited to 60°."},
+        {"percent": 10, "criteria": "Flexion limited to 45°."},
+        {"percent": 20, "criteria": "Flexion limited to 30°."},
+        {"percent": 30, "criteria": "Flexion limited to 15°."}
+      ]
+    }
+  },
+  {
+    "card_type": "rating_criteria",
+    "title": "Knee — limitation of extension (DC 5261)",
+    "body_system": "musculoskeletal",
+    "diagnostic_code": "5261",
+    "source": "38 CFR §4.71a, DC 5261; VAOPGCPREC 9-2004",
+    "content": "Limitation of knee EXTENSION, rated SEPARATELY from flexion (DC 5260) when both are compensably limited (VAOPGCPREC 9-2004) — a commonly missed second knee rating. Get extension measured in degrees.",
+    "data": {
+      "tiers": [
+        {"percent": 0, "criteria": "Extension limited to 5°."},
+        {"percent": 10, "criteria": "Extension limited to 10°."},
+        {"percent": 20, "criteria": "Extension limited to 15°."},
+        {"percent": 30, "criteria": "Extension limited to 20°."},
+        {"percent": 40, "criteria": "Extension limited to 30°."},
+        {"percent": 50, "criteria": "Extension limited to 45°."}
+      ]
+    }
+  },
+  {
+    "card_type": "rating_criteria",
+    "title": "Knee — recurrent subluxation or lateral instability (DC 5257)",
+    "body_system": "musculoskeletal",
+    "diagnostic_code": "5257",
+    "source": "38 CFR §4.71a, DC 5257 (revised eff. Feb 7, 2021); VAOPGCPREC 23-97",
+    "content": "Knee INSTABILITY / recurrent subluxation, rated SEPARATELY from limitation of motion (VAOPGCPREC 23-97) — one of the most commonly missed separate knee ratings. The 2021 revision ties the tiers to prescribed bracing / assistive devices.",
+    "data": {
+      "tiers": [
+        {"percent": 10, "criteria": "Sprain, incomplete ligament tear, or complete ligament tear (repaired, unrepaired, or failed) causing persistent instability, WITHOUT a provider prescription for an assistive device or brace."},
+        {"percent": 20, "criteria": "Incomplete ligament tear with a prescribed brace and/or assistive device; OR an unrepaired/failed complete ligament tear with EITHER a prescribed assistive device OR bracing (not both)."},
+        {"percent": 30, "criteria": "Unrepaired or failed complete ligament tear causing persistent instability, with a provider prescription for BOTH an assistive device AND bracing for ambulation."}
+      ]
+    }
+  }
+]

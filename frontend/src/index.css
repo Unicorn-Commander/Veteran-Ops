@@ -1,0 +1,594 @@
+/* ============================================================================
+   SECTION-IDENTITY CONTRACT (wave 3) — THE API. All page agents build to this.
+
+   Every page root carries BOTH:  <div className="vo-page ..." data-section="X">
+   Sections and their hues (settings is a muted violet, defined below):
+
+     data-section   pages                                        hue family
+     ------------   ------------------------------------------  -------------
+     home           Dashboard, Login                             violet (brand)
+     claim          Conditions, ConditionDetail, Evidence        emerald / teal
+     math           Calculator, Scenarios                        sky / cyan
+     insight        Secondaries, Presumptives                    fuchsia / pink
+     records        Records, RecordsPrintViews chrome,           amber / orange
+                    Corrections, Documents
+     guide          Filing                                       indigo
+     settings       Settings, Profile, Onboarding                muted violet
+
+   [data-section] sets, and every descendant inherits:
+     --section-hue    the section's full-strength hue
+     --section-soft   its translucent chip/fill tint
+     --section-glow   a stronger translucent wash for glows/auras
+     --hue/--hue-soft DEFAULTED to the section hue — so .vo-accent panels,
+                      .vo-chip-hue chips and .vo-hue-link tiles inside a
+                      section adopt the section identity automatically.
+                      Override per-element with inline hueStyle(h) as before.
+
+   Classes this contract ships:
+     .vo-page          (existing) page-enter motion — REQUIRED on page roots;
+                       wave 3 adds a fixed, CSS-only aurora tint (::before)
+                       that shifts the backdrop toward the section hue.
+     .vo-section-band  put on the page-header block (with .vo-page-head):
+                       short section-hue gradient bar above the title + a
+                       soft radial glow behind it.
+     .vo-hue-link      hue-identified quick-link tile (dashboard "map" links,
+                       related-tool links). Set hueStyle(h) inline; hover
+                       lifts + tints toward the hue.
+     .vo-accent        (existing) panel top hairline — now section-aware via
+                       the inherited --hue default.
+
+   Contrast (verified 2026-07-05, all 12 hues, both themes; worst case
+   light-amber label 4.71:1):
+     --mix-ink / --mix-label  theme-tuned percentages behind hueInk()/
+     hueLabel() in lib/hues.ts. USE THOSE HELPERS for any hue-colored text —
+     raw hue text on light tinted grounds fails WCAG (e.g. amber 2.65:1).
+     hueInk(h)   → hue text on soft/tinted grounds (active nav, stat text)
+     hueLabel(h) → quiet tinted labels on the app bg (group labels, crumbs)
+
+   TSX side of the contract (lib/hues.ts): Section, SECTION_HUES,
+   SECTION_LABELS, VIEW_SECTIONS, sectionHueCss()/sectionSoftCss(),
+   hueInk()/hueLabel().
+   ========================================================================== */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Dark command-center by default; light theme overrides the same vars.
+     The Aurora system: one violet brand + a 12-hue identity palette (nav
+     sections, claim types, evidence status, exposure programs each get a
+     hue) over soft glass panels. */
+  :root {
+    color-scheme: dark;
+    --bg: #0a0a13;
+    --surface: #131320;
+    --surface-2: #1b1b2c;
+    --border: #2a2a3f;
+    --border-2: #35354e;
+    --txt: #e9e9f4;
+    --muted: #a3a3ba;
+    --faint: #85859d;
+    /* Rating Raider identity: olive-drab brand + gold (horn) accent. The rainbow
+       --hue-* section palette below echoes the unicorn mascot's mane. */
+    --brand: #6b8b34;
+    --brand-hover: #7ba03d;
+    --brand-soft: rgba(107, 139, 52, 0.16);
+    /* Darker olive used ONLY as a fill behind white text (buttons) so it clears
+       WCAG AA 4.5:1; --brand stays lighter for accent/link text on the dark bg. */
+    --brand-strong: #4f6b1f;
+    --accent: #e0b13a;
+    --danger: #fb4d68;
+    --danger-soft: rgba(244, 63, 94, 0.15);
+    --success: #34d399;
+    --warning: #fbbf24;
+
+    /* ---- Motion system ---- */
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);        /* expo-out: fast start, long settle */
+    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1); /* playful overshoot */
+    --dur-fast: 140ms;
+    --dur: 240ms;
+    --dur-slow: 450ms;
+
+    /* Identity hues (dark: luminous pastels). Soft = translucent chip/fill. */
+    --hue-rose: #fb7185;      --hue-rose-soft: rgba(251, 113, 133, 0.15);
+    --hue-orange: #fb923c;    --hue-orange-soft: rgba(251, 146, 60, 0.15);
+    --hue-amber: #fbbf24;     --hue-amber-soft: rgba(251, 191, 36, 0.14);
+    --hue-lime: #a3e635;      --hue-lime-soft: rgba(163, 230, 53, 0.13);
+    --hue-emerald: #34d399;   --hue-emerald-soft: rgba(52, 211, 153, 0.14);
+    --hue-teal: #2dd4bf;      --hue-teal-soft: rgba(45, 212, 191, 0.14);
+    --hue-cyan: #22d3ee;      --hue-cyan-soft: rgba(34, 211, 238, 0.14);
+    --hue-sky: #38bdf8;       --hue-sky-soft: rgba(56, 189, 248, 0.15);
+    --hue-indigo: #818cf8;    --hue-indigo-soft: rgba(129, 140, 248, 0.16);
+    --hue-violet: #a78bfa;    --hue-violet-soft: rgba(167, 139, 250, 0.16);
+    --hue-fuchsia: #e879f9;   --hue-fuchsia-soft: rgba(232, 121, 249, 0.15);
+    --hue-pink: #f472b6;      --hue-pink-soft: rgba(244, 114, 182, 0.15);
+
+    /* Aurora backdrop intensity. */
+    --aurora-a: rgba(107, 139, 52, 0.28);
+    --aurora-b: rgba(224, 177, 58, 0.18);
+    --aurora-c: rgba(150, 115, 55, 0.15);
+    --aurora-d: rgba(163, 177, 90, 0.14);
+    --panel-glass: rgba(19, 19, 32, 0.80);
+    --topbar-glass: rgba(10, 10, 19, 0.72);
+
+    /* Contrast-safe hue-text mixes (see contract block + lib/hues.ts
+       hueInk/hueLabel). Dark: luminous pastels are already high-contrast, so
+       barely touch them. */
+    --mix-ink: 92%;
+    --mix-label: 62%;
+    /* Section aurora/glow strength (dark: let it glow). */
+    --mix-glow: 20%;
+  }
+
+  :root[data-theme='light'] {
+    color-scheme: light;
+    --bg: #f6f6fc;
+    --surface: #ffffff;
+    --surface-2: #f1f1f8;
+    --border: #e5e5f0;
+    --border-2: #d5d5e6;
+    --txt: #16161f;
+    --muted: #565670;
+    --faint: #6f6f8a;
+    --brand: #4f6b1f;
+    --brand-hover: #5c7d25;
+    --brand-soft: rgba(79, 107, 31, 0.12);
+    --brand-strong: #45611c;
+    --danger: #e11d48;
+    --danger-soft: rgba(225, 29, 72, 0.1);
+    --success: #059669;
+    --warning: #b45309;
+
+    /* Identity hues (light: deepened for contrast on white). */
+    --hue-rose: #e11d48;      --hue-rose-soft: rgba(225, 29, 72, 0.10);
+    --hue-orange: #ea580c;    --hue-orange-soft: rgba(234, 88, 12, 0.10);
+    --hue-amber: #d97706;     --hue-amber-soft: rgba(217, 119, 6, 0.11);
+    --hue-lime: #65a30d;      --hue-lime-soft: rgba(101, 163, 13, 0.11);
+    --hue-emerald: #059669;   --hue-emerald-soft: rgba(5, 150, 105, 0.10);
+    --hue-teal: #0d9488;      --hue-teal-soft: rgba(13, 148, 136, 0.10);
+    --hue-cyan: #0891b2;      --hue-cyan-soft: rgba(8, 145, 178, 0.10);
+    --hue-sky: #0284c7;       --hue-sky-soft: rgba(2, 132, 199, 0.10);
+    --hue-indigo: #4f46e5;    --hue-indigo-soft: rgba(79, 70, 229, 0.10);
+    --hue-violet: #7c3aed;    --hue-violet-soft: rgba(124, 58, 237, 0.10);
+    --hue-fuchsia: #c026d3;   --hue-fuchsia-soft: rgba(192, 38, 211, 0.10);
+    --hue-pink: #db2777;      --hue-pink-soft: rgba(219, 39, 119, 0.10);
+
+    --aurora-a: rgba(107, 139, 52, 0.16);
+    --aurora-b: rgba(184, 134, 11, 0.13);
+    --aurora-c: rgba(146, 110, 45, 0.11);
+    --aurora-d: rgba(120, 140, 60, 0.12);
+    --panel-glass: rgba(255, 255, 255, 0.84);
+    --topbar-glass: rgba(246, 246, 252, 0.78);
+
+    /* Light: ink hue text toward --txt / --muted so every hue clears WCAG
+       4.5:1 (raw light-amber on white is 2.65:1). Soften glows too. */
+    --mix-ink: 66%;
+    --mix-label: 45%;
+    --mix-glow: 11%;
+  }
+
+  /* ---- Section identity (see contract block at the top of this file) ----
+     One rule derives the glow + panel-accent defaults; the per-section rules
+     only pick the hue. `settings` deliberately whispers: violet pulled 38%
+     toward --muted (mirror any change into sectionHueCss() in lib/hues.ts). */
+  [data-section] {
+    --section-hue: var(--brand);
+    --section-soft: var(--brand-soft);
+    --section-glow: color-mix(in srgb, var(--section-hue) var(--mix-glow, 20%), transparent);
+    --hue: var(--section-hue);
+    --hue-soft: var(--section-soft);
+  }
+  [data-section='home'] { --section-hue: var(--hue-violet); --section-soft: var(--hue-violet-soft); }
+  [data-section='claim'] { --section-hue: var(--hue-emerald); --section-soft: var(--hue-emerald-soft); }
+  [data-section='math'] { --section-hue: var(--hue-sky); --section-soft: var(--hue-sky-soft); }
+  [data-section='insight'] { --section-hue: var(--hue-fuchsia); --section-soft: var(--hue-fuchsia-soft); }
+  [data-section='records'] { --section-hue: var(--hue-amber); --section-soft: var(--hue-amber-soft); }
+  [data-section='guide'] { --section-hue: var(--hue-indigo); --section-soft: var(--hue-indigo-soft); }
+  [data-section='settings'] {
+    --section-hue: color-mix(in srgb, var(--hue-violet) 62%, var(--muted));
+    --section-soft: color-mix(in srgb, var(--hue-violet) 9%, transparent);
+  }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    @apply bg-bg text-txt font-sans antialiased;
+    margin: 0;
+    min-height: 100vh;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11'; /* Inter: open digits/legible alternates */
+  }
+
+  /* The aurora: fixed multi-hue glow behind everything. Static on purpose —
+     no animation to burn battery or smear screenshots; theme vars tune it.
+     (Login layers .vo-aurora-live on top for its one moment of drama.) */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(46% 38% at 8% -4%, var(--aurora-a) 0%, transparent 70%),
+      radial-gradient(40% 34% at 100% 12%, var(--aurora-b) 0%, transparent 70%),
+      radial-gradient(38% 40% at 14% 104%, var(--aurora-c) 0%, transparent 70%),
+      radial-gradient(44% 36% at 88% 96%, var(--aurora-d) 0%, transparent 72%);
+  }
+
+  *:focus-visible {
+    @apply outline-none ring-2 ring-brand ring-offset-2;
+    --tw-ring-offset-color: var(--bg);
+  }
+
+  h1, h2, h3, h4 { @apply text-txt; text-wrap: balance; }
+
+  /* Respect prefers-reduced-motion everywhere: collapse every animation and
+     transition the design system ships to a near-instant single frame. */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-delay: 0ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* =====================  TYPE SCALE  =====================
+     One rhythm for every page: display > title > heading > body > caption
+     > micro. Siblings: use these (or the matching text-* tokens in
+     tailwind.config) instead of ad-hoc text-[Npx]. */
+  .vo-page-title { @apply text-title text-txt; }
+  .vo-page-sub { @apply mt-1.5 max-w-2xl text-body text-muted; }
+  .vo-heading { @apply text-heading font-semibold text-txt; }
+  .vo-caption { @apply text-caption text-muted; }
+  .vo-label-micro { @apply text-micro font-semibold uppercase text-faint; }
+
+  /* Sticky footers / composers: clear the fixed mobile tab bar + safe-area.
+     Desktop keeps a modest bottom inset. Main column already pads for the tab
+     bar; this keeps sticky UI inside the thumb-reachable content band. */
+  .vo-sticky-mobile-footer {
+    bottom: 0.75rem;
+  }
+  @media (max-width: 767px) {
+    .vo-sticky-mobile-footer {
+      bottom: 0.75rem;
+    }
+  }
+
+  /* Standard page header block: title + subtitle with the system's rhythm. */
+  .vo-page-head { @apply mb-6; }
+
+  /* =====================  PAGE-ENTER MOTION  =====================
+     Wrap a page's root in .vo-page and its direct children rise in with a
+     gentle stagger. Text stays opaque so contrast remains stable in motion. */
+  .vo-page > * { animation: vo-page-rise var(--dur-slow) var(--ease-out) both; }
+  .vo-page > *:nth-child(1) { animation-delay: 0ms; }
+  .vo-page > *:nth-child(2) { animation-delay: 45ms; }
+  .vo-page > *:nth-child(3) { animation-delay: 90ms; }
+  .vo-page > *:nth-child(4) { animation-delay: 135ms; }
+  .vo-page > *:nth-child(5) { animation-delay: 180ms; }
+  .vo-page > *:nth-child(6) { animation-delay: 225ms; }
+  .vo-page > *:nth-child(n + 7) { animation-delay: 260ms; }
+
+  /* Section aurora tint: on a `data-section` page the backdrop drifts toward
+     the section hue — a fixed, static two-stop wash layered over the base
+     aurora (cheap: two radial gradients, no blur, no animation). Falls back
+     to fully transparent on pages without a section. */
+  .vo-page::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(48% 40% at 16% 0%, var(--section-glow, transparent) 0%, transparent 70%),
+      radial-gradient(40% 34% at 92% 88%, color-mix(in srgb, var(--section-hue, transparent) 9%, transparent) 0%, transparent 72%);
+  }
+
+  /* Step/panel swap (wizards, tab switches): key the element by step. */
+  .vo-step-enter { animation: vo-rise 0.35s var(--ease-out) both; }
+
+  /* =====================  SECTION BAND (page header accent)  =====================
+     Add to the page-header block (usually alongside .vo-page-head): a short
+     section-hue gradient bar above the title + a soft radial glow behind it.
+     Reads the inherited --section-hue/--section-glow, so it needs no props. */
+  .vo-section-band { position: relative; }
+  .vo-section-band::before {
+    content: '';
+    display: block;
+    width: 3.25rem;
+    height: 4px;
+    margin-bottom: 0.75rem;
+    border-radius: 9999px;
+    background: linear-gradient(
+      90deg,
+      var(--section-hue, var(--brand)) 0%,
+      color-mix(in srgb, var(--section-hue, var(--brand)) 30%, transparent) 100%
+    );
+    box-shadow: 0 0 10px var(--section-glow, transparent);
+  }
+  .vo-section-band::after {
+    content: '';
+    position: absolute;
+    left: -2.5rem;
+    top: -1.5rem;
+    width: min(26rem, 85vw);
+    height: 9rem;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(55% 70% at 18% 30%, var(--section-glow, transparent) 0%, transparent 72%);
+  }
+
+  /* =====================  SURFACES  ===================== */
+  /* Glass surfaces so the aurora reads through the seams. */
+  .vo-card {
+    @apply rounded-card border border-line;
+    background: var(--panel-glass);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+  .vo-panel {
+    @apply rounded-pane border border-line;
+    background: var(--panel-glass);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+  /* Interactive card: lift + sharpen border on hover. For cards that link. */
+  .vo-card-hover {
+    transition: transform var(--dur) var(--ease-out), box-shadow var(--dur) var(--ease-out), border-color var(--dur) var(--ease-out);
+  }
+  .vo-card-hover:hover { transform: translateY(-2px); box-shadow: theme('boxShadow.lift'); border-color: var(--border-2); }
+  .vo-card-hover:active { transform: translateY(0); }
+
+  /* Hue accent for a panel/card: set --hue/--hue-soft inline, get a gradient
+     hairline across the top and a tinted title dot for free. */
+  .vo-accent {
+    position: relative;
+  }
+  .vo-accent::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 2px;
+    border-radius: 9999px 9999px 0 0;
+    background: linear-gradient(90deg, var(--hue, var(--brand)) 0%, transparent 78%);
+    opacity: 0.85;
+    pointer-events: none;
+  }
+
+  /* Sticky translucent top bar. High-opacity glass + saturate keeps the text
+     on it crisp while content scrolls beneath. */
+  .vo-topbar {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    background: var(--topbar-glass);
+    backdrop-filter: blur(12px) saturate(1.5);
+    -webkit-backdrop-filter: blur(12px) saturate(1.5);
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* =====================  CONTROLS  ===================== */
+  .vo-input {
+    @apply w-full rounded-control border border-line bg-surface2 px-3.5 py-2.5 text-base text-txt
+      placeholder:text-faint focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand-soft disabled:opacity-60;
+    transition: border-color var(--dur-fast) ease, box-shadow var(--dur-fast) ease, background-color var(--dur-fast) ease;
+  }
+  .vo-label { @apply mb-1.5 block text-sm font-medium text-muted; }
+
+  .vo-btn {
+    @apply inline-flex min-h-[2.75rem] select-none items-center justify-center gap-2 rounded-control px-4 py-2.5 text-sm font-semibold
+      focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60;
+    transition: background-color var(--dur-fast) ease, border-color var(--dur-fast) ease,
+      color var(--dur-fast) ease, box-shadow var(--dur) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+  }
+  .vo-btn:active:not(:disabled) { transform: scale(0.97); }
+  .vo-btn-primary {
+    @apply vo-btn text-white;
+    background-color: var(--brand-strong);
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0) 55%);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+  }
+  .vo-btn-primary:hover:not(:disabled) {
+    filter: brightness(1.1);
+    box-shadow: 0 2px 10px color-mix(in srgb, var(--brand-strong) 45%, transparent), inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  }
+  .vo-btn-secondary { @apply vo-btn border border-line bg-surface2 text-txt hover:border-line2 hover:bg-surface; }
+  .vo-btn-ghost { @apply vo-btn text-muted hover:bg-surface2 hover:text-txt; }
+  .vo-btn-danger { @apply vo-btn border border-danger bg-danger-soft text-danger hover:bg-danger hover:text-white; }
+  /* Square icon-only button with a guaranteed ≥40px hit target. */
+  .vo-icon-btn { @apply vo-btn h-10 w-10 p-0; }
+
+  /* Spring checkbox: appearance-none box, check mark pops in with overshoot. */
+  .vo-check {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 1.125rem;
+    height: 1.125rem;
+    flex-shrink: 0;
+    border-radius: 0.3125rem;
+    border: 1.5px solid var(--border-2);
+    background: var(--surface-2);
+    display: inline-grid;
+    place-content: center;
+    cursor: pointer;
+    transition: border-color var(--dur-fast) ease, background-color var(--dur-fast) ease, transform var(--dur-fast) var(--ease-out);
+  }
+  .vo-check:hover:not(:disabled) { border-color: var(--brand); }
+  .vo-check:active:not(:disabled) { transform: scale(0.9); }
+  .vo-check::before {
+    content: '';
+    width: 0.7rem;
+    height: 0.7rem;
+    transform: scale(0);
+    transition: transform 220ms var(--ease-spring);
+    background: #fff;
+    clip-path: polygon(13% 46%, 3% 60%, 40% 92%, 97% 22%, 84% 10%, 38% 68%);
+  }
+  .vo-check:checked { background: var(--brand); border-color: var(--brand); }
+  .vo-check:checked::before { transform: scale(1); }
+  .vo-check:disabled { cursor: not-allowed; opacity: 0.5; }
+
+  .vo-chip { @apply inline-flex items-center gap-1.5 rounded-full border border-line bg-surface2 px-2.5 py-1 text-xs font-medium text-muted; }
+  /* Disclosure (<details>): hide the native triangle so a custom chevron can drive the
+     open/closed affordance. Raw CSS — Tailwind silently drops `::-webkit-*` pseudo-element
+     arbitrary variants. */
+  .vo-disclosure > summary { list-style: none; cursor: pointer; }
+  .vo-disclosure > summary::-webkit-details-marker { display: none; }
+  /* Hue chip: color via inline --hue/--hue-soft (dynamic hues can't be Tailwind classes). */
+  .vo-chip-hue {
+    @apply inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs font-medium;
+    color: color-mix(in srgb, var(--hue, var(--brand)) var(--mix-ink, 92%), var(--txt));
+    background: var(--hue-soft, var(--brand-soft));
+    border-color: color-mix(in srgb, var(--hue, var(--brand)) 35%, transparent);
+  }
+
+  /* Hue-identified quick-link tile (dashboard "map" links, related tools).
+     Set the hue via inline hueStyle(h); inside a [data-section] it defaults
+     to the section hue. Hover lifts + tints toward the hue. */
+  .vo-hue-link {
+    @apply flex items-center gap-2.5 rounded-control border border-line bg-surface2 px-4 py-3 text-sm font-medium text-txt;
+    transition: transform var(--dur) var(--ease-out), border-color var(--dur) var(--ease-out),
+      background-color var(--dur) var(--ease-out), box-shadow var(--dur) var(--ease-out);
+  }
+  .vo-hue-link:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in srgb, var(--hue, var(--brand)) 45%, transparent);
+    background: var(--hue-soft, var(--brand-soft));
+    box-shadow: theme('boxShadow.soft');
+  }
+  .vo-hue-link:active { transform: translateY(0); }
+
+  /* =====================  BRAND  ===================== */
+  /* Brand wordmark + logo tile: the aurora gradient itself. */
+  .vo-wordmark {
+    background: linear-gradient(92deg, #7ba03d 0%, #c99a2e 50%, #e0b13a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .vo-logo-tile {
+    background: linear-gradient(135deg, #6b8b34 0%, #b8860b 55%, #e0b13a 130%);
+  }
+
+  .vo-skel { @apply rounded bg-surface2; background-image: linear-gradient(90deg, transparent, var(--border), transparent); background-size: 400px 100%; @apply animate-shimmer; }
+
+  .vo-prose { @apply text-body text-txt; }
+  .vo-prose p { @apply mb-3 last:mb-0; }
+  .vo-prose ul { @apply mb-3 ml-5 list-disc space-y-1 last:mb-0; }
+  .vo-prose ol { @apply mb-3 ml-5 list-decimal space-y-1 last:mb-0; }
+  .vo-prose strong { @apply font-semibold text-txt; }
+  .vo-prose code { @apply rounded bg-surface2 px-1.5 py-0.5 font-mono text-[13px]; }
+  .vo-prose h3 { @apply mb-1.5 mt-3 text-base font-semibold first:mt-0; }
+
+  /* =====================  LIVE AURORA (login / big moments)  =====================
+     Three softly blurred blobs drifting on long offset loops. Layer inside a
+     relative overflow-hidden container; blobs position themselves. */
+  .vo-aurora-live { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+  .vo-aurora-live > i {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(70px);
+    opacity: 0.5;
+    will-change: transform;
+  }
+  .vo-aurora-live > i:nth-child(1) {
+    width: 44vmax; height: 44vmax; left: -12vmax; top: -14vmax;
+    background: radial-gradient(circle at 35% 35%, var(--aurora-a), transparent 70%);
+    animation: vo-drift-a 26s ease-in-out infinite alternate;
+  }
+  .vo-aurora-live > i:nth-child(2) {
+    width: 38vmax; height: 38vmax; right: -10vmax; top: 4vmax;
+    background: radial-gradient(circle at 60% 40%, var(--aurora-c), transparent 70%);
+    animation: vo-drift-b 32s ease-in-out infinite alternate;
+  }
+  .vo-aurora-live > i:nth-child(3) {
+    width: 42vmax; height: 42vmax; left: 18vmax; bottom: -18vmax;
+    background: radial-gradient(circle at 45% 55%, var(--aurora-b), transparent 70%);
+    animation: vo-drift-c 38s ease-in-out infinite alternate;
+  }
+
+  /* =====================  CELEBRATION (onboarding finish)  =====================
+     Pure-CSS confetti: parent is .vo-confetti (relative, overflow hidden);
+     each <i> gets --cx (left %), --ch (hue), --cd (delay) inline. */
+  .vo-confetti { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+  .vo-confetti > i {
+    position: absolute;
+    top: -5%;
+    left: var(--cx, 50%);
+    width: 7px;
+    height: 13px;
+    border-radius: 2px;
+    background: var(--ch, var(--brand));
+    opacity: 0;
+    animation: vo-confetti-fall 2.6s var(--cd, 0s) cubic-bezier(0.3, 0.4, 0.6, 1) forwards;
+  }
+  .vo-sparkle { animation: vo-sparkle 1.6s var(--ease-out) both; transform-origin: center; }
+}
+
+/* ---- Keyframes (plain layer so @layer purging never drops them) ---- */
+@keyframes vo-rise {
+  0% { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes vo-page-rise {
+  0% { transform: translateY(12px); }
+  100% { transform: translateY(0); }
+}
+@keyframes vo-drift-a {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(9vmax, 7vmax) scale(1.15); }
+}
+@keyframes vo-drift-b {
+  0% { transform: translate(0, 0) scale(1.1); }
+  100% { transform: translate(-8vmax, 9vmax) scale(0.95); }
+}
+@keyframes vo-drift-c {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(7vmax, -8vmax) scale(1.12); }
+}
+@keyframes vo-confetti-fall {
+  0% { opacity: 0; transform: translateY(0) rotate(0deg); }
+  8% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(120vh) rotate(660deg); }
+}
+@keyframes vo-sparkle {
+  0% { opacity: 0; transform: scale(0.3) rotate(-12deg); }
+  55% { opacity: 1; transform: scale(1.12) rotate(3deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+
+/* Slim, dark-friendly scrollbars. */
+* { scrollbar-width: thin; scrollbar-color: var(--border-2) transparent; }
+*::-webkit-scrollbar { width: 9px; height: 9px; }
+*::-webkit-scrollbar-thumb { background-color: var(--border-2); border-radius: 9999px; }
+*::-webkit-scrollbar-thumb:hover { background-color: var(--faint); }
+
+/* ---- Print stylesheet: the evidence/DBQ packet is the one view meant for paper ---- */
+@media print {
+  body::before { display: none; }
+  .vo-page::before, .vo-section-band::before, .vo-section-band::after { display: none; }
+  .vo-no-print { display: none !important; }
+  body, .vo-print-page {
+    background: #fff !important;
+    color: #111 !important;
+  }
+  .vo-print-page {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .vo-print-page * {
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    color: #111 !important;
+    background: transparent !important;
+    border-color: #ccc !important;
+  }
+  .vo-print-page a { color: #111 !important; text-decoration: underline; }
+  @page { margin: 1.5cm; }
+}

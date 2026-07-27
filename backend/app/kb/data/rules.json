@@ -1,0 +1,101 @@
+[
+  {
+    "card_type": "rule",
+    "title": "Combined ratings — why 50 + 30 ≠ 80",
+    "body_system": "general",
+    "diagnostic_code": null,
+    "source": "38 CFR §4.25 (Combined Ratings Table)",
+    "content": "VA does not ADD ratings; it combines them against remaining capacity. Ratings are ordered most-severe first; each next rating applies only to the efficiency you have left (50% + 30% = 50 + 30% of the remaining 50 = 65, which converts to 70%). The final combined value is converted to the nearest degree divisible by 10, with values ending in 5 adjusted upward. This app's calculator implements the exact table — the practical consequence: the higher your combined rating, the less each additional small rating moves it ('VA math').",
+    "data": {"examples": [{"inputs": [50, 30], "raw": 65, "final": 70}, {"inputs": [70, 60, 30, 20], "raw": 94, "final": 90}]}
+  },
+  {
+    "card_type": "rule",
+    "title": "Bilateral factor — paired arms/legs get a bonus",
+    "body_system": "general",
+    "diagnostic_code": null,
+    "source": "38 CFR §4.26",
+    "content": "When compensable disabilities affect BOTH arms, BOTH legs, or paired skeletal muscles, the ratings for both sides are combined first and 10% of that combined value is ADDED (not combined) before the result — treated as one disability — is combined with everything else. Example from the regulation: 60% and 20% on paired extremities combine to 68; adding 6.8 gives 74.8 → 75. Left/right knee, radiculopathy in both legs, or flat feet plus a knee on the other side all trigger it. If you have disabilities on both sides of the body's extremities and your decision letter shows no bilateral factor, the combined rating may be computed wrong.",
+    "data": null
+  },
+  {
+    "card_type": "rule",
+    "title": "Pyramiding — the same symptom can't be rated twice",
+    "body_system": "general",
+    "diagnostic_code": null,
+    "source": "38 CFR §4.14; Esteban v. Brown, 6 Vet. App. 259 (1994)",
+    "content": "The same manifestation may not be compensated under multiple diagnostic codes (no rating both 'limitation of flexion' and 'painful motion' of the same joint for the same symptom). BUT distinct manifestations of the same injury ARE separately ratable (Esteban): a knee can carry instability (DC 5257) AND arthritis-limited motion (DC 5260/5261); a spine rating does not cover radiculopathy (separate nerve rating); a scar from surgery is separate from the underlying joint. Knowing the pyramiding line in both directions — what's barred and what's permitted — is how under-ratings get found.",
+    "data": null
+  },
+  {
+    "card_type": "rule",
+    "title": "Special Monthly Compensation (SMC) basics",
+    "body_system": "general",
+    "diagnostic_code": null,
+    "source": "38 U.S.C. §1114; 38 CFR §3.350",
+    "content": "SMC pays ABOVE the 100% rate (or in addition to regular compensation) for specific losses and combinations. SMC-K (the most common): loss or loss of use of a hand, foot, or creative organ (erectile dysfunction secondary to diabetes/PTSD meds commonly qualifies) — paid on top of the regular rating. SMC-S (housebound): a single 100% disability PLUS additional disabilities independently combining to 60%+, or being factually housebound. Higher levels (L–R) cover aid & attendance, blindness, amputations. SMC is frequently unclaimed because veterans don't know it exists — if any of these fit, raise it with an accredited VSO.",
+    "data": null
+  },
+  {
+    "card_type": "rule",
+    "title": "TDIU — 100% pay without a 100% rating",
+    "body_system": "general",
+    "diagnostic_code": null,
+    "source": "38 CFR §4.16",
+    "content": "Total Disability based on Individual Unemployability pays at the 100% rate when service-connected disabilities prevent 'substantially gainful employment.' Schedular threshold (§4.16(a)): one disability at 60%+, OR combined 70%+ with at least one at 40%+ (for the threshold, disabilities of one/both extremities incl. the bilateral factor, or from a common etiology, count as ONE). Even below thresholds, extraschedular TDIU (§4.16(b)) exists. Evidence: work history (VA Form 21-8940), employer statements, vocational assessments, SSDI records.",
+    "data": null
+  },
+  {
+    "card_type": "rule",
+    "title": "Painful motion and functional loss — the minimum-rating rules",
+    "body_system": "musculoskeletal",
+    "diagnostic_code": null,
+    "source": "38 CFR §4.59; §4.40 and §4.45; DeLuca v. Brown, 8 Vet. App. 202 (1995)",
+    "content": "Actually painful joint motion merits AT LEAST the minimum compensable rating for the joint (§4.59) even if range-of-motion numbers alone wouldn't rate. Exams must consider functional loss during flare-ups and after repetitive use — pain, weakness, fatigability, incoordination (DeLuca; §4.40/4.45). At a C&P exam, describe your WORST days and flare-up frequency; an exam that measures ROM only on a good day understates the disability. If your decision rated 0% on a painful joint, §4.59 is the first thing to check.",
+    "data": null
+  },
+  {
+    "card_type": "rule",
+    "title": "Secondary service connection — conditions caused or worsened by service-connected ones",
+    "body_system": "general",
+    "diagnostic_code": null,
+    "source": "38 CFR §3.310; Allen v. Brown, 7 Vet. App. 439 (1995)",
+    "content": "A disability that is PROXIMATELY CAUSED BY or AGGRAVATED BY a service-connected disability is itself service-connectable — including aggravation of a nonservice condition (compensated to the degree of worsening). The evidence key is a medical NEXUS OPINION connecting the two ('at least as likely as not caused/aggravated by'), typically from a treating provider or qualified examiner, supported by medical literature. Classic patterns: radiculopathy from a back condition; depression from chronic pain; sleep apnea from PTSD; GERD from NSAIDs; hypertension from PTSD; ED from diabetes or psychiatric medications.",
+    "data": null
+  },
+  {
+    "card_type": "rule",
+    "title": "Direct service connection — the three elements",
+    "body_system": "general",
+    "diagnostic_code": null,
+    "source": "38 CFR §3.303; Shedden v. Principi, 381 F.3d 1163 (Fed. Cir. 2004)",
+    "content": "Every direct claim needs three things: (1) a CURRENT diagnosed disability; (2) an IN-SERVICE event, injury, or disease (service treatment records, personnel records, unit records, or credible lay testimony); (3) a NEXUS — a medical link between the two ('at least as likely as not,' i.e., 50/50 or better). Continuity of symptoms since service supports the nexus, especially for chronic diseases (§3.303(b)). Missing element = the claim's gap; this app's evidence-gap analysis is organized around exactly these three elements.",
+    "data": null
+  },
+  {
+    "card_type": "rule",
+    "title": "Benefit of the doubt — ties go to the veteran",
+    "body_system": "general",
+    "diagnostic_code": null,
+    "source": "38 U.S.C. §5107(b); 38 CFR §3.102",
+    "content": "When the evidence for and against a claim is in approximate balance ('equipoise'), the veteran wins. This is why nexus opinions are phrased 'at least as likely as not' (≥50%). You never need to prove a claim beyond doubt — you need the positive evidence to at least equal the negative.",
+    "data": null
+  },
+  {
+    "card_type": "rule",
+    "title": "Rating protections — 5, 10, and 20 year rules",
+    "body_system": "general",
+    "diagnostic_code": null,
+    "source": "38 CFR §3.344 (stabilized ratings); §3.957 (10-year service connection); §3.951(b) (20-year ratings); §3.343 (total ratings)",
+    "content": "Ratings in effect 5+ years are 'stabilized' — VA needs sustained improvement shown by full review to reduce. Service connection held 10+ years cannot be severed except for fraud. A rating held 20+ years cannot be reduced below its lowest level during that period. Filing for an increase CAN trigger re-evaluation of the condition — worth understanding these protections (and discussing with a VSO) before filing an increase on an old rating.",
+    "data": null
+  },
+  {
+    "card_type": "rule",
+    "title": "Lay evidence counts",
+    "body_system": "general",
+    "diagnostic_code": null,
+    "source": "38 CFR §3.159(a)(2); Layno v. Brown, 6 Vet. App. 465 (1994); VA Form 21-10210 / 21-4138",
+    "content": "Veterans and people who know them are COMPETENT to testify to what they observe: pain, ringing ears, nightmares, limping, mood changes, snoring/apnea episodes. Lay statements (buddy statements from service members, spouse statements on symptoms and their progression) can establish the in-service event and continuity of symptoms — especially where records are thin. Specific, dated, first-person observations beat generalities.",
+    "data": null
+  }
+]

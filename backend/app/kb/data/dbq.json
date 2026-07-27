@@ -1,0 +1,146 @@
+[
+  {
+    "card_type": "dbq",
+    "title": "DBQ catalog — which form fits which condition",
+    "body_system": "general",
+    "diagnostic_code": null,
+    "source": "VA Disability Benefits Questionnaires (VA.gov/find-forms; forms are periodically revised — download the current version)",
+    "content": "DBQs are VA's standardized exam forms. A private treating provider can complete one, giving VA rating-ready evidence in the schedule's own language — often the single highest-leverage document a veteran can bring to a claim. Initial PTSD exams generally must be done by a VA/VA-contracted psychologist or psychiatrist (the PTSD 'initial' DBQ is not veteran-submittable); REVIEW PTSD DBQs and most physical DBQs can be private. Bring the relevant DBQ, your symptom log, and this app's evidence packet to the appointment.",
+    "data": {
+      "catalog": [
+        {
+          "condition": "PTSD (initial)",
+          "dbq": "Initial PTSD DBQ — VA/VA-contracted examiner only",
+          "body_system": "mental"
+        },
+        {
+          "condition": "PTSD (increase/review)",
+          "dbq": "Review PTSD DBQ (VA Form 21-0960P-3)",
+          "body_system": "mental"
+        },
+        {
+          "condition": "Depression / anxiety / other mental disorders",
+          "dbq": "Mental Disorders (other than PTSD) DBQ (21-0960P-2)",
+          "body_system": "mental",
+          "generic": true
+        },
+        {
+          "condition": "Back (thoracolumbar)",
+          "dbq": "Back (Thoracolumbar Spine) Conditions DBQ (21-0960M-14)",
+          "body_system": "musculoskeletal"
+        },
+        {
+          "condition": "Neck (cervical)",
+          "dbq": "Neck (Cervical Spine) Conditions DBQ (21-0960M-13)",
+          "body_system": "musculoskeletal"
+        },
+        {
+          "condition": "Knee / lower leg",
+          "dbq": "Knee and Lower Leg Conditions DBQ (21-0960M-9)",
+          "body_system": "musculoskeletal"
+        },
+        {
+          "condition": "Ankle",
+          "dbq": "Ankle Conditions DBQ (21-0960M-2)",
+          "body_system": "musculoskeletal"
+        },
+        {
+          "condition": "Shoulder / arm",
+          "dbq": "Shoulder and Arm Conditions DBQ (21-0960M-12)",
+          "body_system": "musculoskeletal"
+        },
+        {
+          "condition": "Hip / thigh",
+          "dbq": "Hip and Thigh Conditions DBQ (21-0960M-8)",
+          "body_system": "musculoskeletal"
+        },
+        {
+          "condition": "Hand / finger",
+          "dbq": "Hand and Finger Conditions DBQ (21-0960M-7)",
+          "body_system": "musculoskeletal"
+        },
+        {
+          "condition": "Foot (incl. flat feet)",
+          "dbq": "Foot Conditions incl. Flatfoot DBQ (21-0960M-6)",
+          "body_system": "musculoskeletal"
+        },
+        {
+          "condition": "Hearing loss & tinnitus",
+          "dbq": "Hearing Loss and Tinnitus DBQ (21-0960N-1) — requires audiometric testing",
+          "body_system": "auditory"
+        },
+        {
+          "condition": "Migraines / headaches",
+          "dbq": "Headaches (incl. Migraines) DBQ (21-0960C-8)",
+          "body_system": "neurological"
+        },
+        {
+          "condition": "Radiculopathy / peripheral nerves",
+          "dbq": "Peripheral Nerves Conditions DBQ (21-0960C-10)",
+          "body_system": "neurological"
+        },
+        {
+          "condition": "Sleep apnea",
+          "dbq": "Sleep Apnea DBQ (21-0960L-2) — requires sleep study",
+          "body_system": "respiratory"
+        },
+        {
+          "condition": "Respiratory (asthma, COPD, sinusitis, rhinitis, bronchitis, emphysema)",
+          "dbq": "Respiratory Conditions DBQ (21-0960L-1) — requires PFTs",
+          "body_system": "respiratory",
+          "generic": true
+        },
+        {
+          "condition": "GERD / esophageal",
+          "dbq": "Esophageal Conditions incl. GERD DBQ (21-0960G-1)",
+          "body_system": "digestive"
+        },
+        {
+          "condition": "IBS / intestinal",
+          "dbq": "Intestinal Conditions (other than surgical) DBQ (21-0960G-3)",
+          "body_system": "digestive"
+        },
+        {
+          "condition": "Hypertension",
+          "dbq": "Hypertension DBQ (21-0960A-3)",
+          "body_system": "cardiovascular"
+        },
+        {
+          "condition": "Heart / ischemic heart disease",
+          "dbq": "Heart Conditions incl. IHD DBQ (21-0960A-1) — METs testing",
+          "body_system": "cardiovascular"
+        },
+        {
+          "condition": "Diabetes",
+          "dbq": "Diabetes Mellitus DBQ (21-0960E-1)",
+          "body_system": "endocrine"
+        },
+        {
+          "condition": "Scars / disfigurement",
+          "dbq": "Scars/Disfigurement DBQ (21-0960F-1)",
+          "body_system": "skin"
+        },
+        {
+          "condition": "Skin diseases",
+          "dbq": "Skin Diseases DBQ (21-0960F-2)",
+          "body_system": "skin"
+        },
+        {
+          "condition": "TBI residuals",
+          "dbq": "Initial TBI DBQ — VA-designated specialists only; Review TBI DBQ (21-0960C-12) may be private",
+          "body_system": "neurological"
+        },
+        {
+          "condition": "Male reproductive (incl. ED)",
+          "dbq": "Male Reproductive Organ Conditions DBQ (21-0960J-2)",
+          "body_system": "genitourinary"
+        },
+        {
+          "condition": "Gulf War general medical",
+          "dbq": "Gulf War General Medical Examination DBQ (21-0960Z-2)",
+          "body_system": "general"
+        }
+      ]
+    }
+  }
+]

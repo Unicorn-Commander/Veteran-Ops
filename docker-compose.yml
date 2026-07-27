@@ -1,0 +1,69 @@
+# Valor-Ops — local dev stack.
+# Ports are offset from Glitter Mane so both suites run side by side:
+#   db 5434 (GM 5433) · backend 8001 (GM 8000) · frontend 5174 · mcp 8766
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_DB: valor
+      APP_DB_PASSWORD: ${APP_DB_PASSWORD:-change_me_valor_app_pw}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./db/init:/docker-entrypoint-initdb.d:ro
+    ports:
+      - "5434:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d valor"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build: ./backend
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql+asyncpg://valor_app:${APP_DB_PASSWORD:-change_me_valor_app_pw}@db:5432/valor
+      UPLOAD_DIR: /app/uploads
+    volumes:
+      - valor-uploads:/app/uploads
+    # Lets the container reach a model server on the host on Linux too, not just
+    # Docker Desktop. For the fleet, LLM_BASE_URL points at the tailnet gateway.
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8001:8000"
+
+  frontend:
+    build: ./frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "5174:80"
+
+  # MCP server over SSE — the agent surface for Brigade (and any MCP client).
+  # Brigade's MCP registry connects to http://<this-host>:8766/sse and discovers
+  # the tools live. VALOR_TOKEN authenticates its calls to the API.
+  mcp:
+    build: ./mcp
+    restart: unless-stopped
+    environment:
+      VALOR_API_URL: http://backend:8000
+      VALOR_TOKEN: ${MCP_SERVICE_TOKEN:-}
+      MCP_TRANSPORT: sse
+      MCP_PORT: "8766"
+    ports:
+      - "8766:8766"
+    depends_on:
+      - backend
+
+volumes:
+  pgdata:
+  valor-uploads:

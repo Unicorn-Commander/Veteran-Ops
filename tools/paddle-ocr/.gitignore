@@ -1,0 +1,5 @@
+# Generated / local — not committed
+__pycache__/
+*.pyc
+*.pyo
+smoke_*.png

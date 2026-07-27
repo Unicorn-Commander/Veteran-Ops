@@ -1,0 +1,90 @@
+[
+  {
+    "card_type": "process",
+    "title": "Intent to File — lock your effective date before you're ready",
+    "body_system": "process",
+    "diagnostic_code": null,
+    "source": "38 CFR §3.155; VA Form 21-0966",
+    "content": "An Intent to File (ITF) preserves your effective date for up to ONE YEAR while you gather evidence. File it the moment you start thinking about a claim (online at VA.gov, by phone, or Form 21-0966); if the claim is granted, back pay runs from the ITF date, not the day you finally submitted the paperwork. Costs nothing, binds you to nothing. If you are using this app to organize a claim and have not filed an ITF, that is usually the first action item.",
+    "data": {
+      "order": 1
+    }
+  },
+  {
+    "card_type": "process",
+    "title": "Filing the initial claim — Fully Developed vs standard",
+    "body_system": "process",
+    "diagnostic_code": null,
+    "source": "VA Form 21-526EZ; M21-1 (FDC program)",
+    "content": "Initial and increase claims go on VA Form 21-526EZ (online via VA.gov is the cleanest). The 'Fully Developed Claim' path means you submit ALL private evidence up front and certify there's nothing else to wait for — typically faster decisions. Federal records (service treatment records, VA medical records) VA must fetch itself under its duty to assist (38 U.S.C. §5103A). Attach: diagnosis evidence, nexus material or DBQs, lay statements, and identify all treatment sources. A free accredited VSO (VFW, DAV, American Legion, county/state veterans office) can review and file it with you — recommended, and never charges for an initial claim.",
+    "data": {
+      "order": 2
+    }
+  },
+  {
+    "card_type": "process",
+    "title": "Decision review lanes under the AMA — supplemental, HLR, Board",
+    "body_system": "process",
+    "diagnostic_code": null,
+    "source": "Appeals Modernization Act (Pub. L. 115-55); 38 CFR Part 3 subpart D (§3.2500 et seq.); Forms 20-0995, 20-0996, 10182",
+    "content": "Disagree with a decision? Within ONE YEAR you have three lanes, and you can switch lanes after a denial: (1) SUPPLEMENTAL CLAIM (Form 20-0995) — submit NEW AND RELEVANT evidence; the workhorse lane; also usable after the 1-year window (later effective date). (2) HIGHER-LEVEL REVIEW (Form 20-0996) — a senior reviewer re-examines the SAME record for errors; no new evidence allowed; you may request an informal conference to point out the error. Best when VA misapplied criteria to evidence already in the file. (3) BOARD APPEAL (Form 10182) — a Veterans Law Judge; three dockets: direct review (no new evidence, fastest), evidence submission, or hearing. Deadlines matter: filing any lane within a year of the decision preserves the ORIGINAL effective date.",
+    "data": {
+      "order": 3
+    }
+  },
+  {
+    "card_type": "process",
+    "title": "Effective dates — where back pay comes from",
+    "body_system": "process",
+    "diagnostic_code": null,
+    "source": "38 U.S.C. §5110; 38 CFR §3.400",
+    "content": "General rule: the effective date is the LATER of the date VA received the claim (or ITF) and the date entitlement arose. Big exceptions worth knowing: file within ONE YEAR of separation and the effective date is the day after separation; increases can reach back up to one year before the claim if the worsening is factually shown (§3.400(o)(2)); continuously-pursued reviews (supplemental/HLR/Board within each 1-year window) keep the original date; PACT Act claims filed by Aug 9, 2023 could be backdated to Aug 10, 2022 (later filings use normal rules). Effective-date errors are common and are themselves appealable.",
+    "data": {
+      "order": 4
+    }
+  },
+  {
+    "card_type": "process",
+    "title": "CUE — reopening final decisions for clear and unmistakable error",
+    "body_system": "process",
+    "diagnostic_code": null,
+    "source": "38 CFR §3.105(a); Russell v. Principi, 3 Vet. App. 310 (1992)",
+    "content": "A final decision (even decades old) can be REVISED if it contains clear and unmistakable error: an outcome-determinative error that was undebatable on the law and evidence AS IT EXISTED THEN — not a disagreement with judgment, not new evidence, not a failure of the duty to assist. If a CUE motion succeeds, benefits are paid as if the error never happened (potentially decades of back pay). CUE is technical and unforgiving (one shot per theory per decision) — this is squarely a case to take to an accredited attorney or seasoned VSO, not to run alone.",
+    "data": {
+      "order": 5
+    }
+  },
+  {
+    "card_type": "process",
+    "title": "The C&P exam — how to show up",
+    "body_system": "process",
+    "diagnostic_code": null,
+    "source": "38 CFR §4.1, §4.2, §4.59; M21-1 examination procedures",
+    "content": "The Compensation & Pension exam heavily drives the rating. Be HONEST and COMPLETE: describe your worst days and flare-ups, not just today; say what you can no longer do (work tasks, sleep, family life); don't tough it out — minimizing symptoms understates the rating the criteria would give. Bring your symptom log and medication list. Ranges of motion should reflect where PAIN begins, not how far you can force the joint. If the exam was cursory or the examiner didn't review your file, say so in writing — an inadequate exam is a common and correctable error (HLR or new exam).",
+    "data": {
+      "order": 6
+    }
+  },
+  {
+    "card_type": "process",
+    "title": "Free accredited help — VSOs, agents, attorneys (and who may charge)",
+    "body_system": "process",
+    "diagnostic_code": null,
+    "source": "38 CFR §14.629–14.636; VA Office of General Counsel accreditation search (va.gov/ogc/apps/accreditation)",
+    "content": "Only VA-ACCREDITED representatives (VSO representatives, accredited agents, attorneys) may legally prepare or prosecute a VA claim for you. VSOs (VFW, DAV, American Legion, state/county veterans offices) represent veterans FREE at every stage. Accredited agents/attorneys may charge fees only AFTER an initial decision, for reviews/appeals, under VA fee rules. Unaccredited companies charging a cut of your benefits ('claim sharks') operate outside this system. Rating Raider is self-help software — it is not a representative and never files for you; verify any human helper in VA's accreditation directory.",
+    "data": {
+      "order": 7
+    }
+  },
+  {
+    "card_type": "process",
+    "title": "Getting your records — DD-214, service treatment records, C-file, VA medical records",
+    "body_system": "records",
+    "diagnostic_code": null,
+    "source": "SF-180 (NPRC); milConnect/eVetRecs; VA Form 20-10206 (FOIA/Privacy Act); VA.gov Blue Button; 38 U.S.C. §5103A (VA's duty to assist)",
+    "content": "Four record sets power a claim. (1) DD-214 + personnel file (OMPF): fastest online via milConnect (login) or eVetRecs; by mail via SF-180 to the National Personnel Records Center. (2) Service treatment records: usually part of the OMPF/NPRC request, and VA must also fetch them under its duty to assist once you file. (3) Your VA claims file (C-file) — every exam, decision, and rating narrative VA holds on you: request with VA Form 20-10206 (Privacy Act) online or by mail; reviewing your C-file is how under-ratings and missed conditions get found. (4) VA medical records: instant download via VA.gov Blue Button. Rating Raider pre-fills request worksheets from your profile — you sign and submit them yourself. A one-off note: the 1973 NPRC fire destroyed many Army (1912–1960) and Air Force (1947–1964) records; NPRC can reconstruct from alternates if you say records may be fire-affected.",
+    "data": {
+      "order": 8
+    }
+  }
+]

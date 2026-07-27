@@ -1,0 +1,241 @@
+{
+  "version": 1,
+  "deidentified": true,
+  "cases": [
+    {
+      "id": "ocr-critical-field-disagreement",
+      "domain": "ocr",
+      "source_fixture": "tests/test_crossread.py",
+      "input": {
+        "page": 1,
+        "ocr": "VA decision dated 2026-01-05. Diagnostic code 9411. Evaluation 50 percent. Claim granted.",
+        "vision": "VA decision dated 2026-01-05. Diagnostic code 9411. Evaluation 70 percent. Claim granted."
+      },
+      "expected": {
+        "flagged": true,
+        "confidence": 0.6,
+        "disputed_fields": ["percent"]
+      }
+    },
+    {
+      "id": "evidence-direct-claim-missing-link",
+      "domain": "evidence",
+      "source_fixture": "tests/test_api_analysis.py",
+      "input": {
+        "condition": {
+          "name": "Lumbar strain",
+          "claim_type": "direct",
+          "in_service_event": "Training injury documented in a service record."
+        },
+        "evidence": [
+          {"kind": "diagnosis", "status": "have"}
+        ]
+      },
+      "expected": {
+        "gap_kinds": ["nexus_letter", "continuity"],
+        "all_gaps_cited": true
+      }
+    },
+    {
+      "id": "rating-bilateral-factor",
+      "domain": "rating",
+      "source_fixture": "tests/test_rating.py",
+      "input": {
+        "entries": [
+          {"label": "Right knee", "percent": 30, "side": "right"},
+          {"label": "Left ankle", "percent": 20, "side": "left"},
+          {"label": "Tinnitus", "percent": 20, "side": null}
+        ]
+      },
+      "expected": {
+        "combined": 60,
+        "raw": 58,
+        "bilateral_factor_applied": true,
+        "bilateral_value": 48
+      }
+    },
+    {
+      "id": "deadline-soonest-first",
+      "domain": "deadline",
+      "source_fixture": "tests/test_deadlines.py",
+      "input": {
+        "today": "2026-07-10",
+        "itf_records": [
+          {"type": "compensation", "filed_date": "2026-06-10"}
+        ],
+        "decodes": [
+          {"decision_date": "2026-05-10"}
+        ],
+        "dependents": [
+          {"relationship": "spouse", "marriage_date": "2025-09-01"}
+        ]
+      },
+      "expected": [
+        {"kind": "dependent", "due_date": "2026-09-01", "days_left": 53, "urgency": "soon"},
+        {"kind": "appeal", "due_date": "2027-05-10", "days_left": 304, "urgency": "ok"},
+        {"kind": "itf", "due_date": "2027-06-10", "days_left": 335, "urgency": "ok"}
+      ]
+    },
+    {
+      "id": "citation-ranked-to-source-page",
+      "domain": "citation",
+      "source_fixture": "tests/test_evidence_citations.py",
+      "input": {
+        "condition_name": "Lumbar strain",
+        "kind": "diagnosis",
+        "page_offsets": [0, 100],
+        "chunks": [
+          {"chunk_index": 0, "char_start": 0, "content": "Administrative cover sheet."},
+          {"chunk_index": 1, "char_start": 140, "content": "Lumbar strain diagnosis documented as a current disability."}
+        ]
+      },
+      "expected": {
+        "chunk_index": 1,
+        "page": 2,
+        "quote": "Lumbar strain diagnosis documented as a current disability."
+      }
+    },
+    {
+      "id": "abstention-drops-invented-rating",
+      "domain": "abstention",
+      "source_fixture": "tests/test_api_analysis.py",
+      "input": {
+        "cards": [
+          {
+            "title": "Mental disorders",
+            "diagnostic_code": "9411",
+            "data": {
+              "tiers": [
+                {"percent": 30, "criteria": "Example authored criteria."},
+                {"percent": 50, "criteria": "Example authored criteria."}
+              ]
+            }
+          }
+        ],
+        "answer": {
+          "card_index": 0,
+          "suggested_tier_percent": 70,
+          "rationale": "The record guarantees a 70% rating under DC 5237."
+        }
+      },
+      "expected": {
+        "card_index": 0,
+        "suggested_tier_percent": null,
+        "rationale": null
+      }
+    },
+    {
+      "id": "rating-four-extremity-bilateral",
+      "domain": "rating",
+      "source_fixture": "tests/test_rating.py",
+      "input": {
+        "entries": [
+          {"label": "Right knee", "percent": 30, "side": "right"},
+          {"label": "Left knee", "percent": 20, "side": "left"},
+          {"label": "Right shoulder", "percent": 20, "side": "right"},
+          {"label": "Left shoulder", "percent": 10, "side": "left"},
+          {"label": "PTSD", "percent": 50, "side": null}
+        ]
+      },
+      "expected": {
+        "combined": 80,
+        "raw": 83,
+        "bilateral_factor_applied": true,
+        "bilateral_value": 66
+      }
+    },
+    {
+      "id": "presumptive-pow-internment-branch",
+      "domain": "presumptive",
+      "source_fixture": "tests/test_api_analysis.py",
+      "input": {
+        "today": "2026-07-05",
+        "profile": {
+          "service_periods": [],
+          "exposures": {"pow": true, "pow_internment_days": 45}
+        },
+        "cards": [
+          {
+            "card_type": "presumptive",
+            "title": "Former POW",
+            "source": "38 CFR §3.309(c)",
+            "data": {
+              "program": "pow",
+              "exposure_flags": ["pow"],
+              "match": "flag_only",
+              "conditions_any_period": ["psychosis", "anxiety state"],
+              "conditions_thirty_days": ["beriberi", "avitaminosis"],
+              "conditions": ["psychosis", "anxiety state", "beriberi", "avitaminosis"]
+            }
+          }
+        ]
+      },
+      "expected": {
+        "programs": ["pow"],
+        "pow_conditions": ["psychosis", "anxiety state", "beriberi", "avitaminosis"]
+      }
+    },
+    {
+      "id": "presumptive-als-condition-gated",
+      "domain": "presumptive",
+      "source_fixture": "tests/test_api_analysis.py",
+      "input": {
+        "today": "2026-07-05",
+        "profile": {
+          "service_periods": [
+            {"start_date": "2000-01-01", "end_date": "2004-01-01"}
+          ],
+          "exposures": {}
+        },
+        "condition_names": ["Amyotrophic lateral sclerosis"],
+        "cards": [
+          {
+            "card_type": "presumptive",
+            "title": "ALS",
+            "source": "38 CFR §3.318",
+            "data": {
+              "program": "als",
+              "conditions": ["amyotrophic lateral sclerosis"]
+            }
+          }
+        ]
+      },
+      "expected": {
+        "programs": ["als"],
+        "pow_conditions": []
+      }
+    },
+    {
+      "id": "alias-chart-names-collapse",
+      "domain": "alias",
+      "source_fixture": "tests/test_case_builder.py",
+      "input": {
+        "names": ["CFS", "chronic fatigue", "ME/CFS", "PTSD", "post traumatic stress disorder"],
+        "documents": [
+          {
+            "id": "d1",
+            "mentions": [
+              {"name": "CFS"},
+              {"name": "chronic fatigue"},
+              {"name": "ME/CFS"}
+            ]
+          },
+          {
+            "id": "d2",
+            "mentions": [
+              {"name": "PTSD"},
+              {"name": "post traumatic stress disorder"}
+            ]
+          }
+        ]
+      },
+      "expected": {
+        "keys": ["chronic fatigue syndrome me/cfs", "ptsd"],
+        "groups": [
+          {"alias_count": 3, "count": 3, "name": "Chronic Fatigue Syndrome (ME/CFS)"},
+          {"alias_count": 2, "count": 2, "name": "PTSD"}
+        ]
+      }
+    }
+  ]
+}

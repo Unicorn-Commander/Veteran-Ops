@@ -1,0 +1,56 @@
+[
+  {
+    "card_type": "process",
+    "title": "Discharge Review Board (DRB) — upgrade within 15 years",
+    "body_system": "corrections",
+    "diagnostic_code": null,
+    "source": "10 U.S.C. §1553; DD Form 293; DoDI 1332.28",
+    "content": "Each service's Discharge Review Board can UPGRADE a discharge characterization (e.g., General or Other-Than-Honorable → Honorable) and change the narrative reason for separation, on application (DD Form 293) filed within 15 YEARS of separation. The DRB reviews for 'propriety' (was the discharge legally/procedurally correct?) and 'equity' (was it fair, given your whole record and what's known now?). It CANNOT touch discharges from a general court-martial, medical retirements, or reinstate you — those go to the BCMR/BCNR. You may request a records-only review or a personal appearance hearing (appearance boards historically grant at higher rates). Free help: VSOs, state veterans offices, and law-school veterans clinics handle DRB applications at no charge.",
+    "data": {"order": 1, "form": "DD Form 293", "window_years": 15}
+  },
+  {
+    "card_type": "process",
+    "title": "Board for Correction of Military Records (BCMR/BCNR) — the catch-all",
+    "body_system": "corrections",
+    "diagnostic_code": null,
+    "source": "10 U.S.C. §1552; DD Form 149; 32 CFR (per-service board rules)",
+    "content": "Each military department's Board for Correction of Military/Naval Records can correct ANY military record to fix an 'error or injustice': discharge upgrades beyond the DRB's 15-year window or after a DRB denial, general court-martial discharge characterizations, narrative reasons and reenlistment (RE) codes, rank/grade at separation, awards and decorations, performance records, and MEDICAL separation vs. retirement determinations. Apply on DD Form 149, nominally within 3 years of discovering the error — but boards routinely waive that 'in the interest of justice,' so a stale clock alone should never stop you. Attach everything: personal statement, service records, medical evidence, buddy statements. Relief granted here issues as a corrected record (see the DD-215 card). This is also where you challenge an incorrect separation the DRB can't reach.",
+    "data": {"order": 2, "form": "DD Form 149"}
+  },
+  {
+    "card_type": "process",
+    "title": "Liberal consideration — PTSD, TBI, and MST discharge upgrades",
+    "body_system": "corrections",
+    "diagnostic_code": null,
+    "source": "Hagel memo (2014), Carson memo (2016), Kurta memo (2017), Wilkie memo (2018); 10 U.S.C. §1552(h), §1553(d)",
+    "content": "If your discharge was connected to PTSD, TBI, mental-health conditions, or military sexual trauma (MST) that weren't recognized at the time, review boards are REQUIRED to apply 'liberal consideration' to your upgrade request — codified in statute and DoD guidance. The four Kurta questions frame it: Did you have a condition/experience? Did it exist during service? Does it excuse or mitigate the discharge basis? Does it outweigh the misconduct? Evidence can include post-service diagnoses, VA records, and lay statements — a contemporaneous in-service diagnosis is NOT required. The Wilkie memo adds equity/clemency factors (age, combat, time passed, post-service conduct). Misconduct that today reads as symptoms — going AWOL after trauma, self-medication, insubordination during a mental-health crisis — is exactly what these memos exist to revisit.",
+    "data": {"order": 3}
+  },
+  {
+    "card_type": "process",
+    "title": "Why discharge character matters for VA benefits",
+    "body_system": "corrections",
+    "diagnostic_code": null,
+    "source": "38 CFR §3.12 (character of discharge); 38 CFR §3.360 (health care eligibility); VAOPGCPREC guidance",
+    "content": "VA benefits generally require a discharge 'under conditions other than dishonorable.' An Other-Than-Honorable discharge triggers a VA character-of-discharge determination that can BAR compensation — but the bar is not automatic, and insanity/compelling-circumstances exceptions exist. Even with an OTH, veterans can often access VA mental health care (38 CFR §3.360 tentative eligibility, and VA's OTH emergent mental-health policy). A successful DRB/BCMR upgrade removes the bar entirely and the veteran can then file (or refile) VA claims with the corrected character — which is why a records correction is sometimes the FIRST move in a benefits strategy. Discuss sequencing with an accredited VSO or a veterans law clinic.",
+    "data": {"order": 4}
+  },
+  {
+    "card_type": "process",
+    "title": "PDBR — medical separations rated 20% or less (2001–2009)",
+    "body_system": "corrections",
+    "diagnostic_code": null,
+    "source": "10 U.S.C. §1554a; DD Form 294; DoDI 6040.44",
+    "content": "The Physical Disability Board of Review re-examines DoD disability ratings for service members MEDICALLY SEPARATED (not retired) between Sept 11, 2001 and Dec 31, 2009 with a combined DoD rating of 20% or less. If the PDBR raises the rating to 30%+, the separation converts to a medical RETIREMENT — retroactively — with retiree benefits (TRICARE, retired pay offset rules). Apply on DD Form 294; the board uses the VA schedule (38 CFR Part 4) and cannot LOWER your existing rating, so there is no rating downside to applying. Veterans medically separated in that window who later got higher VA ratings for the same conditions are prime candidates.",
+    "data": {"order": 5, "form": "DD Form 294"}
+  },
+  {
+    "card_type": "process",
+    "title": "DD-215 and what happens after a correction is granted",
+    "body_system": "corrections",
+    "diagnostic_code": null,
+    "source": "DoD 7000.14-R (retro pay); NPRC records procedures; DD Form 215",
+    "content": "When a board grants relief, the correction issues as a DD Form 215 (correction to DD-214) or a reissued DD-214, and the service corrects the underlying record. Follow-through matters: send the corrected DD-214/DD-215 to the VA with any claims affected by the old record; corrections that change retirement status or pay route through DFAS for retroactive pay; update your state veterans department (state benefits often key off discharge character too). Keep certified copies. If the board granted partial relief or denied, you can usually request reconsideration with NEW evidence, or escalate BCMR denials to federal court — that step needs a lawyer (veterans clinics and pro-bono programs exist).",
+    "data": {"order": 6, "form": "DD Form 215"}
+  }
+]

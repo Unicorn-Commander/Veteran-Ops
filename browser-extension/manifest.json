@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Rating Raider — VA Connect",
+  "version": "0.1.0",
+  "description": "Read-only helper: while you are logged into VA.gov viewing your own disability ratings/claims, click to send that data to Rating Raider. No VA API, no credentials, user-initiated only.",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_title": "Rating Raider — VA Connect",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://*.va.gov/*"
+  ]
+}

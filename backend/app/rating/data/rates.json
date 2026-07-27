@@ -1,0 +1,1651 @@
+{
+ "rate_years": {
+  "2018": {
+   "added": {
+    "100": {
+     "child_over_18_school": "266.13",
+     "child_under_18": "82.38",
+     "spouse_aa": "152.06"
+    },
+    "30": {
+     "child_over_18_school": "79.00",
+     "child_under_18": "24.00",
+     "spouse_aa": "46.00"
+    },
+    "40": {
+     "child_over_18_school": "106.00",
+     "child_under_18": "32.00",
+     "spouse_aa": "61.00"
+    },
+    "50": {
+     "child_over_18_school": "133.00",
+     "child_under_18": "41.00",
+     "spouse_aa": "76.00"
+    },
+    "60": {
+     "child_over_18_school": "159.00",
+     "child_under_18": "49.00",
+     "spouse_aa": "91.00"
+    },
+    "70": {
+     "child_over_18_school": "186.00",
+     "child_under_18": "57.00",
+     "spouse_aa": "106.00"
+    },
+    "80": {
+     "child_over_18_school": "212.00",
+     "child_under_18": "65.00",
+     "spouse_aa": "122.00"
+    },
+    "90": {
+     "child_over_18_school": "239.00",
+     "child_under_18": "74.00",
+     "spouse_aa": "137.00"
+    }
+   },
+   "base_no_children": {
+    "100": {
+     "alone": "2973.86",
+     "one_parent": "3106.92",
+     "spouse": "3139.67",
+     "spouse_1_parent": "3272.73",
+     "spouse_2_parents": "3405.79",
+     "two_parents": "3239.98"
+    },
+    "30": {
+     "alone": "417.15",
+     "one_parent": "456.15",
+     "spouse": "466.15",
+     "spouse_1_parent": "505.15",
+     "spouse_2_parents": "544.15",
+     "two_parents": "495.15"
+    },
+    "40": {
+     "alone": "600.90",
+     "one_parent": "653.90",
+     "spouse": "666.90",
+     "spouse_1_parent": "719.90",
+     "spouse_2_parents": "772.90",
+     "two_parents": "706.90"
+    },
+    "50": {
+     "alone": "855.41",
+     "one_parent": "921.41",
+     "spouse": "937.41",
+     "spouse_1_parent": "1003.41",
+     "spouse_2_parents": "1069.41",
+     "two_parents": "987.41"
+    },
+    "60": {
+     "alone": "1083.52",
+     "one_parent": "1162.52",
+     "spouse": "1182.52",
+     "spouse_1_parent": "1261.52",
+     "spouse_2_parents": "1340.52",
+     "two_parents": "1241.52"
+    },
+    "70": {
+     "alone": "1365.48",
+     "one_parent": "1458.48",
+     "spouse": "1481.48",
+     "spouse_1_parent": "1574.48",
+     "spouse_2_parents": "1667.48",
+     "two_parents": "1551.48"
+    },
+    "80": {
+     "alone": "1587.25",
+     "one_parent": "1693.25",
+     "spouse": "1719.25",
+     "spouse_1_parent": "1825.25",
+     "spouse_2_parents": "1931.25",
+     "two_parents": "1799.25"
+    },
+    "90": {
+     "alone": "1783.68",
+     "one_parent": "1902.68",
+     "spouse": "1932.68",
+     "spouse_1_parent": "2051.68",
+     "spouse_2_parents": "2170.68",
+     "two_parents": "2021.68"
+    }
+   },
+   "base_with_1_child": {
+    "100": {
+     "alone": "3084.75",
+     "one_parent": "3217.81",
+     "spouse": "3261.10",
+     "spouse_1_parent": "3394.16",
+     "spouse_2_parents": "3527.22",
+     "two_parents": "3350.87"
+    },
+    "30": {
+     "alone": "450.15",
+     "one_parent": "489.15",
+     "spouse": "503.15",
+     "spouse_1_parent": "542.15",
+     "spouse_2_parents": "581.15",
+     "two_parents": "528.15"
+    },
+    "40": {
+     "alone": "644.90",
+     "one_parent": "697.90",
+     "spouse": "714.90",
+     "spouse_1_parent": "767.90",
+     "spouse_2_parents": "820.90",
+     "two_parents": "750.90"
+    },
+    "50": {
+     "alone": "910.41",
+     "one_parent": "976.41",
+     "spouse": "998.41",
+     "spouse_1_parent": "1064.41",
+     "spouse_2_parents": "1130.41",
+     "two_parents": "1042.41"
+    },
+    "60": {
+     "alone": "1149.52",
+     "one_parent": "1228.52",
+     "spouse": "1255.52",
+     "spouse_1_parent": "1334.52",
+     "spouse_2_parents": "1413.52",
+     "two_parents": "1307.52"
+    },
+    "70": {
+     "alone": "1442.48",
+     "one_parent": "1535.48",
+     "spouse": "1566.48",
+     "spouse_1_parent": "1659.48",
+     "spouse_2_parents": "1752.48",
+     "two_parents": "1628.48"
+    },
+    "80": {
+     "alone": "1675.25",
+     "one_parent": "1781.25",
+     "spouse": "1816.25",
+     "spouse_1_parent": "1922.25",
+     "spouse_2_parents": "2028.25",
+     "two_parents": "1887.25"
+    },
+    "90": {
+     "alone": "1882.68",
+     "one_parent": "2001.68",
+     "spouse": "2041.68",
+     "spouse_1_parent": "2160.68",
+     "spouse_2_parents": "2279.68",
+     "two_parents": "2120.68"
+    }
+   },
+   "effective_date": "2017-12-01",
+   "fetched": "2026-07-05",
+   "flat": {
+    "10": "136.24",
+    "20": "269.30"
+   },
+   "source_url": "https://www.va.gov/disability/compensation-rates/veteran-rates/past-rates-2018/"
+  },
+  "2019": {
+   "added": {
+    "100": {
+     "child_over_18_school": "273.58",
+     "child_under_18": "84.69",
+     "spouse_aa": "156.32"
+    },
+    "30": {
+     "child_over_18_school": "82.00",
+     "child_under_18": "25.00",
+     "spouse_aa": "47.00"
+    },
+    "40": {
+     "child_over_18_school": "109.00",
+     "child_under_18": "33.00",
+     "spouse_aa": "62.00"
+    },
+    "50": {
+     "child_over_18_school": "136.00",
+     "child_under_18": "42.00",
+     "spouse_aa": "78.00"
+    },
+    "60": {
+     "child_over_18_school": "164.00",
+     "child_under_18": "50.00",
+     "spouse_aa": "94.00"
+    },
+    "70": {
+     "child_over_18_school": "191.00",
+     "child_under_18": "59.00",
+     "spouse_aa": "109.00"
+    },
+    "80": {
+     "child_over_18_school": "218.00",
+     "child_under_18": "67.00",
+     "spouse_aa": "125.00"
+    },
+    "90": {
+     "child_over_18_school": "246.00",
+     "child_under_18": "76.00",
+     "spouse_aa": "141.00"
+    }
+   },
+   "base_no_children": {
+    "100": {
+     "alone": "3057.13",
+     "one_parent": "3193.92",
+     "spouse": "3227.58",
+     "spouse_1_parent": "3364.37",
+     "spouse_2_parents": "3501.16",
+     "two_parents": "3330.71"
+    },
+    "30": {
+     "alone": "428.83",
+     "one_parent": "469.83",
+     "spouse": "479.83",
+     "spouse_1_parent": "520.83",
+     "spouse_2_parents": "561.83",
+     "two_parents": "510.83"
+    },
+    "40": {
+     "alone": "617.73",
+     "one_parent": "671.73",
+     "spouse": "685.73",
+     "spouse_1_parent": "739.73",
+     "spouse_2_parents": "793.73",
+     "two_parents": "725.73"
+    },
+    "50": {
+     "alone": "879.36",
+     "one_parent": "947.36",
+     "spouse": "964.36",
+     "spouse_1_parent": "1032.36",
+     "spouse_2_parents": "1100.36",
+     "two_parents": "1015.36"
+    },
+    "60": {
+     "alone": "1113.86",
+     "one_parent": "1195.86",
+     "spouse": "1215.86",
+     "spouse_1_parent": "1297.86",
+     "spouse_2_parents": "1379.86",
+     "two_parents": "1277.86"
+    },
+    "70": {
+     "alone": "1403.71",
+     "one_parent": "1498.71",
+     "spouse": "1522.71",
+     "spouse_1_parent": "1617.71",
+     "spouse_2_parents": "1712.71",
+     "two_parents": "1593.71"
+    },
+    "80": {
+     "alone": "1631.69",
+     "one_parent": "1740.69",
+     "spouse": "1767.69",
+     "spouse_1_parent": "1876.69",
+     "spouse_2_parents": "1985.69",
+     "two_parents": "1849.69"
+    },
+    "90": {
+     "alone": "1833.62",
+     "one_parent": "1956.62",
+     "spouse": "1986.62",
+     "spouse_1_parent": "2109.62",
+     "spouse_2_parents": "2232.62",
+     "two_parents": "2079.62"
+    }
+   },
+   "base_with_1_child": {
+    "100": {
+     "alone": "3171.12",
+     "one_parent": "3444.70",
+     "spouse": "3352.41",
+     "spouse_1_parent": "3489.20",
+     "spouse_2_parents": "3625.99",
+     "two_parents": "3330.71"
+    },
+    "30": {
+     "alone": "462.83",
+     "one_parent": "503.83",
+     "spouse": "516.83",
+     "spouse_1_parent": "557.83",
+     "spouse_2_parents": "598.83",
+     "two_parents": "544.83"
+    },
+    "40": {
+     "alone": "662.73",
+     "one_parent": "716.73",
+     "spouse": "735.73",
+     "spouse_1_parent": "789.73",
+     "spouse_2_parents": "843.73",
+     "two_parents": "770.73"
+    },
+    "50": {
+     "alone": "935.36",
+     "one_parent": "1003.36",
+     "spouse": "1026.36",
+     "spouse_1_parent": "1094.36",
+     "spouse_2_parents": "1162.36",
+     "two_parents": "1071.36"
+    },
+    "60": {
+     "alone": "1181.86",
+     "one_parent": "1263.86",
+     "spouse": "1290.86",
+     "spouse_1_parent": "1372.86",
+     "spouse_2_parents": "1454.86",
+     "two_parents": "1345.86"
+    },
+    "70": {
+     "alone": "1482.71",
+     "one_parent": "1577.71",
+     "spouse": "1609.71",
+     "spouse_1_parent": "1704.71",
+     "spouse_2_parents": "1799.71",
+     "two_parents": "1672.71"
+    },
+    "80": {
+     "alone": "1722.69",
+     "one_parent": "1940.69",
+     "spouse": "1867.69",
+     "spouse_1_parent": "1976.69",
+     "spouse_2_parents": "2085.69",
+     "two_parents": "1849.69"
+    },
+    "90": {
+     "alone": "1935.62",
+     "one_parent": "2181.62",
+     "spouse": "2098.62",
+     "spouse_1_parent": "2221.62",
+     "spouse_2_parents": "2344.62",
+     "two_parents": "2079.62"
+    }
+   },
+   "effective_date": "2018-12-01",
+   "fetched": "2026-07-05",
+   "flat": {
+    "10": "140.05",
+    "20": "276.84"
+   },
+   "source_url": "https://www.va.gov/disability/compensation-rates/veteran-rates/past-rates-2019/"
+  },
+  "2020": {
+   "added": {
+    "100": {
+     "child_over_18_school": "277.96",
+     "child_under_18": "86.05",
+     "spouse_aa": "158.82"
+    },
+    "30": {
+     "child_over_18_school": "83.00",
+     "child_under_18": "25.00",
+     "spouse_aa": "48.00"
+    },
+    "40": {
+     "child_over_18_school": "111.00",
+     "child_under_18": "34.00",
+     "spouse_aa": "63.00"
+    },
+    "50": {
+     "child_over_18_school": "138.00",
+     "child_under_18": "43.00",
+     "spouse_aa": "80.00"
+    },
+    "60": {
+     "child_over_18_school": "166.00",
+     "child_under_18": "51.00",
+     "spouse_aa": "96.00"
+    },
+    "70": {
+     "child_over_18_school": "194.00",
+     "child_under_18": "60.00",
+     "spouse_aa": "111.00"
+    },
+    "80": {
+     "child_over_18_school": "222.00",
+     "child_under_18": "68.00",
+     "spouse_aa": "127.00"
+    },
+    "90": {
+     "child_over_18_school": "250.00",
+     "child_under_18": "77.00",
+     "spouse_aa": "143.00"
+    }
+   },
+   "base_no_children": {
+    "100": {
+     "alone": "3106.04",
+     "one_parent": "3245.02",
+     "spouse": "3279.22",
+     "spouse_1_parent": "3418.20",
+     "spouse_2_parents": "3557.18",
+     "two_parents": "3384.00"
+    },
+    "30": {
+     "alone": "435.69",
+     "one_parent": "476.69",
+     "spouse": "486.69",
+     "spouse_1_parent": "527.69",
+     "spouse_2_parents": "568.69",
+     "two_parents": "517.69"
+    },
+    "40": {
+     "alone": "627.61",
+     "one_parent": "682.61",
+     "spouse": "696.61",
+     "spouse_1_parent": "751.61",
+     "spouse_2_parents": "806.61",
+     "two_parents": "737.61"
+    },
+    "50": {
+     "alone": "893.43",
+     "one_parent": "962.43",
+     "spouse": "979.43",
+     "spouse_1_parent": "1048.43",
+     "spouse_2_parents": "1117.43",
+     "two_parents": "1031.43"
+    },
+    "60": {
+     "alone": "1131.68",
+     "one_parent": "1214.68",
+     "spouse": "1234.68",
+     "spouse_1_parent": "1317.68",
+     "spouse_2_parents": "1400.68",
+     "two_parents": "1297.68"
+    },
+    "70": {
+     "alone": "1426.17",
+     "one_parent": "1523.17",
+     "spouse": "1547.17",
+     "spouse_1_parent": "1644.17",
+     "spouse_2_parents": "1741.17",
+     "two_parents": "1620.17"
+    },
+    "80": {
+     "alone": "1657.80",
+     "one_parent": "1768.80",
+     "spouse": "1795.80",
+     "spouse_1_parent": "1906.80",
+     "spouse_2_parents": "2017.80",
+     "two_parents": "1879.80"
+    },
+    "90": {
+     "alone": "1862.96",
+     "one_parent": "1987.96",
+     "spouse": "2017.96",
+     "spouse_1_parent": "2142.96",
+     "spouse_2_parents": "2267.96",
+     "two_parents": "2112.96"
+    }
+   },
+   "base_with_1_child": {
+    "100": {
+     "alone": "3221.85",
+     "one_parent": "3360.83",
+     "spouse": "3406.04",
+     "spouse_1_parent": "3545.02",
+     "spouse_2_parents": "3684.00",
+     "two_parents": "3499.81"
+    },
+    "30": {
+     "alone": "469.69",
+     "one_parent": "510.69",
+     "spouse": "525.69",
+     "spouse_1_parent": "566.69",
+     "spouse_2_parents": "607.69",
+     "two_parents": "551.69"
+    },
+    "40": {
+     "alone": "673.61",
+     "one_parent": "728.61",
+     "spouse": "747.61",
+     "spouse_1_parent": "802.61",
+     "spouse_2_parents": "857.61",
+     "two_parents": "783.61"
+    },
+    "50": {
+     "alone": "950.43",
+     "one_parent": "1019.43",
+     "spouse": "1043.43",
+     "spouse_1_parent": "1112.43",
+     "spouse_2_parents": "1181.43",
+     "two_parents": "1088.43"
+    },
+    "60": {
+     "alone": "1200.68",
+     "one_parent": "1283.68",
+     "spouse": "1311.68",
+     "spouse_1_parent": "1394.68",
+     "spouse_2_parents": "1477.68",
+     "two_parents": "1366.68"
+    },
+    "70": {
+     "alone": "1507.17",
+     "one_parent": "1604.17",
+     "spouse": "1636.17",
+     "spouse_1_parent": "1733.17",
+     "spouse_2_parents": "1830.17",
+     "two_parents": "1701.17"
+    },
+    "80": {
+     "alone": "1749.80",
+     "one_parent": "1860.80",
+     "spouse": "1897.80",
+     "spouse_1_parent": "2008.80",
+     "spouse_2_parents": "2119.80",
+     "two_parents": "1971.80"
+    },
+    "90": {
+     "alone": "1966.96",
+     "one_parent": "2091.96",
+     "spouse": "2132.96",
+     "spouse_1_parent": "2257.96",
+     "spouse_2_parents": "2382.96",
+     "two_parents": "2216.96"
+    }
+   },
+   "effective_date": "2019-12-01",
+   "fetched": "2026-07-05",
+   "flat": {
+    "10": "142.29",
+    "20": "281.27"
+   },
+   "source_url": "https://www.va.gov/disability/compensation-rates/veteran-rates/past-rates-2020/"
+  },
+  "2021": {
+   "added": {
+    "100": {
+     "child_over_18_school": "281.57",
+     "child_under_18": "87.17",
+     "spouse_aa": "160.89"
+    },
+    "30": {
+     "child_over_18_school": "84.00",
+     "child_under_18": "26.00",
+     "spouse_aa": "48.00"
+    },
+    "40": {
+     "child_over_18_school": "112.00",
+     "child_under_18": "34.00",
+     "spouse_aa": "64.00"
+    },
+    "50": {
+     "child_over_18_school": "140.00",
+     "child_under_18": "43.00",
+     "spouse_aa": "81.00"
+    },
+    "60": {
+     "child_over_18_school": "168.00",
+     "child_under_18": "52.00",
+     "spouse_aa": "96.00"
+    },
+    "70": {
+     "child_over_18_school": "197.00",
+     "child_under_18": "61.00",
+     "spouse_aa": "113.00"
+    },
+    "80": {
+     "child_over_18_school": "225.00",
+     "child_under_18": "69.00",
+     "spouse_aa": "129.00"
+    },
+    "90": {
+     "child_over_18_school": "253.00",
+     "child_under_18": "78.00",
+     "spouse_aa": "145.00"
+    }
+   },
+   "base_no_children": {
+    "100": {
+     "alone": "3146.42",
+     "one_parent": "3287.21",
+     "spouse": "3321.85",
+     "spouse_1_parent": "3462.64",
+     "spouse_2_parents": "3603.43",
+     "two_parents": "3428.00"
+    },
+    "30": {
+     "alone": "441.35",
+     "one_parent": "483.35",
+     "spouse": "493.35",
+     "spouse_1_parent": "535.35",
+     "spouse_2_parents": "577.35",
+     "two_parents": "525.35"
+    },
+    "40": {
+     "alone": "635.77",
+     "one_parent": "691.77",
+     "spouse": "705.77",
+     "spouse_1_parent": "761.77",
+     "spouse_2_parents": "817.77",
+     "two_parents": "747.77"
+    },
+    "50": {
+     "alone": "905.04",
+     "one_parent": "975.04",
+     "spouse": "992.04",
+     "spouse_1_parent": "1062.04",
+     "spouse_2_parents": "1132.04",
+     "two_parents": "1045.04"
+    },
+    "60": {
+     "alone": "1146.39",
+     "one_parent": "1230.39",
+     "spouse": "1251.39",
+     "spouse_1_parent": "1335.39",
+     "spouse_2_parents": "1419.39",
+     "two_parents": "1314.39"
+    },
+    "70": {
+     "alone": "1444.71",
+     "one_parent": "1542.71",
+     "spouse": "1566.71",
+     "spouse_1_parent": "1664.71",
+     "spouse_2_parents": "1762.71",
+     "two_parents": "1640.71"
+    },
+    "80": {
+     "alone": "1679.35",
+     "one_parent": "1791.35",
+     "spouse": "1819.35",
+     "spouse_1_parent": "1931.35",
+     "spouse_2_parents": "2043.45",
+     "two_parents": "1903.35"
+    },
+    "90": {
+     "alone": "1887.18",
+     "one_parent": "2013.18",
+     "spouse": "2044.18",
+     "spouse_1_parent": "2170.18",
+     "spouse_2_parents": "2296.18",
+     "two_parents": "2139.18"
+    }
+   },
+   "base_with_1_child": {
+    "100": {
+     "alone": "3263.74",
+     "one_parent": "3404.53",
+     "spouse": "3450.32",
+     "spouse_1_parent": "3591.11",
+     "spouse_2_parents": "3731.90",
+     "two_parents": "3545.32"
+    },
+    "30": {
+     "alone": "476.35",
+     "one_parent": "518.35",
+     "spouse": "532.35",
+     "spouse_1_parent": "574.35",
+     "spouse_2_parents": "616.35",
+     "two_parents": "560.35"
+    },
+    "40": {
+     "alone": "681.77",
+     "one_parent": "737.77",
+     "spouse": "756.77",
+     "spouse_1_parent": "812.77",
+     "spouse_2_parents": "868.77",
+     "two_parents": "793.77"
+    },
+    "50": {
+     "alone": "963.04",
+     "one_parent": "1033.04",
+     "spouse": "1056.04",
+     "spouse_1_parent": "1126.04",
+     "spouse_2_parents": "1196.04",
+     "two_parents": "1103.04"
+    },
+    "60": {
+     "alone": "1216.39",
+     "one_parent": "1300.39",
+     "spouse": "1328.39",
+     "spouse_1_parent": "1412.39",
+     "spouse_2_parents": "1496.39",
+     "two_parents": "1384.39"
+    },
+    "70": {
+     "alone": "1526.71",
+     "one_parent": "1624.71",
+     "spouse": "1656.71",
+     "spouse_1_parent": "1754.71",
+     "spouse_2_parents": "1852.71",
+     "two_parents": "1722.71"
+    },
+    "80": {
+     "alone": "1772.35",
+     "one_parent": "1884.35",
+     "spouse": "1922.35",
+     "spouse_1_parent": "2034.35",
+     "spouse_2_parents": "2146.35",
+     "two_parents": "1996.35"
+    },
+    "90": {
+     "alone": "1992.18",
+     "one_parent": "2118.18",
+     "spouse": "2160.18",
+     "spouse_1_parent": "2286.18",
+     "spouse_2_parents": "2412.18",
+     "two_parents": "2244.18"
+    }
+   },
+   "effective_date": "2020-12-01",
+   "fetched": "2026-07-05",
+   "flat": {
+    "10": "144.14",
+    "20": "284.93"
+   },
+   "source_url": "https://www.va.gov/disability/compensation-rates/veteran-rates/past-rates-2021/"
+  },
+  "2022": {
+   "added": {
+    "100": {
+     "child_over_18_school": "298.18",
+     "child_under_18": "92.31",
+     "spouse_aa": "170.38"
+    },
+    "30": {
+     "child_over_18_school": "89.00",
+     "child_under_18": "27.00",
+     "spouse_aa": "51.00"
+    },
+    "40": {
+     "child_over_18_school": "119.00",
+     "child_under_18": "36.00",
+     "spouse_aa": "68.00"
+    },
+    "50": {
+     "child_over_18_school": "149.00",
+     "child_under_18": "46.00",
+     "spouse_aa": "86.00"
+    },
+    "60": {
+     "child_over_18_school": "178.00",
+     "child_under_18": "55.00",
+     "spouse_aa": "102.00"
+    },
+    "70": {
+     "child_over_18_school": "208.00",
+     "child_under_18": "64.00",
+     "spouse_aa": "119.00"
+    },
+    "80": {
+     "child_over_18_school": "238.00",
+     "child_under_18": "73.00",
+     "spouse_aa": "136.00"
+    },
+    "90": {
+     "child_over_18_school": "268.00",
+     "child_under_18": "83.00",
+     "spouse_aa": "153.00"
+    }
+   },
+   "base_no_children": {
+    "100": {
+     "alone": "3332.06",
+     "one_parent": "3481.16",
+     "spouse": "3517.84",
+     "spouse_1_parent": "3666.94",
+     "spouse_2_parents": "3816.04",
+     "two_parents": "3630.26"
+    },
+    "30": {
+     "alone": "467.39",
+     "one_parent": "511.39",
+     "spouse": "522.39",
+     "spouse_1_parent": "566.39",
+     "spouse_2_parents": "610.39",
+     "two_parents": "555.39"
+    },
+    "40": {
+     "alone": "673.28",
+     "one_parent": "732.28",
+     "spouse": "747.28",
+     "spouse_1_parent": "806.28",
+     "spouse_2_parents": "865.28",
+     "two_parents": "791.28"
+    },
+    "50": {
+     "alone": "958.44",
+     "one_parent": "1032.44",
+     "spouse": "1050.44",
+     "spouse_1_parent": "1124.44",
+     "spouse_2_parents": "1198.44",
+     "two_parents": "1106.44"
+    },
+    "60": {
+     "alone": "1214.03",
+     "one_parent": "1303.03",
+     "spouse": "1325.03",
+     "spouse_1_parent": "1414.03",
+     "spouse_2_parents": "1503.03",
+     "two_parents": "1392.03"
+    },
+    "70": {
+     "alone": "1529.95",
+     "one_parent": "1633.95",
+     "spouse": "1659.95",
+     "spouse_1_parent": "1763.95",
+     "spouse_2_parents": "1867.95",
+     "two_parents": "1737.95"
+    },
+    "80": {
+     "alone": "1778.43",
+     "one_parent": "1897.43",
+     "spouse": "1926.43",
+     "spouse_1_parent": "2045.43",
+     "spouse_2_parents": "2164.43",
+     "two_parents": "2016.43"
+    },
+    "90": {
+     "alone": "1998.52",
+     "one_parent": "2132.52",
+     "spouse": "2165.52",
+     "spouse_1_parent": "2299.52",
+     "spouse_2_parents": "2433.52",
+     "two_parents": "2266.52"
+    }
+   },
+   "base_with_1_child": {
+    "100": {
+     "alone": "3456.30",
+     "one_parent": "3605.40",
+     "spouse": "3653.89",
+     "spouse_1_parent": "3802.99",
+     "spouse_2_parents": "3952.09",
+     "two_parents": "3754.50"
+    },
+    "30": {
+     "alone": "504.39",
+     "one_parent": "548.39",
+     "spouse": "563.39",
+     "spouse_1_parent": "607.39",
+     "spouse_2_parents": "651.39",
+     "two_parents": "592.39"
+    },
+    "40": {
+     "alone": "722.28",
+     "one_parent": "781.28",
+     "spouse": "801.28",
+     "spouse_1_parent": "860.28",
+     "spouse_2_parents": "919.28",
+     "two_parents": "840.28"
+    },
+    "50": {
+     "alone": "1020.44",
+     "one_parent": "1094.44",
+     "spouse": "1118.44",
+     "spouse_1_parent": "1192.44",
+     "spouse_2_parents": "1266.44",
+     "two_parents": "1168.44"
+    },
+    "60": {
+     "alone": "1288.03",
+     "one_parent": "1377.03",
+     "spouse": "1407.03",
+     "spouse_1_parent": "1496.03",
+     "spouse_2_parents": "1585.03",
+     "two_parents": "1466.03"
+    },
+    "70": {
+     "alone": "1615.95",
+     "one_parent": "1719.95",
+     "spouse": "1754.95",
+     "spouse_1_parent": "1858.95",
+     "spouse_2_parents": "1962.95",
+     "two_parents": "1823.95"
+    },
+    "80": {
+     "alone": "1877.43",
+     "one_parent": "1996.43",
+     "spouse": "2035.43",
+     "spouse_1_parent": "2154.43",
+     "spouse_2_parents": "2273.43",
+     "two_parents": "2115.43"
+    },
+    "90": {
+     "alone": "2109.52",
+     "one_parent": "2243.52",
+     "spouse": "2287.52",
+     "spouse_1_parent": "2421.52",
+     "spouse_2_parents": "2555.52",
+     "two_parents": "2377.52"
+    }
+   },
+   "effective_date": "2021-12-01",
+   "fetched": "2026-07-05",
+   "flat": {
+    "10": "152.64",
+    "20": "301.74"
+   },
+   "source_url": "https://www.va.gov/disability/compensation-rates/veteran-rates/past-rates-2022/"
+  },
+  "2023": {
+   "added": {
+    "100": {
+     "child_over_18_school": "324.12",
+     "child_under_18": "100.34",
+     "spouse_aa": "185.21"
+    },
+    "30": {
+     "child_over_18_school": "97.00",
+     "child_under_18": "30.00",
+     "spouse_aa": "56.00"
+    },
+    "40": {
+     "child_over_18_school": "129.00",
+     "child_under_18": "40.00",
+     "spouse_aa": "74.00"
+    },
+    "50": {
+     "child_over_18_school": "162.00",
+     "child_under_18": "50.00",
+     "spouse_aa": "93.00"
+    },
+    "60": {
+     "child_over_18_school": "194.00",
+     "child_under_18": "60.00",
+     "spouse_aa": "111.00"
+    },
+    "70": {
+     "child_over_18_school": "226.00",
+     "child_under_18": "70.00",
+     "spouse_aa": "130.00"
+    },
+    "80": {
+     "child_over_18_school": "259.00",
+     "child_under_18": "80.00",
+     "spouse_aa": "148.00"
+    },
+    "90": {
+     "child_over_18_school": "291.00",
+     "child_under_18": "90.00",
+     "spouse_aa": "167.00"
+    }
+   },
+   "base_no_children": {
+    "100": {
+     "alone": "3621.95",
+     "one_parent": "3784.02",
+     "spouse": "3823.89",
+     "spouse_1_parent": "3985.96",
+     "spouse_2_parents": "4148.03",
+     "two_parents": "3946.09"
+    },
+    "30": {
+     "alone": "508.05",
+     "one_parent": "556.05",
+     "spouse": "568.05",
+     "spouse_1_parent": "616.05",
+     "spouse_2_parents": "664.05",
+     "two_parents": "604.05"
+    },
+    "40": {
+     "alone": "731.86",
+     "one_parent": "795.86",
+     "spouse": "811.86",
+     "spouse_1_parent": "875.86",
+     "spouse_2_parents": "939.86",
+     "two_parents": "859.86"
+    },
+    "50": {
+     "alone": "1041.82",
+     "one_parent": "1122.82",
+     "spouse": "1141.82",
+     "spouse_1_parent": "1222.82",
+     "spouse_2_parents": "1303.82",
+     "two_parents": "1203.82"
+    },
+    "60": {
+     "alone": "1319.65",
+     "one_parent": "1416.65",
+     "spouse": "1440.65",
+     "spouse_1_parent": "1537.65",
+     "spouse_2_parents": "1634.65",
+     "two_parents": "1513.65"
+    },
+    "70": {
+     "alone": "1663.06",
+     "one_parent": "1776.06",
+     "spouse": "1804.06",
+     "spouse_1_parent": "1917.06",
+     "spouse_2_parents": "2030.06",
+     "two_parents": "1889.06"
+    },
+    "80": {
+     "alone": "1933.15",
+     "one_parent": "2062.15",
+     "spouse": "2094.15",
+     "spouse_1_parent": "2223.15",
+     "spouse_2_parents": "2353.15",
+     "two_parents": "2191.15"
+    },
+    "90": {
+     "alone": "2172.39",
+     "one_parent": "2317.39",
+     "spouse": "2353.39",
+     "spouse_1_parent": "2498.39",
+     "spouse_2_parents": "2643.39",
+     "two_parents": "2462.39"
+    }
+   },
+   "base_with_1_child": {
+    "100": {
+     "alone": "3757.00",
+     "one_parent": "3919.07",
+     "spouse": "3971.78",
+     "spouse_1_parent": "4133.85",
+     "spouse_2_parents": "4295.92",
+     "two_parents": "4081.14"
+    },
+    "30": {
+     "alone": "548.05",
+     "one_parent": "596.05",
+     "spouse": "612.05",
+     "spouse_1_parent": "660.05",
+     "spouse_2_parents": "708.05",
+     "two_parents": "644.05"
+    },
+    "40": {
+     "alone": "785.86",
+     "one_parent": "849.86",
+     "spouse": "870.86",
+     "spouse_1_parent": "934.86",
+     "spouse_2_parents": "998.86",
+     "two_parents": "913.86"
+    },
+    "50": {
+     "alone": "1108.82",
+     "one_parent": "1189.82",
+     "spouse": "1215.82",
+     "spouse_1_parent": "1296.82",
+     "spouse_2_parents": "1377.82",
+     "two_parents": "1270.82"
+    },
+    "60": {
+     "alone": "1400.65",
+     "one_parent": "1497.65",
+     "spouse": "1528.65",
+     "spouse_1_parent": "1625.65",
+     "spouse_2_parents": "1722.65",
+     "two_parents": "1594.65"
+    },
+    "70": {
+     "alone": "1757.06",
+     "one_parent": "1870.06",
+     "spouse": "1907.06",
+     "spouse_1_parent": "2020.06",
+     "spouse_2_parents": "2133.06",
+     "two_parents": "1983.06"
+    },
+    "80": {
+     "alone": "2041.15",
+     "one_parent": "2170.15",
+     "spouse": "2212.15",
+     "spouse_1_parent": "2341.15",
+     "spouse_2_parents": "2470.15",
+     "two_parents": "2299.15"
+    },
+    "90": {
+     "alone": "2293.39",
+     "one_parent": "2438.39",
+     "spouse": "2486.39",
+     "spouse_1_parent": "2631.39",
+     "spouse_2_parents": "2776.39",
+     "two_parents": "2583.39"
+    }
+   },
+   "effective_date": "2022-12-01",
+   "fetched": "2026-07-05",
+   "flat": {
+    "10": "165.92",
+    "20": "327.99"
+   },
+   "source_url": "https://www.va.gov/disability/compensation-rates/veteran-rates/past-rates-2023/"
+  },
+  "2024": {
+   "added": {
+    "100": {
+     "child_over_18_school": "334.49",
+     "child_under_18": "103.55",
+     "spouse_aa": "191.14"
+    },
+    "30": {
+     "child_over_18_school": "100.00",
+     "child_under_18": "31.00",
+     "spouse_aa": "57.00"
+    },
+    "40": {
+     "child_over_18_school": "133.00",
+     "child_under_18": "41.00",
+     "spouse_aa": "76.00"
+    },
+    "50": {
+     "child_over_18_school": "167.00",
+     "child_under_18": "51.00",
+     "spouse_aa": "95.00"
+    },
+    "60": {
+     "child_over_18_school": "200.00",
+     "child_under_18": "62.00",
+     "spouse_aa": "114.00"
+    },
+    "70": {
+     "child_over_18_school": "234.00",
+     "child_under_18": "72.00",
+     "spouse_aa": "134.00"
+    },
+    "80": {
+     "child_over_18_school": "267.00",
+     "child_under_18": "82.00",
+     "spouse_aa": "153.00"
+    },
+    "90": {
+     "child_over_18_school": "301.00",
+     "child_under_18": "93.00",
+     "spouse_aa": "172.00"
+    }
+   },
+   "base_no_children": {
+    "100": {
+     "alone": "3737.85",
+     "one_parent": "3905.11",
+     "spouse": "3946.25",
+     "spouse_1_parent": "4113.51",
+     "spouse_2_parents": "4280.77",
+     "two_parents": "4072.37"
+    },
+    "30": {
+     "alone": "524.31",
+     "one_parent": "574.31",
+     "spouse": "586.31",
+     "spouse_1_parent": "636.31",
+     "spouse_2_parents": "686.31",
+     "two_parents": "624.31"
+    },
+    "40": {
+     "alone": "755.28",
+     "one_parent": "821.28",
+     "spouse": "838.28",
+     "spouse_1_parent": "904.28",
+     "spouse_2_parents": "970.28",
+     "two_parents": "887.28"
+    },
+    "50": {
+     "alone": "1075.16",
+     "one_parent": "1158.16",
+     "spouse": "1179.16",
+     "spouse_1_parent": "1262.16",
+     "spouse_2_parents": "1345.16",
+     "two_parents": "1241.16"
+    },
+    "60": {
+     "alone": "1361.88",
+     "one_parent": "1461.88",
+     "spouse": "1486.88",
+     "spouse_1_parent": "1586.88",
+     "spouse_2_parents": "1686.88",
+     "two_parents": "1561.88"
+    },
+    "70": {
+     "alone": "1716.28",
+     "one_parent": "1833.28",
+     "spouse": "1861.28",
+     "spouse_1_parent": "1978.28",
+     "spouse_2_parents": "2095.28",
+     "two_parents": "1950.28"
+    },
+    "80": {
+     "alone": "1995.01",
+     "one_parent": "2128.01",
+     "spouse": "2161.01",
+     "spouse_1_parent": "2294.01",
+     "spouse_2_parents": "2427.01",
+     "two_parents": "2261.01"
+    },
+    "90": {
+     "alone": "2241.91",
+     "one_parent": "2391.91",
+     "spouse": "2428.91",
+     "spouse_1_parent": "2578.91",
+     "spouse_2_parents": "2728.91",
+     "two_parents": "2541.91"
+    }
+   },
+   "base_with_1_child": {
+    "100": {
+     "alone": "3877.22",
+     "one_parent": "4044.48",
+     "spouse": "4098.87",
+     "spouse_1_parent": "4266.13",
+     "spouse_2_parents": "4433.39",
+     "two_parents": "4211.74"
+    },
+    "30": {
+     "alone": "565.31",
+     "one_parent": "615.31",
+     "spouse": "632.31",
+     "spouse_1_parent": "682.31",
+     "spouse_2_parents": "732.31",
+     "two_parents": "665.31"
+    },
+    "40": {
+     "alone": "810.28",
+     "one_parent": "876.28",
+     "spouse": "899.28",
+     "spouse_1_parent": "965.28",
+     "spouse_2_parents": "1031.28",
+     "two_parents": "942.28"
+    },
+    "50": {
+     "alone": "1144.16",
+     "one_parent": "1227.16",
+     "spouse": "1255.16",
+     "spouse_1_parent": "1338.16",
+     "spouse_2_parents": "1421.16",
+     "two_parents": "1310.16"
+    },
+    "60": {
+     "alone": "1444.88",
+     "one_parent": "1544.88",
+     "spouse": "1577.88",
+     "spouse_1_parent": "1677.88",
+     "spouse_2_parents": "1777.88",
+     "two_parents": "1644.88"
+    },
+    "70": {
+     "alone": "1813.28",
+     "one_parent": "1930.28",
+     "spouse": "1968.28",
+     "spouse_1_parent": "2085.28",
+     "spouse_2_parents": "2202.28",
+     "two_parents": "2047.28"
+    },
+    "80": {
+     "alone": "2106.01",
+     "one_parent": "2239.01",
+     "spouse": "2283.01",
+     "spouse_1_parent": "2416.01",
+     "spouse_2_parents": "2549.01",
+     "two_parents": "2372.01"
+    },
+    "90": {
+     "alone": "2366.91",
+     "one_parent": "2516.91",
+     "spouse": "2565.91",
+     "spouse_1_parent": "2715.91",
+     "spouse_2_parents": "2865.91",
+     "two_parents": "2666.91"
+    }
+   },
+   "effective_date": "2023-12-01",
+   "fetched": "2026-07-05",
+   "flat": {
+    "10": "171.23",
+    "20": "338.49"
+   },
+   "source_url": "https://www.va.gov/disability/compensation-rates/veteran-rates/past-rates-2024/"
+  },
+  "2025": {
+   "added": {
+    "100": {
+     "child_over_18_school": "342.85",
+     "child_under_18": "106.14",
+     "spouse_aa": "195.92"
+    },
+    "30": {
+     "child_over_18_school": "102.00",
+     "child_under_18": "31.00",
+     "spouse_aa": "58.00"
+    },
+    "40": {
+     "child_over_18_school": "137.00",
+     "child_under_18": "42.00",
+     "spouse_aa": "78.00"
+    },
+    "50": {
+     "child_over_18_school": "171.00",
+     "child_under_18": "53.00",
+     "spouse_aa": "98.00"
+    },
+    "60": {
+     "child_over_18_school": "205.00",
+     "child_under_18": "63.00",
+     "spouse_aa": "117.00"
+    },
+    "70": {
+     "child_over_18_school": "239.00",
+     "child_under_18": "74.00",
+     "spouse_aa": "137.00"
+    },
+    "80": {
+     "child_over_18_school": "274.00",
+     "child_under_18": "84.00",
+     "spouse_aa": "157.00"
+    },
+    "90": {
+     "child_over_18_school": "308.00",
+     "child_under_18": "95.00",
+     "spouse_aa": "176.00"
+    }
+   },
+   "base_no_children": {
+    "100": {
+     "alone": "3831.30",
+     "one_parent": "4002.74",
+     "spouse": "4044.91",
+     "spouse_1_parent": "4216.35",
+     "spouse_2_parents": "4387.79",
+     "two_parents": "4174.18"
+    },
+    "30": {
+     "alone": "537.42",
+     "one_parent": "588.42",
+     "spouse": "601.42",
+     "spouse_1_parent": "652.42",
+     "spouse_2_parents": "703.42",
+     "two_parents": "639.42"
+    },
+    "40": {
+     "alone": "774.16",
+     "one_parent": "842.16",
+     "spouse": "859.16",
+     "spouse_1_parent": "927.16",
+     "spouse_2_parents": "995.16",
+     "two_parents": "910.16"
+    },
+    "50": {
+     "alone": "1102.04",
+     "one_parent": "1187.04",
+     "spouse": "1208.04",
+     "spouse_1_parent": "1293.04",
+     "spouse_2_parents": "1378.04",
+     "two_parents": "1272.04"
+    },
+    "60": {
+     "alone": "1395.93",
+     "one_parent": "1497.93",
+     "spouse": "1523.93",
+     "spouse_1_parent": "1625.93",
+     "spouse_2_parents": "1727.93",
+     "two_parents": "1599.93"
+    },
+    "70": {
+     "alone": "1759.19",
+     "one_parent": "1879.19",
+     "spouse": "1908.19",
+     "spouse_1_parent": "2028.19",
+     "spouse_2_parents": "2148.19",
+     "two_parents": "1999.19"
+    },
+    "80": {
+     "alone": "2044.89",
+     "one_parent": "2181.89",
+     "spouse": "2214.89",
+     "spouse_1_parent": "2351.89",
+     "spouse_2_parents": "2488.89",
+     "two_parents": "2318.89"
+    },
+    "90": {
+     "alone": "2297.96",
+     "one_parent": "2451.96",
+     "spouse": "2489.96",
+     "spouse_1_parent": "2643.96",
+     "spouse_2_parents": "2797.96",
+     "two_parents": "2605.96"
+    }
+   },
+   "base_with_1_child": {
+    "100": {
+     "alone": "3974.15",
+     "one_parent": "4145.59",
+     "spouse": "4201.35",
+     "spouse_1_parent": "4372.79",
+     "spouse_2_parents": "4544.23",
+     "two_parents": "4317.03"
+    },
+    "30": {
+     "alone": "579.42",
+     "one_parent": "630.42",
+     "spouse": "648.42",
+     "spouse_1_parent": "699.42",
+     "spouse_2_parents": "750.42",
+     "two_parents": "681.42"
+    },
+    "40": {
+     "alone": "831.16",
+     "one_parent": "899.16",
+     "spouse": "922.16",
+     "spouse_1_parent": "990.16",
+     "spouse_2_parents": "1058.16",
+     "two_parents": "967.16"
+    },
+    "50": {
+     "alone": "1173.04",
+     "one_parent": "1258.04",
+     "spouse": "1287.04",
+     "spouse_1_parent": "1372.04",
+     "spouse_2_parents": "1457.04",
+     "two_parents": "1343.04"
+    },
+    "60": {
+     "alone": "1480.93",
+     "one_parent": "1582.93",
+     "spouse": "1617.93",
+     "spouse_1_parent": "1719.93",
+     "spouse_2_parents": "1821.93",
+     "two_parents": "1684.93"
+    },
+    "70": {
+     "alone": "1858.19",
+     "one_parent": "1978.19",
+     "spouse": "2018.19",
+     "spouse_1_parent": "2138.19",
+     "spouse_2_parents": "2258.19",
+     "two_parents": "2098.19"
+    },
+    "80": {
+     "alone": "2158.89",
+     "one_parent": "2295.89",
+     "spouse": "2340.89",
+     "spouse_1_parent": "2477.89",
+     "spouse_2_parents": "2614.89",
+     "two_parents": "2432.89"
+    },
+    "90": {
+     "alone": "2425.96",
+     "one_parent": "2579.96",
+     "spouse": "2630.96",
+     "spouse_1_parent": "2784.96",
+     "spouse_2_parents": "2938.96",
+     "two_parents": "2733.96"
+    }
+   },
+   "effective_date": "2024-12-01",
+   "fetched": "2026-07-05",
+   "flat": {
+    "10": "175.51",
+    "20": "346.95"
+   },
+   "source_url": "https://www.va.gov/disability/compensation-rates/veteran-rates/past-rates-2025/"
+  },
+  "2026": {
+   "added": {
+    "100": {
+     "child_over_18_school": "352.45",
+     "child_under_18": "109.11",
+     "spouse_aa": "201.41"
+    },
+    "30": {
+     "child_over_18_school": "105.00",
+     "child_under_18": "32.00",
+     "spouse_aa": "61.00"
+    },
+    "40": {
+     "child_over_18_school": "140.00",
+     "child_under_18": "43.00",
+     "spouse_aa": "81.00"
+    },
+    "50": {
+     "child_over_18_school": "176.00",
+     "child_under_18": "54.00",
+     "spouse_aa": "101.00"
+    },
+    "60": {
+     "child_over_18_school": "211.00",
+     "child_under_18": "65.00",
+     "spouse_aa": "121.00"
+    },
+    "70": {
+     "child_over_18_school": "246.00",
+     "child_under_18": "76.00",
+     "spouse_aa": "141.00"
+    },
+    "80": {
+     "child_over_18_school": "281.00",
+     "child_under_18": "87.00",
+     "spouse_aa": "161.00"
+    },
+    "90": {
+     "child_over_18_school": "317.00",
+     "child_under_18": "98.00",
+     "spouse_aa": "181.00"
+    }
+   },
+   "base_no_children": {
+    "100": {
+     "alone": "3938.58",
+     "one_parent": "4114.82",
+     "spouse": "4158.17",
+     "spouse_1_parent": "4334.41",
+     "spouse_2_parents": "4510.65",
+     "two_parents": "4291.06"
+    },
+    "30": {
+     "alone": "552.47",
+     "one_parent": "604.47",
+     "spouse": "617.47",
+     "spouse_1_parent": "669.47",
+     "spouse_2_parents": "721.47",
+     "two_parents": "656.47"
+    },
+    "40": {
+     "alone": "795.84",
+     "one_parent": "865.84",
+     "spouse": "882.84",
+     "spouse_1_parent": "952.84",
+     "spouse_2_parents": "1022.84",
+     "two_parents": "935.84"
+    },
+    "50": {
+     "alone": "1132.90",
+     "one_parent": "1220.90",
+     "spouse": "1241.90",
+     "spouse_1_parent": "1329.90",
+     "spouse_2_parents": "1417.90",
+     "two_parents": "1308.90"
+    },
+    "60": {
+     "alone": "1435.02",
+     "one_parent": "1540.02",
+     "spouse": "1566.02",
+     "spouse_1_parent": "1671.02",
+     "spouse_2_parents": "1776.02",
+     "two_parents": "1645.02"
+    },
+    "70": {
+     "alone": "1808.45",
+     "one_parent": "1931.45",
+     "spouse": "1961.45",
+     "spouse_1_parent": "2084.45",
+     "spouse_2_parents": "2207.45",
+     "two_parents": "2054.45"
+    },
+    "80": {
+     "alone": "2102.15",
+     "one_parent": "2242.15",
+     "spouse": "2277.15",
+     "spouse_1_parent": "2417.15",
+     "spouse_2_parents": "2557.15",
+     "two_parents": "2382.15"
+    },
+    "90": {
+     "alone": "2362.30",
+     "one_parent": "2520.30",
+     "spouse": "2559.30",
+     "spouse_1_parent": "2717.30",
+     "spouse_2_parents": "2875.30",
+     "two_parents": "2678.30"
+    }
+   },
+   "base_with_1_child": {
+    "100": {
+     "alone": "4085.43",
+     "one_parent": "4261.67",
+     "spouse": "4318.99",
+     "spouse_1_parent": "4495.23",
+     "spouse_2_parents": "4671.47",
+     "two_parents": "4437.91"
+    },
+    "30": {
+     "alone": "596.47",
+     "one_parent": "648.47",
+     "spouse": "666.47",
+     "spouse_1_parent": "718.47",
+     "spouse_2_parents": "770.47",
+     "two_parents": "700.47"
+    },
+    "40": {
+     "alone": "853.84",
+     "one_parent": "923.84",
+     "spouse": "947.84",
+     "spouse_1_parent": "1017.84",
+     "spouse_2_parents": "1087.84",
+     "two_parents": "993.84"
+    },
+    "50": {
+     "alone": "1205.90",
+     "one_parent": "1293.90",
+     "spouse": "1322.90",
+     "spouse_1_parent": "1410.90",
+     "spouse_2_parents": "1498.90",
+     "two_parents": "1381.90"
+    },
+    "60": {
+     "alone": "1523.02",
+     "one_parent": "1628.02",
+     "spouse": "1663.02",
+     "spouse_1_parent": "1768.02",
+     "spouse_2_parents": "1873.02",
+     "two_parents": "1733.02"
+    },
+    "70": {
+     "alone": "1910.45",
+     "one_parent": "2033.45",
+     "spouse": "2074.45",
+     "spouse_1_parent": "2197.45",
+     "spouse_2_parents": "2320.45",
+     "two_parents": "2156.45"
+    },
+    "80": {
+     "alone": "2219.15",
+     "one_parent": "2359.15",
+     "spouse": "2406.15",
+     "spouse_1_parent": "2546.15",
+     "spouse_2_parents": "2686.15",
+     "two_parents": "2499.15"
+    },
+    "90": {
+     "alone": "2494.30",
+     "one_parent": "2652.30",
+     "spouse": "2704.30",
+     "spouse_1_parent": "2862.30",
+     "spouse_2_parents": "3020.30",
+     "two_parents": "2810.30"
+    }
+   },
+   "effective_date": "2025-12-01",
+   "fetched": "2026-07-05",
+   "flat": {
+    "10": "180.42",
+    "20": "356.66"
+   },
+   "source_url": "https://www.va.gov/disability/compensation-rates/veteran-rates/"
+  }
+ }
+}

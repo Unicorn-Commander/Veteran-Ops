@@ -1,0 +1,137 @@
+# Valor-Ops — edge-host / public deploy (valor.magicunicorn.dev)
+#
+# Suite convention: Traefik runs on the external `web` network and terminates TLS
+# (Let's Encrypt HTTP challenge). The frontend's nginx reverse-proxies /api ->
+# backend, so we only need to expose the FRONTEND to Traefik; everything else stays
+# on the internal network.
+#
+#   Host(valor.magicunicorn.dev) -> frontend:80  (nginx serves SPA + proxies /api)
+#
+# Inference is REMOTE (veteran PII stays on the tailnet): LLM via the UC LiteLLM
+# gateway, embeddings via Infinity bge-m3.
+#
+# Secrets come from infrastructure/.env (NOT committed). DNS: an A record
+# valor.magicunicorn.dev must exist before the cert can issue.
+
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: valor-ops-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: valor
+      APP_DB_PASSWORD: ${APP_DB_PASSWORD}
+    volumes:
+      - valor-pgdata:/var/lib/postgresql/data
+      - ../db/init:/docker-entrypoint-initdb.d:ro
+    networks: [valor-internal]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d valor"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  backend:
+    build: ../backend
+    image: valor-ops-backend:latest
+    container_name: valor-ops-backend
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql+asyncpg://valor_app:${APP_DB_PASSWORD}@db:5432/valor
+      UPLOAD_DIR: /app/uploads
+      ANALYSIS_WORKER_ENABLED: "false"
+      ANALYSIS_WORKER_REQUIRED: "true"
+    volumes:
+      - valor-uploads:/app/uploads
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks: [valor-internal]
+
+  analysis-worker:
+    build: ../backend
+    image: valor-ops-backend:latest
+    container_name: valor-ops-analysis-worker
+    command: ["python", "-m", "app.analysis.worker"]
+    restart: unless-stopped
+    # The backend image probes its HTTP server; this process is intentionally a
+    # worker only. Worker health is reported through the API's /readyz heartbeat.
+    healthcheck:
+      disable: true
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql+asyncpg://valor_app:${APP_DB_PASSWORD}@db:5432/valor
+      UPLOAD_DIR: /app/uploads
+      ANALYSIS_WORKER_ENABLED: "false"
+    volumes:
+      - valor-uploads:/app/uploads
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      db:
+        condition: service_healthy
+    networks: [valor-internal]
+
+  frontend:
+    build: ../frontend
+    image: valor-ops-frontend:latest
+    container_name: valor-ops-frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    networks: [valor-internal, web]
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=web"
+      - "traefik.http.routers.valor-ops.rule=Host(`valor.magicunicorn.dev`)"
+      - "traefik.http.routers.valor-ops.entrypoints=websecure"
+      - "traefik.http.routers.valor-ops.tls=true"
+      - "traefik.http.routers.valor-ops.tls.certresolver=letsencrypt"
+      - "traefik.http.services.valor-ops.loadbalancer.server.port=80"
+      # Wave 15 — edge rate-limiting on the AUTH surface (login/register/password/
+      # verify). A higher-priority sub-router matches /api/auth and applies a per-client
+      # limit so credential-stuffing / brute-force / account-enumeration is throttled at
+      # the edge (the W9 audit deferred this to Traefik on purpose — an in-app limiter
+      # behind a proxy would key on the shared forwarded IP). This router only ever sees
+      # Cloudflare traffic, so the real client is Cf-Connecting-Ip. Limits are generous
+      # enough never to bother a real person (a burst of 20, ~8/s sustained per IP).
+      - "traefik.http.routers.valor-ops-auth.rule=Host(`valor.magicunicorn.dev`) && PathPrefix(`/api/auth`)"
+      - "traefik.http.routers.valor-ops-auth.entrypoints=websecure"
+      - "traefik.http.routers.valor-ops-auth.tls=true"
+      - "traefik.http.routers.valor-ops-auth.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.valor-ops-auth.priority=100"
+      - "traefik.http.routers.valor-ops-auth.service=valor-ops"
+      - "traefik.http.routers.valor-ops-auth.middlewares=valor-auth-rl"
+      - "traefik.http.middlewares.valor-auth-rl.ratelimit.average=8"
+      - "traefik.http.middlewares.valor-auth-rl.ratelimit.period=1s"
+      - "traefik.http.middlewares.valor-auth-rl.ratelimit.burst=20"
+      - "traefik.http.middlewares.valor-auth-rl.ratelimit.sourcecriterion.requestheadername=Cf-Connecting-Ip"
+
+  mcp:
+    build: ../mcp
+    image: valor-ops-mcp:latest
+    container_name: valor-ops-mcp
+    restart: unless-stopped
+    environment:
+      VALOR_API_URL: http://backend:8000
+      VALOR_TOKEN: ${MCP_SERVICE_TOKEN:-}
+      MCP_TRANSPORT: sse
+      MCP_PORT: "8766"
+    depends_on:
+      - backend
+    networks: [valor-internal]
+
+networks:
+  valor-internal:
+    driver: bridge
+  web:
+    external: true
+
+volumes:
+  valor-pgdata:
+  valor-uploads:

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="popup.css" />
+    <title>Rating Raider — VA Connect</title>
+  </head>
+  <body>
+    <header class="rr-header">
+      <div class="rr-brand">
+        <span class="rr-logo" aria-hidden="true">★</span>
+        <div>
+          <h1 class="rr-title">VA Connect</h1>
+          <p class="rr-subtitle">Rating Raider helper</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="rr-main">
+      <!-- Status / context line -->
+      <p id="rr-status" class="rr-status" role="status">Checking this tab…</p>
+
+      <!-- Actions -->
+      <div class="rr-actions">
+        <button id="rr-read" class="rr-btn rr-btn-primary" disabled>
+          Read my VA data
+        </button>
+      </div>
+
+      <!-- Preview of exactly what was read (transparency) -->
+      <section
+        id="rr-preview"
+        class="rr-preview"
+        hidden
+        aria-live="polite"
+      >
+        <div class="rr-combined">
+          <span class="rr-combined-label">Combined rating</span>
+          <span id="rr-combined-value" class="rr-combined-value">—</span>
+        </div>
+
+        <div class="rr-counts">
+          <span id="rr-count-sc" class="rr-chip">0 service-connected</span>
+          <span id="rr-count-denied" class="rr-chip">0 denied</span>
+          <span id="rr-count-pending" class="rr-chip">0 pending</span>
+        </div>
+
+        <ul id="rr-list" class="rr-list"></ul>
+
+        <button id="rr-send" class="rr-btn rr-btn-send">
+          Send to Rating Raider
+        </button>
+        <p class="rr-note">
+          Opens a new tab to Rating Raider. Your data is passed in the URL
+          fragment (after <code>#</code>) so it is never sent to a server log.
+        </p>
+      </section>
+
+      <p class="rr-privacy">
+        Read-only. Runs only when you click. No passwords, cookies, or session
+        tokens are ever read or stored.
+      </p>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

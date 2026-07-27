@@ -1,0 +1,83 @@
+# valor-paddle-ocr-gpu — GPU (CUDA) PaddleOCR HTTP service for the fleet.
+#
+# Mirror of the CPU image (SAME app.py, SAME verified pin set) with two changes:
+#   1. CPU `paddlepaddle==3.2.0` (PyPI)  ->  `paddlepaddle-gpu==3.2.0` (CUDA 12.6
+#      wheel from paddle's own index).
+#   2. Runtime OCR_DEVICE=gpu, so app.py's _build_ocr constructs PaddleOCR on GPU.
+#
+# Target host: ocr-host RTX 4070, driver 580.x (CUDA 13.0 capable). The cu126
+# wheel + CUDA-12.6 runtime base run fine under a 13.0 driver (forward-compatible
+# driver / older CUDA runtime).
+#
+# BUILD ON THE GPU HOST. `docker build` has NO GPU, so the model-bake step below
+# is forced onto CPU (device only affects inference, not the model download).
+# The GPU is used only at container RUNTIME, which is why the container MUST be
+# started with `--gpus` pinned to the 4070 (see run command in the README/notes).
+#
+#   docker build -f tools/paddle-ocr/Dockerfile.gpu -t valor-paddle-ocr-gpu tools/paddle-ocr
+FROM nvidia/cuda:12.6.3-cudnn-runtime-ubuntu22.04
+
+# Python 3.11 (matches the verified cp311 wheel set) via deadsnakes, plus the
+# same system libs the CPU image needs: libgomp1 (paddle OpenMP runtime),
+# libgl1 + libglib2.0-0 (opencv runtime paddlex pulls in). The CUDA runtime +
+# cuDNN 9 come from the base image.
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        software-properties-common gnupg ca-certificates \
+    && add-apt-repository -y ppa:deadsnakes/ppa \
+    && apt-get update \
+    && apt-get install -y --no-install-recommends \
+        python3.11 python3.11-venv libgomp1 libgl1 libglib2.0-0 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Isolated venv so `python` / `pip` / `uvicorn` all resolve to 3.11.
+RUN python3.11 -m venv /opt/venv
+ENV PATH=/opt/venv/bin:$PATH \
+    HOME=/root \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    GLOG_minloglevel=2
+
+WORKDIR /app
+
+# GPU paddle FIRST, from paddle's CUDA-12.6 index. paddlepaddle is NOT a
+# paddleocr dependency (see README pitfall #5), so installing it up front is safe
+# and guarantees the GPU wheel — not the CPU one — is what paddleocr binds to.
+RUN pip install --no-cache-dir --upgrade pip \
+    && pip install --no-cache-dir \
+        paddlepaddle-gpu==3.2.0 \
+        -i https://www.paddlepaddle.org.cn/packages/stable/cu126/
+
+# The rest of the verified stack from PyPI — identical pins to the CPU image.
+RUN pip install --no-cache-dir \
+        paddleocr==3.7.0 \
+        paddlex==3.7.2 \
+        numpy==2.3.5 \
+        pillow==12.3.0 \
+        fastapi==0.115.6 \
+        "uvicorn[standard]==0.34.0" \
+        python-multipart==0.0.20
+
+COPY app.py .
+
+# NOTE: we do NOT bake models at build time. paddlepaddle-GPU links libcuda.so.1
+# (the NVIDIA *driver* library), which nvidia-container-toolkit injects only at
+# container RUNTIME (--gpus). `import paddle` therefore fails during `docker build`
+# (no GPU/driver present) — so the models download on FIRST container start
+# instead: app.py's lifespan constructs PaddleOCR + runs a warmup predict, and the
+# HEALTHCHECK start-period below (120s) covers that one-time download.
+ENV PADDLE_PDX_DISABLE_MODEL_SOURCE_CHECK=True
+
+# Runtime OCR runs on GPU. app.py reads OCR_DEVICE; the container is started with
+# --gpus pinned to the 4070 so this GPU place is the physical 4070.
+ENV OCR_DEVICE=gpu
+
+EXPOSE 8095
+
+# /health flips to 200 only after the model loads onto the GPU. Longer
+# start-period than the CPU image: first GPU load pays CUDA context + cuDNN init.
+HEALTHCHECK --interval=15s --timeout=5s --start-period=120s --retries=6 \
+    CMD python -c "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:8095/health',timeout=3).status==200 else 1)" || exit 1
+
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8095", "--workers", "1"]

@@ -1,0 +1,460 @@
+[
+  {
+    "card_type": "presumptive",
+    "title": "PACT Act — burn pits / airborne hazards presumptives (Gulf War & post-9/11)",
+    "body_system": "general",
+    "diagnostic_code": null,
+    "source": "PACT Act (38 U.S.C. §§1119-1120; Pub. L. 117-168) with 2024-2025 additions; 38 CFR §3.320 (respiratory/rare-cancer subset); VA.gov PACT Act page",
+    "content": "Veterans with qualifying service in covered locations are PRESUMED exposed to burn pits/airborne hazards; the listed conditions are presumed service-connected — no nexus opinion needed, just the diagnosis plus qualifying service. Cancers: brain, gastrointestinal (any type), glioblastoma, head (any), kidney, lymphatic (any), lymphoma (any), melanoma, neck (any), pancreatic, reproductive (any), respiratory (any). Respiratory: asthma diagnosed after service, chronic bronchitis, COPD, chronic rhinitis, chronic sinusitis, constrictive/obliterative bronchiolitis, emphysema, granulomatous disease, interstitial lung disease, pleuritis, pulmonary fibrosis, sarcoidosis. 2024-2025 additions (same covered service, under 38 U.S.C. §1120): male breast cancer, urethral and paraurethral-gland cancers, urinary bladder and ureter (genitourinary) cancers, acute and chronic leukemias, multiple myeloma, myelodysplastic syndrome, and myelofibrosis.",
+    "data": {
+      "program": "pact_burn_pits",
+      "exposure_flags": [
+        "burn_pits",
+        "gulf_war"
+      ],
+      "qualifying_service": [
+        {
+          "where": "Bahrain, Iraq, Kuwait, Oman, Qatar, Saudi Arabia, Somalia, UAE (incl. airspace)",
+          "from": "1990-08-02",
+          "to": null
+        },
+        {
+          "where": "Afghanistan, Djibouti, Egypt, Jordan, Lebanon, Syria, Uzbekistan, Yemen (incl. airspace)",
+          "from": "2001-09-11",
+          "to": null
+        }
+      ],
+      "conditions": [
+        "brain cancer",
+        "gastrointestinal cancer",
+        "glioblastoma",
+        "head cancer",
+        "kidney cancer",
+        "lymphatic cancer",
+        "lymphoma",
+        "melanoma",
+        "neck cancer",
+        "pancreatic cancer",
+        "reproductive cancer",
+        "respiratory cancer",
+        "male breast cancer",
+        "urethral cancer",
+        "paraurethral gland cancer",
+        "urinary bladder cancer",
+        "ureter cancer",
+        "genitourinary cancer",
+        "acute leukemia",
+        "chronic leukemia",
+        "multiple myeloma",
+        "myelodysplastic syndrome",
+        "myelofibrosis",
+        "asthma (diagnosed after service)",
+        "chronic bronchitis",
+        "COPD",
+        "chronic rhinitis",
+        "chronic sinusitis",
+        "constrictive bronchiolitis",
+        "obliterative bronchiolitis",
+        "emphysema",
+        "granulomatous disease",
+        "interstitial lung disease",
+        "pleuritis",
+        "pulmonary fibrosis",
+        "sarcoidosis"
+      ]
+    }
+  },
+  {
+    "card_type": "presumptive",
+    "title": "Agent Orange / herbicide exposure presumptives",
+    "body_system": "general",
+    "diagnostic_code": null,
+    "source": "38 CFR §3.309(e); §3.307(a)(6); PACT Act (added hypertension and MGUS; expanded locations)",
+    "content": "Veterans with qualifying herbicide exposure are presumed service-connected for: AL amyloidosis, bladder cancer, chronic B-cell leukemias (incl. CLL, hairy cell), chloracne, diabetes mellitus type 2, HYPERTENSION (PACT-added), hypothyroidism, Hodgkin's disease, ischemic heart disease, MGUS (PACT-added), multiple myeloma, non-Hodgkin's lymphoma, Parkinsonism, Parkinson's disease, peripheral neuropathy (early-onset), porphyria cutanea tarda, prostate cancer, respiratory cancers (lung, bronchus, larynx, trachea), soft-tissue sarcomas.",
+    "data": {
+      "program": "agent_orange",
+      "exposure_flags": [
+        "agent_orange"
+      ],
+      "qualifying_service": [
+        {
+          "where": "Republic of Vietnam (incl. inland waterways and, per Blue Water Navy Act, offshore within 12 nautical miles)",
+          "from": "1962-01-09",
+          "to": "1975-05-07"
+        },
+        {
+          "where": "Korean DMZ area",
+          "from": "1967-09-01",
+          "to": "1971-08-31"
+        },
+        {
+          "where": "Thailand — any U.S. or Royal Thai base (PACT expanded: no longer perimeter-duty-only)",
+          "from": "1962-01-09",
+          "to": "1976-06-30"
+        },
+        {
+          "where": "Laos",
+          "from": "1965-12-01",
+          "to": "1969-09-30"
+        },
+        {
+          "where": "Cambodia (Mimot/Krek, Kampong Cham)",
+          "from": "1969-04-16",
+          "to": "1969-04-30"
+        },
+        {
+          "where": "Guam or American Samoa (incl. territorial waters)",
+          "from": "1962-01-09",
+          "to": "1980-07-31"
+        },
+        {
+          "where": "Johnston Atoll (or ship that called there)",
+          "from": "1972-01-01",
+          "to": "1977-09-30"
+        },
+        {
+          "where": "C-123 aircraft (post-Vietnam contaminated aircraft crews)",
+          "from": "1969-01-01",
+          "to": "1986-12-31"
+        }
+      ],
+      "conditions": [
+        "AL amyloidosis",
+        "bladder cancer",
+        "chronic B-cell leukemia",
+        "chronic lymphocytic leukemia",
+        "hairy cell leukemia",
+        "chloracne",
+        "diabetes mellitus type 2",
+        "hypertension",
+        "hypothyroidism",
+        "Hodgkin's disease",
+        "ischemic heart disease",
+        "coronary artery disease",
+        "MGUS",
+        "multiple myeloma",
+        "non-Hodgkin's lymphoma",
+        "Parkinsonism",
+        "Parkinson's disease",
+        "peripheral neuropathy (early-onset)",
+        "porphyria cutanea tarda",
+        "prostate cancer",
+        "lung cancer",
+        "respiratory cancer",
+        "soft-tissue sarcoma"
+      ]
+    }
+  },
+  {
+    "card_type": "presumptive",
+    "title": "Gulf War illness — undiagnosed illness & chronic multisymptom illness",
+    "body_system": "general",
+    "diagnostic_code": null,
+    "source": "38 CFR §3.317",
+    "content": "Veterans of Southwest Asia service (Aug 2, 1990–present) get presumptive service connection for (a) UNDIAGNOSED illnesses (chronic symptoms — fatigue, headaches, joint/muscle pain, neurologic or GI symptoms, skin, sleep disturbance — that defy diagnosis) and (b) medically-unexplained chronic multisymptom illnesses: chronic fatigue syndrome, fibromyalgia, functional GI disorders (incl. IBS). The condition must manifest to at least 10% by the regulatory deadline — the deadline has been extended repeatedly (most recently past 2026); verify the current date at eCFR §3.317. This presumption is unusual: it covers symptom CLUSTERS without a diagnosis, which normal claims can't.",
+    "data": {
+      "program": "gulf_war",
+      "exposure_flags": [
+        "gulf_war"
+      ],
+      "qualifying_service": [
+        {
+          "where": "Southwest Asia theater: Iraq, Kuwait, Saudi Arabia, Bahrain, Qatar, UAE, Oman, Gulf of Aden/Oman, Persian Gulf, Arabian Sea, Red Sea, neutral zone",
+          "from": "1990-08-02",
+          "to": null
+        }
+      ],
+      "conditions": [
+        "chronic fatigue syndrome",
+        "fibromyalgia",
+        "irritable bowel syndrome",
+        "functional gastrointestinal disorder",
+        "undiagnosed illness (chronic unexplained symptoms)"
+      ]
+    }
+  },
+  {
+    "card_type": "presumptive",
+    "title": "Camp Lejeune contaminated water presumptives",
+    "body_system": "general",
+    "diagnostic_code": null,
+    "source": "38 CFR §3.307(a)(7), §3.309(f)",
+    "content": "Service members (incl. reservists/guardsmen) with 30+ cumulative days at Camp Lejeune or MCAS New River between Aug 1, 1953 and Dec 31, 1987 are presumed service-connected for: adult leukemia, aplastic anemia and other myelodysplastic syndromes, bladder cancer, kidney cancer, liver cancer, multiple myeloma, non-Hodgkin's lymphoma, Parkinson's disease. (Separate from the CLJA lawsuit remedy — a veteran can pursue both.)",
+    "data": {
+      "program": "camp_lejeune",
+      "exposure_flags": [
+        "camp_lejeune"
+      ],
+      "qualifying_service": [
+        {
+          "where": "Camp Lejeune / MCAS New River, NC (30+ cumulative days)",
+          "from": "1953-08-01",
+          "to": "1987-12-31"
+        }
+      ],
+      "conditions": [
+        "adult leukemia",
+        "aplastic anemia",
+        "myelodysplastic syndrome",
+        "bladder cancer",
+        "kidney cancer",
+        "liver cancer",
+        "multiple myeloma",
+        "non-Hodgkin's lymphoma",
+        "Parkinson's disease"
+      ],
+      "match": "flag_only"
+    }
+  },
+  {
+    "card_type": "presumptive",
+    "title": "Radiation-exposed veterans presumptives",
+    "body_system": "general",
+    "diagnostic_code": null,
+    "source": "38 CFR §3.309(d); §3.311 (non-presumptive radiogenic path); PACT Act (added cleanup of Enewetak, Palomares, Thule)",
+    "content": "Veterans who participated in 'radiation-risk activities' (atmospheric nuclear testing, Hiroshima/Nagasaki occupation, certain Enewetak/Palomares/Thule cleanup duty — PACT-added, gaseous-diffusion-plant service) are presumed service-connected for listed cancers: leukemia (other than CLL), thyroid, breast, pharynx, esophagus, stomach, small intestine, pancreas, bile ducts, gall bladder, liver (primary), salivary gland, urinary tract, multiple myeloma, lymphomas (except Hodgkin's), bronchiolo-alveolar carcinoma, bone, brain, colon, lung, ovary cancers. Other 'radiogenic diseases' can be pursued under §3.311 with dose assessment.",
+    "data": {
+      "program": "radiation",
+      "exposure_flags": [
+        "radiation"
+      ],
+      "qualifying_service": [
+        {
+          "where": "Radiation-risk activity (atmospheric tests, Hiroshima/Nagasaki occupation 1945-46, Enewetak/Palomares/Thule cleanup, gaseous diffusion plants)",
+          "from": "1945-08-06",
+          "to": null
+        }
+      ],
+      "conditions": [
+        "leukemia (non-CLL)",
+        "thyroid cancer",
+        "breast cancer",
+        "pharynx cancer",
+        "esophageal cancer",
+        "stomach cancer",
+        "small intestine cancer",
+        "pancreatic cancer",
+        "bile duct cancer",
+        "gall bladder cancer",
+        "liver cancer (primary)",
+        "salivary gland cancer",
+        "urinary tract cancer",
+        "multiple myeloma",
+        "lymphoma (non-Hodgkin's)",
+        "bone cancer",
+        "brain cancer",
+        "colon cancer",
+        "lung cancer",
+        "ovarian cancer"
+      ],
+      "match": "flag_only"
+    }
+  },
+  {
+    "card_type": "presumptive",
+    "title": "Chronic diseases within one year of separation (§3.309(a))",
+    "body_system": "general",
+    "diagnostic_code": null,
+    "source": "38 CFR §3.307(a)(3), §3.309(a)",
+    "content": "Certain chronic diseases manifesting to a degree of 10% or more within ONE YEAR of separation are presumed service-connected — including arthritis, diabetes, cardiovascular disease incl. hypertension, epilepsy, organic diseases of the nervous system (courts treat sensorineural hearing loss and tinnitus as such), peptic ulcers, psychoses. For veterans recently separated, this presumption plus early diagnosis is a powerful path — get conditions documented within the first year where true.",
+    "data": {
+      "program": "chronic_one_year",
+      "exposure_flags": [],
+      "qualifying_service": [
+        {
+          "where": "Any service — condition manifests to 10%+ within 1 year of separation",
+          "from": null,
+          "to": null
+        }
+      ],
+      "conditions": [
+        "arthritis",
+        "diabetes mellitus",
+        "hypertension",
+        "cardiovascular disease",
+        "epilepsy",
+        "sensorineural hearing loss",
+        "tinnitus",
+        "peptic ulcer",
+        "psychosis",
+        "organic disease of the nervous system"
+      ]
+    }
+  },
+  {
+    "card_type": "presumptive",
+    "title": "Former prisoner of war (POW) presumptives",
+    "body_system": "general",
+    "diagnostic_code": null,
+    "source": "38 CFR §3.309(c)",
+    "content": "Former POWs may be presumed service-connected for certain conditions. Any period of internment (no minimum): psychosis, anxiety states, dysthymic disorder, frostbite residuals (cold-injury climate), post-traumatic osteoarthritis, atherosclerotic heart disease / hypertensive vascular disease and complications, stroke and complications, osteoporosis (with PTSD). For 30+ cumulative days of internment: avitaminosis, beriberi (incl. beriberi heart disease), chronic dysentery, helminthiasis, malnutrition (incl. optic atrophy), pellagra and other nutritional deficiency, cirrhosis, peripheral neuropathy (except infectious), irritable bowel syndrome, peptic ulcer disease, osteoporosis.",
+    "data": {
+      "program": "pow",
+      "exposure_flags": [
+        "pow"
+      ],
+      "qualifying_service": [
+        {
+          "where": "Any service — any period of POW internment (no minimum duration)",
+          "from": null,
+          "to": null
+        }
+      ],
+      "match": "flag_only",
+      "conditions_any_period": [
+        "psychosis",
+        "anxiety state",
+        "dysthymic disorder",
+        "depressive neurosis",
+        "organic residuals of frostbite",
+        "post-traumatic osteoarthritis",
+        "atherosclerotic heart disease",
+        "hypertensive vascular disease",
+        "hypertensive heart disease",
+        "stroke",
+        "osteoporosis"
+      ],
+      "conditions_thirty_days": [
+        "avitaminosis",
+        "beriberi",
+        "beriberi heart disease",
+        "chronic dysentery",
+        "helminthiasis",
+        "malnutrition",
+        "optic atrophy",
+        "pellagra",
+        "nutritional deficiency",
+        "cirrhosis of the liver",
+        "peripheral neuropathy",
+        "irritable bowel syndrome",
+        "peptic ulcer disease",
+        "osteoporosis"
+      ],
+      "conditions": [
+        "psychosis",
+        "anxiety state",
+        "dysthymic disorder",
+        "depressive neurosis",
+        "organic residuals of frostbite",
+        "post-traumatic osteoarthritis",
+        "atherosclerotic heart disease",
+        "hypertensive vascular disease",
+        "hypertensive heart disease",
+        "stroke",
+        "avitaminosis",
+        "beriberi",
+        "beriberi heart disease",
+        "chronic dysentery",
+        "helminthiasis",
+        "malnutrition",
+        "optic atrophy",
+        "pellagra",
+        "nutritional deficiency",
+        "cirrhosis of the liver",
+        "peripheral neuropathy",
+        "irritable bowel syndrome",
+        "peptic ulcer disease",
+        "osteoporosis"
+      ]
+    }
+  },
+  {
+    "card_type": "presumptive",
+    "title": "Gulf War infectious diseases presumptives (38 CFR §3.317(c))",
+    "body_system": "general",
+    "diagnostic_code": null,
+    "source": "38 CFR §3.317(c) — infectious diseases (bacterial and parasitic)",
+    "content": "Veterans with qualifying Gulf War service (Southwest Asia theater from Aug 2, 1990 onward, AND Afghanistan service from Sep 19, 2001 onward) are presumed service-connected for the following infectious diseases: brucellosis, campylobacter jejuni infection, Coxiella burnetii (Q fever), malaria, nontyphoid salmonella infection, shigellosis, visceral leishmaniasis, West Nile virus infection, and any infection with tuberculosis. The condition must manifest to at least 10% by the regulatory deadline. Content note: per-disease manifestation rules exist in the regulation; do not assume all diseases share identical windows — verify each disease's manifesting-to-degree requirements at eCFR §3.317.",
+    "data": {
+      "program": "gulf_war_infectious",
+      "exposure_flags": [
+        "gulf_war"
+      ],
+      "qualifying_service": [
+        {
+          "where": "Southwest Asia theater: Iraq, Kuwait, Saudi Arabia, Bahrain, Qatar, UAE, Oman, Gulf of Aden/Oman, Persian Gulf, Arabian Sea, Red Sea, neutral zone",
+          "from": "1990-08-02",
+          "to": null
+        },
+        {
+          "where": "Afghanistan (incl. airspace)",
+          "from": "2001-09-19",
+          "to": null
+        }
+      ],
+      "conditions": [
+        "brucellosis",
+        "campylobacter jejuni infection",
+        "Coxiella burnetii infection (Q fever)",
+        "malaria",
+        "nontyphoid salmonella infection",
+        "shigellosis",
+        "visceral leishmaniasis",
+        "West Nile virus infection",
+        "tuberculosis"
+      ]
+    }
+  },
+  {
+    "card_type": "presumptive",
+    "title": "Mustard gas exposure presumptives (38 CFR §3.316)",
+    "body_system": "general",
+    "diagnostic_code": null,
+    "source": "38 CFR §3.316 (mustard gas, Lewisite, and other vesicating agents)",
+    "content": "Veterans with documented mustard gas exposure are presumed service-connected for: chronic conjunctivitis, keratitis, corneal opacities, corneal scar formation, chronic laryngitis, chronic bronchitis, emphysema, chronic obstructive pulmonary disease (COPD), and squamous cell carcinoma of the skin, nasopharynx, larynx, and lung (except mesothelioma, which has its own path). Mustard gas is a chemical warfare agent; exposure is a service fact that must be documented in the record — the presumption applies once exposure is established. Confirm the exposure history and condition diagnoses with a VSO.",
+    "data": {
+      "program": "mustard_gas",
+      "exposure_flags": [
+        "mustard_gas"
+      ],
+      "qualifying_service": [
+        {
+          "where": "Any service period with documented mustard gas exposure",
+          "from": null,
+          "to": null
+        }
+      ],
+      "conditions": [
+        "chronic conjunctivitis",
+        "keratitis",
+        "corneal opacities",
+        "corneal scar formation",
+        "chronic laryngitis",
+        "chronic bronchitis",
+        "emphysema",
+        "chronic obstructive pulmonary disease (COPD)",
+        "squamous cell carcinoma of the skin",
+        "squamous cell carcinoma of the nasopharynx",
+        "squamous cell carcinoma of the larynx",
+        "squamous cell carcinoma of the lung"
+      ],
+      "match": "flag_only"
+    }
+  },
+  {
+    "card_type": "presumptive",
+    "title": "ALS (amyotrophic lateral sclerosis)",
+    "body_system": "neurological",
+    "diagnostic_code": null,
+    "source": "38 CFR §3.318",
+    "content": "Amyotrophic lateral sclerosis (ALS / Lou Gehrig's disease) is presumed service-connected under 38 CFR §3.318 for veterans with 90 or more days of active continuous service. The claim needs a current ALS diagnosis; a nexus opinion is not required when the service-length criterion is met. Do not treat this as an automatic grant — confirm service length and diagnosis with an accredited VSO. The general presumptive matcher only surfaces this card when the veteran has (or is claiming) an ALS / motor-neuron condition AND 90+ cumulative active-service days, so every veteran with 90+ days is not spammed.",
+    "data": {
+      "program": "als",
+      "exposure_flags": [],
+      "qualifying_service": [
+        {
+          "where": "Any active continuous service totaling 90 or more days (38 CFR §3.318)",
+          "from": null,
+          "to": null
+        }
+      ],
+      "match": "service_days_90_plus_condition_gated",
+      "conditions": [
+        "ALS",
+        "amyotrophic lateral sclerosis",
+        "Lou Gehrig's disease",
+        "motor neuron disease"
+      ]
+    }
+  }
+]

@@ -1,0 +1,103 @@
+{
+  "_comment": "Secondary-condition suggestion map. Each entry: primary condition pattern → plausible secondaries with the medical rationale to DISCUSS WITH A PROVIDER. These are recognized claim patterns, not medical advice; every suggestion requires a real nexus opinion (38 CFR §3.310). The analysis endpoint matches primaries by keyword and returns these with the rationale.",
+  "map": [
+    {
+      "primary_keywords": ["ptsd", "anxiety", "depression", "mental"],
+      "secondaries": [
+        {"condition": "Obstructive sleep apnea", "rationale": "Peer-reviewed literature links PTSD with higher OSA prevalence (sleep fragmentation, arousal threshold changes, medication-related weight gain). Requires sleep study + nexus opinion.", "dbq": "Sleep Apnea DBQ"},
+        {"condition": "GERD", "rationale": "Chronic stress response and psychiatric medications (SSRIs, others) are associated with reflux; nexus opinion should address causation or aggravation.", "dbq": "Esophageal Conditions DBQ"},
+        {"condition": "Hypertension", "rationale": "Chronic hyperarousal and sympathetic activation are associated with elevated blood pressure; literature-supported secondary/aggravation theory.", "dbq": "Hypertension DBQ"},
+        {"condition": "Erectile dysfunction", "rationale": "Common side effect of SSRIs/SNRIs and of PTSD itself; typically compensated via SMC-K even at 0%.", "dbq": "Male Reproductive Organ Conditions DBQ"},
+        {"condition": "Migraines / tension headaches", "rationale": "Headache disorders frequently co-occur with and are aggravated by PTSD and sleep deprivation.", "dbq": "Headaches DBQ"},
+        {"condition": "IBS / functional GI disorder", "rationale": "Gut-brain axis: functional GI disorders are strongly associated with chronic anxiety/PTSD.", "dbq": "Intestinal Conditions DBQ"}
+      ]
+    },
+    {
+      "primary_keywords": ["back", "spine", "lumbar", "thoracolumbar", "cervical", "neck", "disc"],
+      "secondaries": [
+        {"condition": "Radiculopathy / sciatica (each affected extremity)", "rationale": "Nerve-root compression from spine pathology radiating into limbs — rated separately per extremity under DC 8520/8510-series; check for the bilateral factor.", "dbq": "Peripheral Nerves DBQ"},
+        {"condition": "Depression / adjustment disorder (chronic pain)", "rationale": "Chronic-pain-to-depression secondary service connection is a well-recognized pathway with strong literature support.", "dbq": "Mental Disorders DBQ"},
+        {"condition": "Hip/knee condition (altered gait)", "rationale": "Antalgic gait and compensatory mechanics can cause or aggravate ipsilateral/contralateral joint pathology; nexus should address biomechanics.", "dbq": "Hip and Thigh / Knee DBQ"},
+        {"condition": "GERD (NSAID use)", "rationale": "Long-term NSAID therapy for service-connected pain causing/aggravating reflux or gastritis — medication-bridge secondary theory.", "dbq": "Esophageal Conditions DBQ"},
+        {"condition": "Sleep disturbance / insomnia", "rationale": "Pain-disrupted sleep may support a mental-health or sleep-disorder secondary; document with a sleep log.", "dbq": "Mental Disorders or Sleep Apnea DBQ"},
+        {"condition": "Erectile dysfunction", "rationale": "Lumbar radiculopathy and chronic opioid/pain-medication use are associated with ED (SMC-K).", "dbq": "Male Reproductive Organ Conditions DBQ"},
+        {"condition": "Cervicogenic headaches (from a neck condition)", "rationale": "Headaches originating from a service-connected CERVICAL/neck condition (cervicogenic headache) are a recognized secondary, rated on the migraine schedule (DC 8100). Most relevant when the primary is a neck condition.", "dbq": "Headaches DBQ"}
+      ]
+    },
+    {
+      "primary_keywords": ["knee", "ankle", "foot", "hip", "leg"],
+      "secondaries": [
+        {"condition": "Opposite-limb joint condition (overcompensation)", "rationale": "Favoring an injured limb shifts load to the other side; nexus must address gait mechanics, ideally with gait analysis or provider observation. If granted, both sides trigger the bilateral factor (§4.26).", "dbq": "Knee / Ankle / Hip DBQ"},
+        {"condition": "Low back condition (altered gait)", "rationale": "Chronic limp altering spinal mechanics is a recognized secondary path to lumbar pathology.", "dbq": "Back (Thoracolumbar) DBQ"},
+        {"condition": "Depression (chronic pain / lost function)", "rationale": "Chronic musculoskeletal pain is a leading driver of secondary depression claims.", "dbq": "Mental Disorders DBQ"}
+      ]
+    },
+    {
+      "primary_keywords": ["diabetes"],
+      "secondaries": [
+        {"condition": "Peripheral neuropathy (each extremity)", "rationale": "Classic diabetic complication; rated per nerve per extremity — bilateral factor applies when both sides affected.", "dbq": "Peripheral Nerves DBQ"},
+        {"condition": "Diabetic retinopathy / eye conditions", "rationale": "Microvascular complication; needs eye exam.", "dbq": "Eye Conditions DBQ"},
+        {"condition": "Nephropathy / chronic kidney disease", "rationale": "Microvascular complication; labs (eGFR, albuminuria) document it.", "dbq": "Kidney Conditions DBQ"},
+        {"condition": "Erectile dysfunction", "rationale": "Vascular/neurologic complication of diabetes (SMC-K).", "dbq": "Male Reproductive Organ Conditions DBQ"},
+        {"condition": "Hypertension (via diabetic nephropathy, or aggravation)", "rationale": "VA generally does NOT treat essential hypertension as a direct complication of diabetes (M21-1) — especially where the hypertension pre-dated the diabetes. The winnable theories are hypertension secondary to diabetic NEPHROPATHY (the kidney bridge) or AGGRAVATION of pre-existing hypertension; frame the nexus on one of those, not on diabetes 'causing' the hypertension.", "dbq": "Hypertension / Kidney DBQ"}
+      ]
+    },
+    {
+      "primary_keywords": ["hearing", "tinnitus", "acoustic"],
+      "secondaries": [
+        {"condition": "Depression / anxiety (tinnitus distress)", "rationale": "Severe chronic tinnitus is associated with sleep disturbance, anxiety, and depression; document functional impact.", "dbq": "Mental Disorders DBQ"},
+        {"condition": "Migraines", "rationale": "Tinnitus/hearing disorders co-occur with headache disorders; weaker path — needs a solid provider opinion.", "dbq": "Headaches DBQ"}
+      ]
+    },
+    {
+      "primary_keywords": ["migraine", "headache", "tbi", "traumatic brain"],
+      "secondaries": [
+        {"condition": "Depression / anxiety", "rationale": "Chronic headache disorders and TBI are strongly associated with mood disorders.", "dbq": "Mental Disorders DBQ"},
+        {"condition": "Sleep disturbance / insomnia", "rationale": "TBI and chronic migraines disrupt sleep architecture.", "dbq": "Mental Disorders / Sleep Apnea DBQ"},
+        {"condition": "Tinnitus (TBI)", "rationale": "Tinnitus is among the most common TBI residuals.", "dbq": "Hearing Loss and Tinnitus DBQ"}
+      ]
+    },
+    {
+      "primary_keywords": ["sleep apnea"],
+      "secondaries": [
+        {"condition": "Hypertension", "rationale": "Untreated OSA is a well-established cause of secondary hypertension.", "dbq": "Hypertension DBQ"},
+        {"condition": "Heart conditions (arrhythmia, IHD)", "rationale": "OSA's cardiovascular sequelae are literature-supported.", "dbq": "Heart Conditions DBQ"},
+        {"condition": "Depression / cognitive complaints", "rationale": "Chronic sleep fragmentation drives mood and cognitive symptoms.", "dbq": "Mental Disorders DBQ"}
+      ]
+    },
+    {
+      "primary_keywords": ["gerd", "reflux"],
+      "secondaries": [
+        {"condition": "Asthma / chronic respiratory irritation", "rationale": "Reflux-associated aspiration can aggravate airway disease.", "dbq": "Respiratory Conditions DBQ"},
+        {"condition": "Barrett's esophagus / esophageal stricture", "rationale": "Progression of untreated GERD; usually rated within the esophageal codes rather than separately — ask the provider to document severity.", "dbq": "Esophageal Conditions DBQ"}
+      ]
+    },
+    {
+      "primary_keywords": ["hypertension"],
+      "secondaries": [
+        {"condition": "Chronic kidney disease", "rationale": "Hypertensive nephropathy; labs document it.", "dbq": "Kidney Conditions DBQ"},
+        {"condition": "Heart conditions (IHD, hypertensive heart disease)", "rationale": "Long-standing hypertension causing cardiac disease.", "dbq": "Heart Conditions DBQ"},
+        {"condition": "Stroke residuals", "rationale": "Hypertension is the dominant stroke risk factor; residuals rate under the affected functions.", "dbq": "Central Nervous System DBQ"}
+      ]
+    },
+    {
+      "primary_keywords": ["rhinitis", "sinusitis", "sinus", "deviated septum", "nasal"],
+      "secondaries": [
+        {"condition": "Obstructive sleep apnea", "rationale": "Chronic nasal-airway obstruction (rhinitis, sinusitis, septal deviation, turbinate hypertrophy) impairs upper-airway patency and can cause or aggravate OSA — one of the most-recommended OSA secondaries. Requires a sleep study + nexus opinion.", "dbq": "Sleep Apnea DBQ"}
+      ]
+    },
+    {
+      "primary_keywords": ["prostate", "prostatectomy"],
+      "secondaries": [
+        {"condition": "Erectile dysfunction", "rationale": "Prostatectomy, radiation, or the prostate condition itself commonly causes ED — one of the most frequent ED secondaries, with near-automatic Special Monthly Compensation (SMC-K) even at a 0% ED rating.", "dbq": "Male Reproductive Organ Conditions DBQ"}
+      ]
+    },
+    {
+      "primary_keywords": ["pes planus", "flat feet", "flatfoot", "fallen arches", "plantar"],
+      "secondaries": [
+        {"condition": "Plantar fasciitis", "rationale": "Flat feet alter arch mechanics and load — a recognized cause of secondary plantar fasciitis (DC 5269).", "dbq": "Foot Conditions DBQ"},
+        {"condition": "Knee / hip / low-back condition (altered gait)", "rationale": "Flatfoot changes gait and lower-limb alignment, which can cause or aggravate knee, hip, and low-back pathology up the kinetic chain; nexus should address biomechanics.", "dbq": "Knee / Hip / Back DBQ"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+# valor-paddle-ocr — pinned, verified-working set.
+#
+# Verified by: full install + PP-OCRv6 OCR of a VA-style image on python:3.11-slim
+# (native linux/arm64) reading all target tokens, plus an amd64 build. The exact
+# transitive versions below came from `pip freeze` of that working environment.
+#
+# WHY paddlepaddle==3.2.0 (and not the newer 3.3.x): 3.2.0 is the NEWEST paddle
+# release that publishes BOTH cp311 wheels — manylinux x86_64 (AVX, the fleet) AND
+# manylinux2014 aarch64 (Apple Silicon, the local bench). 3.3.x dropped aarch64,
+# so it can't build natively on this Mac. One pin, both arches.
+#
+# NOTE: paddleocr 3.7.0's English default is the PP-OCRv6_medium det/rec models
+# (newer than the requested PP-OCRv5, reads the test perfectly). Pin paddleocr to
+# an older 3.x if you specifically need PP-OCRv5 (see README).
+
+# --- OCR engine (order matters: paddlepaddle is not a paddleocr dependency) ---
+paddlepaddle==3.2.0
+paddleocr==3.7.0
+paddlex==3.7.2            # pulled by paddleocr[ocr-core]; pinned to lock resolution
+
+# --- transitive deps whose version is load-bearing (pinned to the verified set) ---
+numpy==2.3.5             # paddlex requires <2.4,>=1.24; 2.3.5 verified, no ABI issue
+pillow==12.3.0
+
+# --- HTTP service ---
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
