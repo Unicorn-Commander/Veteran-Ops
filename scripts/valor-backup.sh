@@ -27,6 +27,9 @@ S3_ENDPOINT="${VALOR_BACKUP_S3_ENDPOINT:-}"
 AWS_BIN="${VALOR_AWS_BIN:-$(command -v aws 2>/dev/null || true)}"
 
 mkdir -p "$LOCAL_KEEP_DIR" "$(dirname "$LOG")"
+chmod 700 "$LOCAL_KEEP_DIR"
+touch "$LOG"
+chmod 600 "$LOG"
 trap 'rm -rf "$BACKUP_DIR"' EXIT
 
 log() { printf '[%s] %s\n' "$(date '+%Y-%m-%d %H:%M:%S')" "$*" | tee -a "$LOG"; }
@@ -143,7 +146,7 @@ done > "$CHECKSUM_FILE"
 # this run's partial local payloads if any copy fails, and never publish the marker.
 COPIED_LOCAL=()
 for artifact in "${ARTIFACTS[@]}"; do
-  if cp "$artifact" "$LOCAL_KEEP_DIR/"; then
+  if install -m 600 "$artifact" "$LOCAL_KEEP_DIR/"; then
     COPIED_LOCAL+=("${LOCAL_KEEP_DIR}/$(basename "$artifact")")
   else
     FAILED=1
@@ -151,10 +154,13 @@ for artifact in "${ARTIFACTS[@]}"; do
   fi
 done
 if [ "$FAILED" -eq 0 ]; then
-  cp "$CHECKSUM_FILE" "$LOCAL_KEEP_DIR/" || FAILED=1
+  install -m 600 "$CHECKSUM_FILE" "$LOCAL_KEEP_DIR/" || FAILED=1
 fi
 if [ "$FAILED" -ne 0 ]; then
-  rm -f "${COPIED_LOCAL[@]}" "${LOCAL_KEEP_DIR}/$(basename "$CHECKSUM_FILE")"
+  if [ "${#COPIED_LOCAL[@]}" -gt 0 ]; then
+    rm -f "${COPIED_LOCAL[@]}"
+  fi
+  rm -f "${LOCAL_KEEP_DIR}/$(basename "$CHECKSUM_FILE")"
   log "ERROR: local backup set could not be published atomically"
   exit 1
 fi
@@ -192,11 +198,13 @@ else
   log "Remote copy disabled; artifacts retained locally only"
 fi
 
-find "$LOCAL_KEEP_DIR" -name 'valor_db_*.dump' -mtime +30 -delete 2>>"$LOG"
-find "$LOCAL_KEEP_DIR" -name 'valor_uploads_*.tar.gz' -mtime +30 -delete 2>>"$LOG"
-find "$LOCAL_KEEP_DIR" -name 'valor_env_*.env.age' -mtime +30 -delete 2>>"$LOG"
-find "$LOCAL_KEEP_DIR" -name 'valor_backup_*.manifest' -mtime +30 -delete 2>>"$LOG"
-find "$LOCAL_KEEP_DIR" -name 'valor_backup_*.sha256' -mtime +30 -delete 2>>"$LOG"
+{
+  find "$LOCAL_KEEP_DIR" -name 'valor_db_*.dump' -mtime +30 -delete
+  find "$LOCAL_KEEP_DIR" -name 'valor_uploads_*.tar.gz' -mtime +30 -delete
+  find "$LOCAL_KEEP_DIR" -name 'valor_env_*.env.age' -mtime +30 -delete
+  find "$LOCAL_KEEP_DIR" -name 'valor_backup_*.manifest' -mtime +30 -delete
+  find "$LOCAL_KEEP_DIR" -name 'valor_backup_*.sha256' -mtime +30 -delete
+} 2>>"$LOG"
 
 if [ "$FAILED" -eq 0 ]; then
   log "=== Valor-Ops backup complete (verified) ==="

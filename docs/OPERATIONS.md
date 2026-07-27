@@ -41,9 +41,13 @@ an optional off-host copy configured outside the repository:
 
 **If you add a new `volumes:` entry to the compose file, add it to the backup script.**
 
-The script contains no remote credentials. Set `VALOR_BACKUP_REMOTE_URI` and optional
-`VALOR_BACKUP_S3_ENDPOINT` in `~/.config/valor-ops/backup.env`; AWS credentials come
-from the CLI's standard credential chain or instance identity.
+The script contains no remote credentials. Copy `deploy/valor-backup.env.example` to
+`~/.config/valor-ops/backup.env` and set mode `0600`; set `VALOR_BACKUP_REMOTE_URI`
+and optional `VALOR_BACKUP_S3_ENDPOINT` there. AWS credentials come from the CLI's
+standard credential chain or instance identity. If the remote URI is unset, the
+script performs no remote request and retains the verified local set. If remote
+upload is configured but unavailable, or an attempted environment encryption fails,
+the run exits nonzero.
 
 The live `infrastructure/.env` and, when created, external `backup.env` contain secrets
 and must be owned by the deployment account with mode `0600`; the containing
