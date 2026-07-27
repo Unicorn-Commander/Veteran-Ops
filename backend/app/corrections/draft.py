@@ -4,7 +4,7 @@ Routes the situation (route.py), then builds a print-ready packet: a drafted
 statement of the error or injustice (the veteran's own words VERBATIM plus a
 structured frame), a tailored evidence checklist, filing instructions, and an
 attestation. Educational — the veteran reviews, signs, and files it with the board;
-Rating Raider never files and never renders a legal opinion.
+Veteran-Ops never files and never renders a legal opinion.
 """
 
 from __future__ import annotations

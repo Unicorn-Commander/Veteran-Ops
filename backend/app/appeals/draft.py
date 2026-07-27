@@ -89,7 +89,7 @@ _SIGNATURE_BLOCK = (
 )
 
 _DRAFT_DISCLAIMER = (
-    "Rating Raider is self-help educational software — not legal advice, not a "
+    "Veteran-Ops is self-help educational software — not legal advice, not a "
     "VA-accredited representative, and not affiliated with VA. This is a DRAFT "
     "decision-review response prepared for YOUR review and signature; Rating Raider "
     "does not file or appeal anything for you and never renders a medical opinion. "

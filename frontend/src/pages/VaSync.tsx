@@ -23,7 +23,7 @@ export function VaSync() {
         <h1 className="vo-page-title">Connect your VA data</h1>
         <p className="vo-page-sub">
           Bring in what VA.gov shows for your own ratings and claims, then review it before anything is added to your
-          workspace. This is read-only self-help: Rating Raider does not submit forms, change VA.gov, or file anything
+          workspace. This is read-only self-help: Veteran-Ops does not submit forms, change VA.gov, or file anything
           for you.
         </p>
       </div>

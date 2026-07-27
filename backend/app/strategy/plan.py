@@ -71,7 +71,7 @@ _NOT_A_PREDICTION = (
 
 _DISCLAIMER = (
     "Your Claim Plan is educational self-help, not legal advice and not a prediction "
-    "of VA's decision. Rating Raider is not a VA-accredited representative and never "
+    "of VA's decision. Veteran-Ops is not a VA-accredited representative and never "
     "files, appeals, or decides anything for you. These are options to consider — you "
     "choose your path. A free VA-accredited VSO can review your specific situation."
 )

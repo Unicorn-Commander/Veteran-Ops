@@ -202,7 +202,7 @@ export function Benefits() {
       <Panel hue="amber" title="Important disclaimer" subtitle="Educational only - verify with every provider">
         <div className="space-y-3 p-5 text-sm leading-relaxed text-muted">
           <p>
-            Rating Raider is self-help educational software. It does not promise outcomes, and every program here can
+            Veteran-Ops is self-help educational software. It does not promise outcomes, and every program here can
             change. Confirm current rules, deadlines, and documentation with the official provider before you rely on
             anything.
           </p>

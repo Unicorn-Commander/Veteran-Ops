@@ -292,7 +292,7 @@ function LegalLaneNote() {
       <div>
         <h2 className="text-sm font-semibold text-txt">Prepared for you — never filed for you</h2>
         <p className="mt-1 text-sm leading-relaxed text-muted">
-          Rating Raider is educational self-help software, not a VA-accredited representative. Every workflow
+          Veteran-Ops is educational self-help software, not a VA-accredited representative. Every workflow
           organizes your own evidence and explains what the rules say — it never diagnoses, predicts a rating, or
           files anything for you. You file at VA.gov, or a free accredited VSO (VFW, DAV, American Legion, your
           state/county office) files with you at no cost.

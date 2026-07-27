@@ -13,7 +13,7 @@ import { hueInk, hueLabel, type Hue } from '../lib/hues'
  * It fetches GET /api/forms/{formId} so the AUTO_FILLED / YOU_COMPLETE lists come
  * straight from the backend registry (single source of truth — honest labeling of
  * what's filled vs. what the veteran completes and signs), then downloads the
- * pre-filled OFFICIAL PDF as a DRAFT. Rating Raider never files anything.
+ * pre-filled OFFICIAL PDF as a DRAFT. Veteran-Ops never files anything.
  */
 export function FilledFormPanel({
   formId,
@@ -53,7 +53,7 @@ export function FilledFormPanel({
         <p className="text-sm leading-relaxed text-muted">
           This is the <strong className="text-txt">actual government PDF</strong>, pre-filled with the data we hold with
           confidence. It downloads as a <strong className="text-txt">draft</strong> — review every field, complete the
-          blanks, and sign it before you file. Rating Raider never files it for you.
+          blanks, and sign it before you file. Veteran-Ops never files it for you.
         </p>
 
         {error && (

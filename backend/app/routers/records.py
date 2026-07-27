@@ -30,7 +30,7 @@ router = APIRouter(prefix="/records", tags=["records"])
 
 SIGNATURE_NOTE = (
     "Prepared for YOUR signature — you review, sign, and submit it yourself. "
-    "Rating Raider never submits anything on your behalf. Free help is available "
+    "Veteran-Ops never submits anything on your behalf. Free help is available "
     "at every step from a VA-accredited VSO (VFW, DAV, The American Legion, or "
     "your state/county veterans office)."
 )

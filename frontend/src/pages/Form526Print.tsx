@@ -12,7 +12,7 @@ import type { Form526Contention, Form526Packet } from '../types'
 // refined-letterhead document. The assembled packet is handed over via
 // sessionStorage (FORM526_KEY) by pages/Form526.tsx. This is a REVIEW worksheet
 // — the veteran reads it, signs it, and files it themselves at VA.gov or hands
-// it to a free VSO. Rating Raider never submits anything.
+// it to a free VSO. Veteran-Ops never submits anything.
 
 function readPacket(): Form526Packet | null {
   try {
@@ -115,7 +115,7 @@ function ApplicationBody({ packet }: { packet: Form526Packet }) {
       </h1>
       <p className="rr-sans mt-1.5 text-sm text-muted">
         A review worksheet assembled from your own records — not the official fillable form. Review it, then file it
-        yourself at VA.gov or hand it to a free VSO. Rating Raider never submits anything on your behalf.
+        yourself at VA.gov or hand it to a free VSO. Veteran-Ops never submits anything on your behalf.
       </p>
 
       <Section>

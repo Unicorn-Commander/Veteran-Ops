@@ -7,7 +7,7 @@ Two endpoints, RLS via `current_user_id`/`get_db` (the form526.py pattern):
        Claim / Higher-Level Review / Board Appeal).
 
 The router does DB reads only and hands plain data to the PURE assembly helpers in
-appeals/draft.py. Educational self-help only: Rating Raider does not file or appeal
+appeals/draft.py. Educational self-help only: Veteran-Ops does not file or appeal
 anything and never renders a medical opinion; the veteran's words pass VERBATIM.
 """
 

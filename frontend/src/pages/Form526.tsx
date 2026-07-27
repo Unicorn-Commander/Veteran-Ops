@@ -25,7 +25,7 @@ import type { Form526Contention, Form526EvidenceRef, Form526Packet } from '../ty
 // Compensation), ASSEMBLED from the veteran's own data (profile, conditions,
 // evidence, ITF). This is NOT the fillable government PDF — it's a review
 // worksheet the veteran reads, signs, and files themselves at VA.gov or hands
-// to a free VSO. Rating Raider never files anything. Endpoint shape reconciled
+// to a free VSO. Veteran-Ops never files anything. Endpoint shape reconciled
 // against backend/app/routers/form526.py (routers are truth). Follows the
 // Buddy.tsx builder + BuddyPrint sessionStorage handoff pattern.
 
@@ -224,7 +224,7 @@ function AlmostDoneClimax({ onPrint, compact = false }: { onPrint: () => void; c
     {
       n: 2,
       title: 'Download & complete',
-      body: 'Fill blanks (SSN, address, signature). Rating Raider never stores those.',
+      body: 'Fill blanks (SSN, address, signature). Veteran-Ops never stores those.',
     },
     {
       n: 3,
@@ -253,7 +253,7 @@ function AlmostDoneClimax({ onPrint, compact = false }: { onPrint: () => void; c
           </p>
           <h2 className="text-lg font-bold tracking-tight text-txt sm:text-xl">You&apos;re almost done</h2>
           <p className="mt-1 max-w-[70ch] text-sm leading-relaxed text-muted">
-            Your application is assembled. Three steps left — then you (or a free VSO) submit. Rating Raider never
+            Your application is assembled. Three steps left — then you (or a free VSO) submit. Veteran-Ops never
             files for you.
           </p>
         </div>
@@ -428,7 +428,7 @@ function PdfDownloadPanel({ ink, label }: { ink: string; label: string }) {
           <p className="text-sm leading-relaxed text-muted">
             This is the <strong className="text-txt">actual government PDF</strong>, pre-filled with the data we hold with
             confidence. It downloads as a <strong className="text-txt">draft</strong> — review every field, complete the
-            blanks, and sign it before you file. Rating Raider never files it for you.
+            blanks, and sign it before you file. Veteran-Ops never files it for you.
           </p>
 
           <div className="mt-4 grid gap-4 sm:grid-cols-2">
@@ -541,7 +541,7 @@ function EvidenceList({
 
 function GuidancePanel({ data, ink }: { data: Form526Packet; ink: string }) {
   return (
-    <Panel hue={HUE} title="How to file this" subtitle="You file it — Rating Raider never does">
+    <Panel hue={HUE} title="How to file this" subtitle="You file it — Veteran-Ops never does">
       <div className="p-5">
         <ol className="space-y-2.5 text-sm text-txt">
           {data.guidance.map((g, i) => (
@@ -583,7 +583,7 @@ function LegalLaneBanner() {
         <h2 className="text-sm font-semibold text-txt">Prepared for your review and signature — never filed for you</h2>
         <p className="mt-1 text-sm leading-relaxed text-muted">
           This is your own data assembled into VA Form 21-526EZ so you can review it in one place — as a clean worksheet
-          and as the pre-filled official PDF below. Rating Raider never submits anything. You file it yourself at VA.gov,
+          and as the pre-filled official PDF below. Veteran-Ops never submits anything. You file it yourself at VA.gov,
           or a VA-accredited VSO — VFW, DAV, The American Legion, or your state/county veterans office — files it with you
           for free.
         </p>

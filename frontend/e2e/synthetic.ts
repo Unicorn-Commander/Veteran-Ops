@@ -551,7 +551,7 @@ const coach = {
 const caseBrief = {
   title: 'Case brief — for you or a VSO',
   disclaimer:
-    'Educational self-help organization of the veteran’s own records. Not legal advice, not a medical opinion, and not a VA determination. Veteran-Ops does not file claims and Rating Raider does not represent you. Review with a VA-accredited representative before filing.',
+    'Educational self-help organization of the veteran’s own records. Not legal advice, not a medical opinion, and not a VA determination. Veteran-Ops does not file claims and Veteran-Ops does not represent you. Review with a VA-accredited representative before filing.',
   profile_summary:
     'Synthetic demo record — Army, honorable discharge, combat service indicated. Six conditions tracked, current combined rating 50%. Prepared for review with an accredited representative.',
   snapshot,

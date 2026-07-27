@@ -5,7 +5,7 @@ Same legal lane as 21-526EZ: we fill ONLY glance-verifiable, high-confidence fie
 we already hold — the veteran's name and the service-connected condition(s) they say
 keep them from working. We NEVER fill SSN, VA file number, date of birth, address,
 the employment/earnings history, or the signature. Output is a DRAFT the veteran
-reviews, completes, and signs; Rating Raider does not file it. TDIU claims often
+reviews, completes, and signs; Veteran-Ops does not file it. TDIU claims often
 warrant an accredited VSO/attorney — the app says so elsewhere.
 
 Template: VA Form 21-8940, JUL 2024 (OMB 2900-0404), 4 pages / 188 AcroForm fields,

@@ -6,7 +6,7 @@ worksheets.
 Legal lane (BUILD-SPEC / WAVE6): this is NOT the fillable government PDF (no
 reliable AcroForm map exists). It is a faithful, sectioned worksheet the veteran
 REVIEWS, SIGNS, and either files themselves at VA.gov or hands to a free
-VA-accredited VSO. Rating Raider never files anything — "prepared for your review
+VA-accredited VSO. Veteran-Ops never files anything — "prepared for your review
 and signature." Educational, not legal advice.
 """
 
@@ -47,9 +47,9 @@ _EXPOSURE_LABELS = {
 }
 
 _DISCLAIMER = (
-    "Rating Raider is self-help educational software — not legal advice, not a "
+    "Veteran-Ops is self-help educational software — not legal advice, not a "
     "VA-accredited representative, and not affiliated with the VA. This application "
-    "is prepared for YOUR review and signature. Rating Raider never files anything "
+    "is prepared for YOUR review and signature. Veteran-Ops never files anything "
     "for you. Free help is available from a VA-accredited VSO (VFW, DAV, The "
     "American Legion, or your state/county veterans office)."
 )
@@ -75,7 +75,7 @@ _GUIDANCE = [
     "DBQs, and lay/buddy statements listed under each condition. The \"still "
     "needed\" items are gaps to close before or after you file.",
     "Review every section for accuracy and completeness, then sign and date. You "
-    "are the one who reviews, signs, and submits — Rating Raider never does.",
+    "are the one who reviews, signs, and submits — Veteran-Ops never does.",
 ]
 
 
@@ -230,7 +230,7 @@ async def get_form526_pdf(
     veteran's high-confidence data (name, email, service dates, and each condition
     with how it relates to service). SSN, VA file number, DOB, address, and the
     signature are left blank for the veteran — we don't collect them. Returned as a
-    DRAFT the veteran reviews, completes, and signs; Rating Raider never files it."""
+    DRAFT the veteran reviews, completes, and signs; Veteran-Ops never files it."""
     user_uuid = uuid.UUID(uid)
     user = await db.get(User, user_uuid)
     profile = (

@@ -8,7 +8,7 @@ import type { TdiuWorksheet } from '../types'
 // Standalone print view for the TDIU work-history worksheet (VA Form 21-8940).
 // Same pattern as StatementPrint.tsx: no Shell chrome, one print button, refined
 // letterhead document. The worksheet is handed over via sessionStorage
-// (TDIU_WORKSHEET_KEY) by pages/Tdiu.tsx. Rating Raider never submits and never
+// (TDIU_WORKSHEET_KEY) by pages/Tdiu.tsx. Veteran-Ops never submits and never
 // decides unemployability — the veteran reads this, signs it, and files it.
 
 function readState(): TdiuPrintState | null {
@@ -105,7 +105,7 @@ function TdiuBody({ worksheet, veteranName }: { worksheet: TdiuWorksheet; vetera
         {worksheet.form} — {worksheet.form_title}
       </h1>
       <p className="rr-sans mt-1.5 text-sm text-muted">
-        Your work history, organized for you to review and sign. Rating Raider never decides unemployability and never
+        Your work history, organized for you to review and sign. Veteran-Ops never decides unemployability and never
         submits this — you (or your VSO) file it with the claim. TDIU is VA's determination.
       </p>
 

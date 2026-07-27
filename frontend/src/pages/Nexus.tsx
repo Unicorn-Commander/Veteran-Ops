@@ -709,7 +709,7 @@ function ProviderBriefSection({
 }
 
 /** Prominent legal-lane note: this is a template FOR your provider — it is not a
- * medical opinion, and Rating Raider cannot supply the opinion. */
+ * medical opinion, and Veteran-Ops cannot supply the opinion. */
 function LegalLaneBanner() {
   return (
     <div
@@ -726,7 +726,7 @@ function LegalLaneBanner() {
         <h2 className="text-sm font-semibold text-txt">This is a template for YOUR provider to complete and sign</h2>
         <p className="mt-1 text-sm leading-relaxed text-muted">
           A nexus opinion is a <strong className="font-semibold text-txt">medical opinion</strong> — only a qualified
-          treating provider can render it and sign it. Rating Raider cannot and does not supply the medical opinion. This
+          treating provider can render it and sign it. Veteran-Ops cannot and does not supply the medical opinion. This
           builder produces a scaffold: the "at least as likely as not" opinion sentence is a fill-in, and the rationale is
           left <strong className="font-semibold text-txt">blank</strong> for your provider to write in their own clinical
           judgment. You (or a free VA-accredited VSO) then submit the signed letter as evidence.

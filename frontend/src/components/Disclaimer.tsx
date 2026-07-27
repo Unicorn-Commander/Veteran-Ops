@@ -176,7 +176,7 @@ export function DisclaimerModal({ onAccept }: { onAccept: () => void }) {
             onChange={(e) => setChecked(e.target.checked)}
             label={
               <>
-                I understand Rating Raider is educational software, not a VA-accredited representative,
+                I understand Veteran-Ops is educational software, not a VA-accredited representative,
                 and I'm free to use a VSO for free help at any time.
               </>
             }

@@ -63,8 +63,8 @@ class Settings(BaseSettings):
     #   "" / other — console fallback: LOG the message, never deliver (dev/degraded)
     email_provider: str = ""                     # "postmark" | "smtp" | "" (console/log)
     postmark_server_token: str = ""
-    email_from: str = ""                         # e.g. "rating-raider@magicunicorn.dev"
-    email_from_name: str = "Rating Raider"
+    email_from: str = ""                         # e.g. "veteran-ops@magicunicorn.dev"
+    email_from_name: str = "Veteran-Ops"
     # SMTP (used when EMAIL_PROVIDER=smtp). Password never logged.
     smtp_host: str = ""
     smtp_port: int = 587

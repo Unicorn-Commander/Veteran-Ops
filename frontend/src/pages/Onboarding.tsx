@@ -406,7 +406,7 @@ function WelcomeStep() {
     <Panel hue="violet">
       <div className="flex flex-col gap-5 p-6 sm:p-8">
         <div className="text-center">
-          <h2 className="text-heading text-txt">Welcome to Rating Raider</h2>
+          <h2 className="text-heading text-txt">Welcome to Veteran-Ops</h2>
           <p className="mx-auto mt-2.5 max-w-lg text-body text-muted">
             Rating Raider helps you get organized and figure out where you stand with the VA — filing a claim is one
             part of that, not the whole thing. Nothing here gets filed or sent anywhere; it's your own organized

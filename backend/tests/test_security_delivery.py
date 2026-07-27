@@ -60,7 +60,7 @@ def test_va_feature_requires_independent_encryption_key(monkeypatch):
 
 
 def test_email_enabled_postmark_and_smtp(monkeypatch):
-    monkeypatch.setattr(settings, "email_from", "rating-raider@magicunicorn.dev")
+    monkeypatch.setattr(settings, "email_from", "veteran-ops@magicunicorn.dev")
     monkeypatch.setattr(settings, "email_provider", "")
     monkeypatch.setattr(settings, "postmark_server_token", "")
     monkeypatch.setattr(settings, "smtp_host", "")

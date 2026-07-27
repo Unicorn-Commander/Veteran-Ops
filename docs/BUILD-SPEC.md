@@ -12,7 +12,7 @@ This document is the contract. Agents build against it; do not invent schema or 
 is **software the veteran operates themselves** (TurboTax model). Rules for every string in the app:
 - Never "we file for you," "we'll handle your claim," "maximize your rating with us."
   Always "your claim," "you file," "bring this to your provider/VSO."
-- Global persistent footer + first-run acknowledgment: *"Rating Raider is self-help educational
+- Global persistent footer + first-run acknowledgment: *"Veteran-Ops is self-help educational
   software. It is not legal advice, not a VA-accredited representative or agent, and is not
   affiliated with the U.S. Department of Veterans Affairs. For free help filing or appealing,
   use a VA-accredited Veterans Service Officer (VSO) — VFW, DAV, The American Legion, or your

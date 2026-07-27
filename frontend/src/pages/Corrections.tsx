@@ -549,7 +549,7 @@ export function Corrections() {
                 Build my application to review &amp; sign
               </button>
               <p className="text-xs text-faint">
-                Opens a clean, letterhead draft. You review it, sign it, and file it with the board — Rating Raider
+                Opens a clean, letterhead draft. You review it, sign it, and file it with the board — Veteran-Ops
                 never files anything.
               </p>
             </div>
@@ -841,7 +841,7 @@ function LegalLaneBanner() {
           board, not the VA
         </h2>
         <p className="mt-1 text-sm leading-relaxed text-muted">
-          Rating Raider is educational self-help software — not a lawyer, not a VA-accredited representative. It does
+          Veteran-Ops is educational self-help software — not a lawyer, not a VA-accredited representative. It does
           not give legal advice, file anything for you, or promise an outcome. A records correction or discharge upgrade
           is decided by your <strong className="text-txt">military department's review board</strong> (DRB, BCMR/BCNR,
           or PDBR) — not the VA. It assembles an application from what you tell it, in your own words, for you to review

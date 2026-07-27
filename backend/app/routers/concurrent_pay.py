@@ -9,7 +9,7 @@ Legal lane: DFAS restores CRDP automatically at a 50%+ rating; CRSC is a tax-fre
 payment the veteran APPLIES for on DD Form 2860 to their branch. This NEVER says a
 veteran "qualifies" or "will receive" — DFAS and the branch decide eligibility and
 the exact amount. The read and the estimate are DETERMINISTIC (pure §1414/§1413a
-logic + VA's published rate table); no LLM anywhere near this. Rating Raider never
+logic + VA's published rate table); no LLM anywhere near this. Veteran-Ops never
 files anything.
 """
 
@@ -32,12 +32,12 @@ router = APIRouter(prefix="/concurrent-pay", tags=["concurrent-pay"])
 
 DISCLAIMER = (
     "Concurrent pay (CRDP and CRSC) is decided by DFAS and your branch of service — "
-    "Rating Raider does not and cannot decide whether you qualify or what you'll be "
+    "Veteran-Ops does not and cannot decide whether you qualify or what you'll be "
     "paid. This reads where you stand from the facts in your profile — your combined "
     "rating, whether you draw military retired pay, and whether a disability is combat-"
     "related — and explains what each program is and how to pursue it. CRDP is "
     "automatic through DFAS; CRSC you apply for on DD Form 2860 to your branch. Any "
-    "dollar figure here is a rough estimate, not a promise. Rating Raider never files "
+    "dollar figure here is a rough estimate, not a promise. Veteran-Ops never files "
     "anything for you."
 )
 

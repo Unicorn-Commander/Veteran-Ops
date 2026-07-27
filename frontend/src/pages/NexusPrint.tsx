@@ -8,7 +8,7 @@ import type { NexusDraft, NexusDraftInput } from '../types'
 // Standalone print view for the medical-nexus opinion TEMPLATE. Same pattern as
 // BuddyPrint.tsx: no Shell chrome, one print button, refined letterhead
 // document. The draft is handed over via sessionStorage (NEXUS_DRAFT_KEY) by
-// pages/Nexus.tsx. Rating Raider never renders the medical opinion — the
+// pages/Nexus.tsx. Veteran-Ops never renders the medical opinion — the
 // [PROVIDER TO COMPLETE] sections are the provider's to write and sign.
 
 function readState(): NexusPrintState | null {
@@ -123,7 +123,7 @@ function LetterBody({ draft, inputs }: { draft: NexusDraft; inputs: NexusDraftIn
       </h1>
       <p className="rr-sans mt-1.5 text-sm text-muted">
         A template to bring to your provider. The opinion and rationale — the [PROVIDER TO COMPLETE] sections — are the
-        provider's to write and sign in their own clinical judgment. Rating Raider does not supply the medical opinion.
+        provider's to write and sign in their own clinical judgment. Veteran-Ops does not supply the medical opinion.
       </p>
 
       <section className="mt-7">{blocks}</section>

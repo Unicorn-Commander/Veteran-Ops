@@ -8,7 +8,7 @@ import type { DependencyWorksheet } from '../types'
 // Standalone print view for the dependency worksheet (VA Form 21-686c / 21-509).
 // Same pattern as TdiuPrint.tsx: no Shell chrome, one print button, refined
 // letterhead document. The worksheet is handed over via sessionStorage
-// (DEPENDENCY_WORKSHEET_KEY) by pages/Dependency.tsx. Rating Raider never submits
+// (DEPENDENCY_WORKSHEET_KEY) by pages/Dependency.tsx. Veteran-Ops never submits
 // and never decides dependency — the veteran reads this, signs it, and files it.
 
 function readState(): DependencyPrintState | null {
@@ -105,7 +105,7 @@ function DependencyBody({ worksheet, veteranName }: { worksheet: DependencyWorks
         {worksheet.form} — {worksheet.form_title}
       </h1>
       <p className="rr-sans mt-1.5 text-sm text-muted">
-        Your dependency change, organized for you to review and sign. Rating Raider never decides dependency and never
+        Your dependency change, organized for you to review and sign. Veteran-Ops never decides dependency and never
         submits this — you (or your VSO) file it with VA. VA makes the determination.
       </p>
 

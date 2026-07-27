@@ -20,7 +20,7 @@ from __future__ import annotations
 import io
 from datetime import date
 
-PRODUCER = "Rating Raider"
+PRODUCER = "Veteran-Ops"
 
 
 def split_name(full_name: str) -> tuple[str, str, str]:

@@ -10,7 +10,7 @@ Legal lane (identical to routers/form526.py): we fill ONLY glance-verifiable,
 high-confidence fields we hold with confidence and leave SSN, VA file number, date of
 birth, address, and the signature blank — the veteran completes and signs. The fill is
 PURE and deterministic (no LLM). A value map written against a stale edition simply
-UNDER-fills (pypdf ignores renamed fields) — it never mis-fills. Rating Raider never
+UNDER-fills (pypdf ignores renamed fields) — it never mis-fills. Veteran-Ops never
 files anything.
 
 The old /form526/pdf endpoint (routers/form526.py) still works unchanged; this router
@@ -37,7 +37,7 @@ _DISCLAIMER = (
     "This is the OFFICIAL government PDF, pre-filled with the data Rating Raider holds "
     "with confidence. It downloads as a DRAFT — review every field, complete the "
     "blanks (SSN, VA file number, date of birth, address, and signature are always "
-    "left for you), and sign it before you file. Rating Raider never files anything. "
+    "left for you), and sign it before you file. Veteran-Ops never files anything. "
     "Free help is available from a VA-accredited VSO (VFW, DAV, The American Legion, "
     "or your state/county veterans office)."
 )
@@ -147,7 +147,7 @@ async def get_form_pdf(
 ):
     """The OFFICIAL fillable VA PDF for `form_id`, pre-filled with the veteran's
     high-confidence data and streamed as a DRAFT. SSN, VA file number, DOB, address,
-    and the signature are left blank; Rating Raider never files it."""
+    and the signature are left blank; Veteran-Ops never files it."""
     spec = get_spec(form_id)
     if spec is None:
         raise HTTPException(status_code=404, detail=f"Unknown form '{form_id}'.")

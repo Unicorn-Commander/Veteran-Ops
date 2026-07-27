@@ -23,12 +23,12 @@ const FALLBACK_HANDOFF: HandoffLinksData = {
   itf_url: 'https://www.va.gov/disability/how-to-file-claim/intent-to-file/',
   form526_route: '/application',
   packet_note:
-    'We prepare the packet; you or a free VA-accredited VSO submit. Rating Raider never e-files for you.',
+    'We prepare the packet; you or a free VA-accredited VSO submit. Veteran-Ops never e-files for you.',
 }
 
 /**
  * File-ready handoff panel — score, remaining needs, and the paths the veteran
- * (or a free VSO) uses to actually submit. Rating Raider never files.
+ * (or a free VSO) uses to actually submit. Veteran-Ops never files.
  */
 export function FileReadyHandoff({
   compact = false,

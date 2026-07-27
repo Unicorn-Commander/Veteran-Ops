@@ -41,14 +41,14 @@ FORM_TITLE = "Veteran's Application for Increased Compensation Based on Unemploy
 
 DISCLAIMER = (
     "TDIU (Individual Unemployability) is decided by the VA based on your work "
-    "history and your service-connected conditions — Rating Raider does not and "
+    "history and your service-connected conditions — Veteran-Ops does not and "
     "cannot decide whether you qualify. This screen organizes where you stand "
     "against the schedular thresholds in 38 CFR §4.16 and the evidence these "
     "claims turn on. Whether you are unemployable is VA's determination. Because "
     "TDIU claims turn on the strength of the unemployability record, a free "
     "VA-accredited Veterans Service Officer (VFW, DAV, The American Legion, or your "
     "state/county veterans office) — or an accredited attorney or agent — is worth "
-    "having in your corner. Rating Raider never files anything for you."
+    "having in your corner. Veteran-Ops never files anything for you."
 )
 
 VSO_NOTE = (
@@ -98,7 +98,7 @@ DRAFT_GUIDANCE = [
     "(21-4192), a vocational opinion, and SSDI records carry real weight.",
     "This worksheet organizes your answers; file on the official VA Form 21-8940 "
     "(and have your employer complete 21-4192). A VSO can submit the package with "
-    "you — Rating Raider never files it for you.",
+    "you — Veteran-Ops never files it for you.",
 ]
 
 POST_DENIAL_NOTE = (

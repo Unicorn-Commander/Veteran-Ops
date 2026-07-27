@@ -338,7 +338,7 @@ export function Profile() {
           <p className="flex items-start gap-2 text-xs leading-relaxed text-muted">
             <ShieldCheck size={14} className="mt-0.5 shrink-0 text-h-violet" />
             <span>
-              This is used to pre-fill your official VA forms as a draft you review and sign. Rating Raider never
+              This is used to pre-fill your official VA forms as a draft you review and sign. Veteran-Ops never
               files anything for you.
             </span>
           </p>

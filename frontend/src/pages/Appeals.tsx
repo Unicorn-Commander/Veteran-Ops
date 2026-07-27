@@ -23,7 +23,7 @@ import type { AppealCandidate, AppealDraftInput, AppealLane, DecodeOption } from
 // /appeals — WAVE7 Track A. Appeals draft assist (Supplemental Claim / HLR /
 // Board). After a denial the decoder surfaced — or for any claimed condition —
 // help the veteran DRAFT a decision-review response, then hand it to the print
-// view. Educational self-help only: Rating Raider is not a VA-accredited rep,
+// view. Educational self-help only: Veteran-Ops is not a VA-accredited rep,
 // does not file or appeal anything, and never renders a medical opinion. The
 // veteran's own words pass through VERBATIM. Endpoint shapes reconciled against
 // backend/app/routers/appeals.py (routers are truth). Follows Buddy/Form526.
@@ -208,7 +208,7 @@ export function Appeals() {
               Build my response to review &amp; sign
             </button>
             <p className="text-xs text-faint">
-              Opens a clean, letterhead draft. You review it, sign it, and file it — Rating Raider never does.
+              Opens a clean, letterhead draft. You review it, sign it, and file it — Veteran-Ops never does.
             </p>
           </div>
 
@@ -400,7 +400,7 @@ function LegalLaneBanner() {
           <ShieldCheck size={15} style={{ color: hueInk(HUE) }} /> Prepared for your review and signature — never filed for you
         </h2>
         <p className="mt-1 text-sm leading-relaxed text-muted">
-          Rating Raider is educational self-help software — not a VA-accredited representative. It does not file or appeal
+          Veteran-Ops is educational self-help software — not a VA-accredited representative. It does not file or appeal
           anything for you and never renders a medical opinion. It drafts a response from what you select, in your own
           words. You file it at VA.gov, or a VA-accredited VSO — VFW, DAV, The American Legion, or your state/county
           veterans office — helps you appeal for free. You never have to pay to appeal a VA decision.

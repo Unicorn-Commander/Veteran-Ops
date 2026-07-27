@@ -613,7 +613,7 @@ def build_case_brief(
         "title": "Case brief — for you or a VSO",
         "disclaimer": (
             "Educational self-help organization of the veteran’s own records. "
-            "Not legal advice; not a VA determination. Rating Raider does not file claims."
+            "Not legal advice; not a VA determination. Veteran-Ops does not file claims."
         ),
         "profile_summary": profile_summary or "",
         "snapshot": plan.get("snapshot") or {},

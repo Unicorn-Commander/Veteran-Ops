@@ -392,7 +392,7 @@ export function VaImport() {
           )}
 
           <p className="vo-caption">
-            This reflects what your VA record says today. Rating Raider never files anything for you and never predicts
+            This reflects what your VA record says today. Veteran-Ops never files anything for you and never predicts
             an outcome — an accredited VSO can review it with you for free.
           </p>
 

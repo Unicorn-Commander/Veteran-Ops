@@ -33,7 +33,7 @@ FORM_URL = "https://www.va.gov/find-forms/about-form-21-10210/"
 
 DISCLAIMER = (
     "This is a draft prepared for the WITNESS to review, edit into their own "
-    "words, and sign — Rating Raider never writes, signs, or submits a "
+    "words, and sign — Veteran-Ops never writes, signs, or submits a "
     "statement for anyone. A buddy/lay statement is competent evidence VA must "
     "consider when the witness describes what they personally saw or "
     "experienced (38 CFR §3.159(a)(2); Layno v. Brown, 6 Vet. App. 465 "

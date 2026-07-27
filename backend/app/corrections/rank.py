@@ -95,7 +95,7 @@ _LEGAL_AID = (
     "never have to pay to correct your record."
 )
 _DISCLAIMER = (
-    "This is educational self-help, not legal advice. Rating Raider is not a lawyer or "
+    "This is educational self-help, not legal advice. Veteran-Ops is not a lawyer or "
     "an accredited representative, does not promote anyone, and does not file or decide "
     "anything — the Army Board for Correction of Military Records does. Promotion rules "
     "have exceptions (branch, component, competitive category, promotion holds); "

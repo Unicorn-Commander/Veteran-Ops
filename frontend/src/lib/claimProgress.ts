@@ -237,7 +237,7 @@ export function resolveNextAction(input: ClaimProgressInput): NextClaimAction {
       stepId: 'done',
       title: "You're ready to prepare filing",
       detail:
-        'Core evidence is identified. Assemble the application packet, then you or a free VSO submit — Rating Raider never files for you.',
+        'Core evidence is identified. Assemble the application packet, then you or a free VSO submit — Veteran-Ops never files for you.',
       route: '/application',
       cta: 'Prepare application',
     }

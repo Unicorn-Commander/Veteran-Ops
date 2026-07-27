@@ -115,7 +115,7 @@ DRAFT_GUIDANCE = [
     "greater) standard — that exact language is what VA weighs.",
     "The provider signs on their own letterhead with their credentials, license "
     "number, and date. Then you (or a free VA-accredited VSO) submit the signed "
-    "letter as evidence — Rating Raider never files it for you.",
+    "letter as evidence — Veteran-Ops never files it for you.",
 ]
 
 
@@ -372,7 +372,7 @@ async def provider_brief(
         blank_rationale_prompt=(
             "Write the clinical rationale in your own professional judgment. "
             "Cite records reviewed and explain WHY the standard is met. "
-            "Rating Raider never supplies this opinion."
+            "Veteran-Ops never supplies this opinion."
         ),
         disclaimer=DISCLAIMER,
     )

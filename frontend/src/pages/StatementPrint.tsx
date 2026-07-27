@@ -8,7 +8,7 @@ import type { StatementDraft, StatementDraftInput } from '../types'
 // Standalone print view for the personal statement (VA Form 21-4138). Same
 // pattern as BuddyPrint.tsx: no Shell chrome, one print button, refined
 // letterhead document. The draft is handed over via sessionStorage
-// (STATEMENT_DRAFT_KEY) by pages/Statement.tsx. Rating Raider never submits —
+// (STATEMENT_DRAFT_KEY) by pages/Statement.tsx. Veteran-Ops never submits —
 // these are the VETERAN'S own words; they read this, sign it, and file it.
 
 function readState(): StatementPrintState | null {
@@ -79,7 +79,7 @@ function StatementBody({ draft, inputs }: { draft: StatementDraft; inputs: State
         {draft.form} — {draft.form_title}
       </h1>
       <p className="rr-sans mt-1.5 text-sm text-muted">
-        Your own statement, formatted for you to review and sign. Rating Raider never rewords it and never submits it —
+        Your own statement, formatted for you to review and sign. Veteran-Ops never rewords it and never submits it —
         you (or your VSO) file it with the claim.
       </p>
 

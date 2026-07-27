@@ -2,7 +2,7 @@
 application packet. Stateless (pure engines on the submitted situation), auth-required.
 
 Educational self-help: the veteran files with the military board (DRB/BCMR/PDBR),
-not the VA; Rating Raider never files and never gives legal advice. Discharge-upgrade
+not the VA; Veteran-Ops never files and never gives legal advice. Discharge-upgrade
 paths route to free legal aid.
 """
 
@@ -61,7 +61,7 @@ _RANK_THRESHOLDS = [
     "retired grade and pay.",
 ]
 _RANK_DISCLAIMER = (
-    "Educational self-help, not legal advice. Rating Raider does not promote anyone and "
+    "Educational self-help, not legal advice. Veteran-Ops does not promote anyone and "
     "does not file or decide anything — the Army Board for Correction of Military "
     "Records does. Promotion rules have exceptions (holds, flags, component, competitive "
     "category); confirm your situation with a VSO or a free veterans legal clinic."

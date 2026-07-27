@@ -12,23 +12,23 @@ lawyer. Keep the app name in sync with settings.app_name usage elsewhere.
 from __future__ import annotations
 
 TERMS_MD = """\
-# Terms of Use — Rating Raider
+# Terms of Use — Veteran-Ops
 
 _Last updated: July 5, 2026_
 
-## What Rating Raider is (and isn't)
+## What Veteran-Ops is (and isn't)
 
-Rating Raider is **self-help educational software**. It helps you organize your
+Veteran-Ops is **self-help educational software**. It helps you organize your
 own VA disability compensation claim: your conditions, your evidence, your
 deadlines, and what the rating criteria actually say.
 
-Rating Raider is **not**:
+Veteran-Ops is **not**:
 
 - legal advice, or a substitute for it;
 - a VA-accredited representative, agent, or attorney (38 CFR §14.629);
 - affiliated with, or endorsed by, the U.S. Department of Veterans Affairs.
 
-**You always drive.** Rating Raider never files a claim, submits a form, or
+**You always drive.** Veteran-Ops never files a claim, submits a form, or
 changes anything in a VA system on its own. The few features that can send
 something to VA (like recording an Intent to File) run only on your own
 VA.gov-consented sign-in, only when you explicitly confirm the specific action,
@@ -75,7 +75,7 @@ does not limit anything that cannot be limited by law.
 """
 
 PRIVACY_MD = """\
-# Privacy Policy — Rating Raider
+# Privacy Policy — Veteran-Ops
 
 _Last updated: July 5, 2026_
 

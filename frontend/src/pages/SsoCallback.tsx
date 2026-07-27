@@ -12,7 +12,7 @@ const ERRORS: Record<string, string> = {
   missing_code: 'Single sign-on did not complete. Please try again.',
   no_email: 'Your account has no email address, which Rating Raider requires.',
   email_unverified: 'Please verify your Unicorn Commander email, then sign in again.',
-  no_account: 'No Rating Raider account exists for you, and self-service signup is off.',
+  no_account: 'No Veteran-Ops account exists for you, and self-service signup is off.',
 }
 
 /** Lands here from the backend OIDC callback with the token in the URL

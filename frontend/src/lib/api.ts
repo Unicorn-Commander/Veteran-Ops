@@ -975,7 +975,7 @@ export const dependencyApi = {
 
 // ---- Appeals draft assist (routers/appeals.py — WAVE7 A) ----
 // Supplemental Claim (20-0995) / Higher-Level Review (20-0996) / Board (10182)
-// draft assist. Educational: the veteran files it; Rating Raider never does, and
+// draft assist. Educational: the veteran files it; Veteran-Ops never does, and
 // never renders a medical opinion. Callers degrade gracefully on 404 (older backend).
 export const appealsApi = {
   candidates: () => request<AppealCandidatesOut>('/appeals/candidates'),

@@ -11,7 +11,7 @@ import type { AppealDraftContentionOut, AppealDraftOut, DecodeOption } from '../
 // no Shell chrome, one print button, a refined-letterhead document. The draft is
 // handed over via sessionStorage by pages/Appeals.tsx. This is a REVIEW draft —
 // the veteran reads it, signs it, and files it themselves at VA.gov or hands it to
-// a free VSO. Rating Raider never submits anything and never renders a medical
+// a free VSO. Veteran-Ops never submits anything and never renders a medical
 // opinion. The veteran's own words are reproduced VERBATIM.
 
 /** Kept local to both files (Appeals.tsx defines the same string). */
@@ -131,7 +131,7 @@ function ResponseBody({ draft }: { draft: AppealDraftOut }) {
       <h1 className="text-[26px] font-bold leading-tight tracking-tight text-txt">{draft.heading}</h1>
       <p className="rr-sans mt-1.5 text-sm text-muted">
         A draft decision-review response assembled from what you selected — not a filed document. Review it, sign it, and
-        file it yourself at VA.gov or hand it to a free VSO. Rating Raider never submits anything and never renders a
+        file it yourself at VA.gov or hand it to a free VSO. Veteran-Ops never submits anything and never renders a
         medical opinion.
       </p>
 

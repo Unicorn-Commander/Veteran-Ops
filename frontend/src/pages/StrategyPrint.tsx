@@ -124,7 +124,7 @@ function GamePlanBody({ plan }: { plan: GamePlanOut }) {
       <p className="rr-sans mt-1.5 text-sm text-muted">
         Educational strategy assembled from your own records — options to consider, not a prediction of any outcome.
         Any estimated combined rating is simple §4.25 math on the target ratings you entered. You decide your path, and a
-        free VSO can file it with you. Rating Raider never files, represents you, or renders a medical opinion.
+        free VSO can file it with you. Veteran-Ops never files, represents you, or renders a medical opinion.
       </p>
 
       <Section>

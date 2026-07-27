@@ -12,7 +12,7 @@ import type { CorrectionPacket } from '../types'
 // button, a refined-letterhead document. The packet is handed over via
 // sessionStorage (CORRECTION_PACKET_KEY) by pages/Corrections.tsx. This is a
 // REVIEW draft — the veteran reads it, signs it, and files it themselves with the
-// MILITARY review board (DRB / BCMR/BCNR / PDBR), not the VA. Rating Raider never
+// MILITARY review board (DRB / BCMR/BCNR / PDBR), not the VA. Veteran-Ops never
 // files anything, never gives legal advice, and never promises an outcome. The
 // veteran's own words are reproduced VERBATIM.
 
@@ -53,7 +53,7 @@ function CorrectionBody({ packet }: { packet: CorrectionPacket }) {
       <p className="rr-sans mt-1.5 text-sm text-muted">
         A draft records-correction application assembled from what you told us — not a filed document. Review it, sign
         it, and file it yourself with the military review board (not the VA), or hand it to a free VSO or veterans law
-        clinic. Rating Raider never submits anything, never gives legal advice, and never promises an outcome.
+        clinic. Veteran-Ops never submits anything, never gives legal advice, and never promises an outcome.
       </p>
 
       <Section>

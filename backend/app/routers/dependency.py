@@ -111,7 +111,7 @@ DRAFT_GUIDANCE = [
     "than the statement alone.",
     "If you're responding to a proposed removal, file BEFORE the deadline in your VA "
     "letter. When it reads true and complete, sign and submit VA Form 21-686c (or "
-    "hand it to your VSO) — Rating Raider never files it for you.",
+    "hand it to your VSO) — Veteran-Ops never files it for you.",
 ]
 
 VSO_NOTE = (

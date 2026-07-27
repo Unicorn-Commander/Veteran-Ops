@@ -27,7 +27,7 @@ import type {
 // /buddy — WAVE5-SPEC F4. VA Form 21-10210 (Lay/Witness Statement) builder.
 // A buddy statement is powerful LAY EVIDENCE (38 CFR §3.159(a)(2); Layno v.
 // Brown) — but the WITNESS reviews it, edits it into their own words, and
-// SIGNS it. Rating Raider never fabricates, never signs, never submits.
+// SIGNS it. Veteran-Ops never fabricates, never signs, never submits.
 // Endpoint shapes reconciled against backend/app/routers/buddy.py (routers are
 // truth). Follows the Records.tsx builder + RecordsPrintViews print pattern.
 

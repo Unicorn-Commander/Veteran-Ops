@@ -6,7 +6,7 @@ fill ONLY the veteran's name (the identity block, which repeats in the page foot
 We deliberately leave the Patient name BLANK — it is usually the veteran but not
 always, and we won't assume it — along with SSN, service number, every provider's
 name/address/treatment dates, the conditions treated, and the signature. Output is a
-DRAFT the veteran completes and signs; Rating Raider does not file it. (Note: VA pairs
+DRAFT the veteran completes and signs; Veteran-Ops does not file it. (Note: VA pairs
 this with the 21-4142a; the veteran completes that separately.)
 
 Template: VA Form 21-4142, AUG 2024 (OMB 2900-0858), 5 pages / 145 AcroForm fields,

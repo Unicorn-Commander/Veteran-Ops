@@ -435,7 +435,7 @@ function ItfConfirmModal({ onClose, onFiled }: { onClose: () => void; onFiled: (
             </li>
           </ul>
           <p className="text-xs text-muted">
-            Rating Raider is self-help educational software, not a VA-accredited representative. A VSO can also file
+            Veteran-Ops is self-help educational software, not a VA-accredited representative. A VSO can also file
             this for you, for free.
           </p>
           {contractError && (

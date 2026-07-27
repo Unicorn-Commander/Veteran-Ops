@@ -14,7 +14,7 @@ decides. **No outcome promises, ever.** Every estimated combined rating is label
 as computed from the veteran's OWN target ratings (§4.25 math) and explicitly "not a
 prediction of what VA will decide." No "you will get / you qualify for / this
 guarantees." Ranking is by evidence-readiness and known VA rules, NOT by predicting
-VA behavior. Heavy disclaimer + VSO referral on every surface. Rating Raider never
+VA behavior. Heavy disclaimer + VSO referral on every surface. Veteran-Ops never
 files, represents, or renders a medical opinion.
 
 ## Ownership

@@ -8,7 +8,7 @@ server-side; this file holds no business logic, so "API + MCP for everything"
 stays one source of truth.
 
 IMPORTANT — legal lane + agent behavior (see docs/BUILD-SPEC.md, "Legal lane"):
-  * Rating Raider is self-help EDUCATIONAL software for a veteran preparing their own
+  * Veteran-Ops is self-help EDUCATIONAL software for a veteran preparing their own
     VA disability claim. It is NOT legal advice, NOT a VA-accredited
     representative/agent under 38 CFR §14.629, and is NOT affiliated with the
     U.S. Department of Veterans Affairs (38 CFR §14.629 restricts paid claim
@@ -60,7 +60,7 @@ TOKEN = os.environ.get("VALOR_TOKEN", "")
 # DISCLAIMER (this process is a separate container with no import path into the
 # backend app, so it is intentionally duplicated here; keep both in sync).
 DISCLAIMER = (
-    "Rating Raider is self-help educational software. It is not legal advice, not a "
+    "Veteran-Ops is self-help educational software. It is not legal advice, not a "
     "VA-accredited representative or agent, and is not affiliated with the U.S. "
     "Department of Veterans Affairs. For free help filing or appealing, use a "
     "VA-accredited Veterans Service Officer (VSO) — VFW, DAV, The American Legion, "

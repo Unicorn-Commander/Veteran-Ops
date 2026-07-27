@@ -236,7 +236,7 @@ function DecodeEmptyState({ unavailable }: { unavailable: boolean }) {
         hue="violet"
         icon={<ScanText size={20} />}
         title="Decoder not available yet"
-        description="This copy of Rating Raider can't reach the decision decoder right now. Your uploaded letters are safe in Documents — check back shortly."
+        description="This copy of Veteran-Ops can't reach the decision decoder right now. Your uploaded letters are safe in Documents — check back shortly."
         action={
           <Link to="/documents" className="text-sm font-semibold text-brand hover:text-brand-hover">
             Go to Documents →

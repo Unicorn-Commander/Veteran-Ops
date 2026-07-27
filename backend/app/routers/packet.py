@@ -47,7 +47,7 @@ def _disclaimer() -> str:
         return DISCLAIMER
     except Exception:  # noqa: BLE001
         return (
-            "Rating Raider is self-help educational software, not legal advice and not a "
+            "Veteran-Ops is self-help educational software, not legal advice and not a "
             "VA-accredited representative. Verify current criteria at eCFR / VA.gov."
         )
 

@@ -248,7 +248,7 @@ function SelfServeActions({
         </div>
       </div>
       <p className="border-t border-line px-5 py-3 text-xs leading-relaxed text-muted">
-        Rating Raider is self-help software. Paying does not file your claim, represent you, or
+        Veteran-Ops is self-help software. Paying does not file your claim, represent you, or
         change any VA decision — it unlocks the tools you use yourself. A free VA-accredited VSO can
         always help you file.
       </p>

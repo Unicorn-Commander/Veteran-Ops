@@ -47,7 +47,7 @@ DISCLAIMER = (
     "yours, and Rating Raider formats them without rewording, adding, or "
     "changing any fact. A Statement in Support of Claim (VA Form 21-4138) is "
     "your own account of what happened and how it affects you; it carries "
-    "weight when it is specific, first-person, and true. Rating Raider never "
+    "weight when it is specific, first-person, and true. Veteran-Ops never "
     "signs it and never files it for you — you read it over, sign and date it, "
     "and submit it (or hand it to your representative). A VA-accredited "
     "Veterans Service Officer (VFW, DAV, The American Legion, or your "
@@ -194,7 +194,7 @@ _ATTEST = (
     "This is a DRAFT built only from what you've already recorded — it may be incomplete "
     "or not quite right. Read every line, fix anything that isn't exactly true, add the "
     "details only you know, and delete anything you didn't experience. It becomes your "
-    "sworn statement only when the words are yours and you sign it. Rating Raider never "
+    "sworn statement only when the words are yours and you sign it. Veteran-Ops never "
     "signs or files it for you."
 )
 

@@ -223,7 +223,7 @@ export function BuildCase() {
           (not when you open this page).
         </p>
         <p className="mt-2 text-xs leading-relaxed text-faint">
-          Self-help software: you organize and prepare; you or a free VSO file. Rating Raider never e-files for you.
+          Self-help software: you organize and prepare; you or a free VSO file. Veteran-Ops never e-files for you.
         </p>
       </div>
 

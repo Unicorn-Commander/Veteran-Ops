@@ -75,7 +75,7 @@ export function Help() {
             for you.
           </p>
           <p>
-            Rating Raider never files a claim, never represents you, never diagnoses a condition, and
+            Veteran-Ops never files a claim, never represents you, never diagnoses a condition, and
             never predicts what the VA will decide. When it is time to file, you can do it yourself on
             VA.gov, or hand your prepared packet to a free VA-accredited Veterans Service Officer.
           </p>
@@ -94,7 +94,7 @@ export function Help() {
             ['See where you stand', 'Your Claim Plan reads everything and lays out what is ready, what to strengthen first, what to weigh before filing, and what you may be missing.', '/strategy'],
             ['Build your evidence', 'Every claim needs a current diagnosis, an in-service event, and a medical link between them. Close the gaps on each condition.', '/evidence'],
             ['Produce the paperwork', 'Generate statements, nexus request letters, and forms in your own words. Review and sign them.', '/statement'],
-            ['File it', 'Submit on VA.gov yourself, or take your packet to a free VSO. Rating Raider never files for you.', '/filing'],
+            ['File it', 'Submit on VA.gov yourself, or take your packet to a free VSO. Veteran-Ops never files for you.', '/filing'],
             ['Decode the decision', 'When your rating decision arrives, run it through the decoder to understand exactly what was granted, what was denied, and why.', '/decode'],
             ['Respond to a denial', 'A denial is not the end. Most veterans file a Supplemental Claim with new evidence, and you have a year to keep your original date.', '/appeals'],
           ].map(([title, body, to], i) => (

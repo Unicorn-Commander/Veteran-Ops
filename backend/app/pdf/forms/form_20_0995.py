@@ -11,7 +11,7 @@ we hold — the veteran's name/email and the specific issues (their claimed
 conditions) they're asking VA to review again with new & relevant evidence. We NEVER
 fill SSN, VA file number, date of birth, address, the DATE of the decision being
 contested, or the signature. Output is a DRAFT the veteran reviews, completes, and
-signs; Rating Raider does not file it.
+signs; Veteran-Ops does not file it.
 
 Template: VA Form 20-0995, MAY 2024 (OMB 2900-0886), 7 pages / 164 AcroForm fields,
 introspected 2026-07-09. pypdf ignores unknown field names → stale map under-fills,

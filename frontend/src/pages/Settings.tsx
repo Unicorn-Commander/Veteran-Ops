@@ -139,7 +139,7 @@ const VA_APIS: { key: VaApiKey; label: string; description: string }[] = [
 ]
 
 /** VA.gov (Lighthouse) connection card — wave 3. The veteran signs in AT
- * VA.gov (Login.gov / ID.me) and consents there; Rating Raider never sees the
+ * VA.gov (Login.gov / ID.me) and consents there; Veteran-Ops never sees the
  * VA.gov password. Handles the /settings?va=connected|error landing from the
  * OAuth callback (backend _landing()). */
 function VaConnectionsCard() {
@@ -213,7 +213,7 @@ function VaConnectionsCard() {
         <div className="flex items-start gap-2.5">
           <Landmark size={16} className="mt-0.5 shrink-0 text-h-violet" />
           <p className="text-xs leading-relaxed text-muted">
-            You sign in at VA.gov (Login.gov or ID.me) and consent there — Rating Raider never sees your VA.gov
+            You sign in at VA.gov (Login.gov or ID.me) and consent there — Veteran-Ops never sees your VA.gov
             password, and you can revoke access anytime, here or from VA.gov's connected-apps page.
           </p>
         </div>
@@ -704,7 +704,7 @@ export function Settings() {
           </div>
         </Panel>
         <p className="px-1 text-center text-micro text-faint">
-          Rating Raider is self-help educational software — not legal advice, not a VA-accredited representative, and not
+          Veteran-Ops is self-help educational software — not legal advice, not a VA-accredited representative, and not
           affiliated with VA.{' '}
           <Link to="/legal" className="font-semibold text-muted underline underline-offset-2 hover:text-txt">
             Terms &amp; privacy

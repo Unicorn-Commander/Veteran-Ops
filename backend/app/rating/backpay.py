@@ -228,7 +228,7 @@ def compute_backpay(
         f"{covered_years[0]}–{covered_years[-1]}. Months in any other rate year "
         "are excluded from totals, never estimated.",
         "Estimates only — VA's award letter and payment history are "
-        "authoritative. Rating Raider is self-help educational software, not a "
+        "authoritative. Veteran-Ops is self-help educational software, not a "
         "benefits determination, not legal advice, and not a VA-accredited "
         "representative.",
     ]

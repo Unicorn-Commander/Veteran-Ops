@@ -76,7 +76,7 @@ _LEGAL_AID = (
     "pay for help correcting your record."
 )
 _DISCLAIMER = (
-    "This is educational self-help, not legal advice. Rating Raider is not a lawyer or "
+    "This is educational self-help, not legal advice. Veteran-Ops is not a lawyer or "
     "an accredited representative and does not file or decide anything. These boards "
     "are part of your military service department, not the VA. Deadlines and eligibility "
     "have exceptions — confirm your specific situation with a VSO or a free legal-aid "

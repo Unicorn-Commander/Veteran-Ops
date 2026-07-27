@@ -221,7 +221,7 @@ export function CaseBrief() {
         <DisclaimerFooterBlock
           text={
             brief.disclaimer ||
-            'Educational self-help organization of the veteran’s own records. Not legal advice; not a VA determination. Rating Raider does not file claims.'
+            'Educational self-help organization of the veteran’s own records. Not legal advice; not a VA determination. Veteran-Ops does not file claims.'
           }
         />
       </article>

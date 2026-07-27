@@ -4,7 +4,7 @@ We fill the OFFICIAL VA AcroForm PDFs (bundled under templates/) with the
 high-confidence data the app already holds and leave everything we don't collect
 (SSN, VA file number, date of birth, address, signature) for the veteran. Each form
 stays pristine — no injected pages — and travels as a DRAFT the veteran reviews,
-completes, and signs. Rating Raider never files anything.
+completes, and signs. Veteran-Ops never files anything.
 
 Wave 8 generalized the original 21-526EZ filler across the form set:
   - base.fill_acroform      — the generalized pypdf fill (DRAFT stamp, NeedAppearances)

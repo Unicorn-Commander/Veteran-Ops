@@ -123,8 +123,8 @@ async def _send(to: str, subject: str, text_body: str) -> dict:
 
 
 _SIGNOFF = (
-    "\n\n— Rating Raider\n\n"
-    "Rating Raider is self-help educational software. It is not the U.S. Department of "
+    "\n\n— Veteran-Ops\n\n"
+    "Veteran-Ops is self-help educational software. It is not the U.S. Department of "
     "Veterans Affairs and is not a VA-accredited representative. If you didn't request "
     "this, you can ignore this email."
 )
@@ -132,29 +132,29 @@ _SIGNOFF = (
 
 async def send_verification_email(to: str, link: str) -> None:
     body = (
-        "Welcome to Rating Raider.\n\n"
+        "Welcome to Veteran-Ops.\n\n"
         "Confirm your email address to secure your account:\n\n"
         f"{link}\n\n"
-        "This link expires in a few days. You can keep using Rating Raider in the "
+        "This link expires in a few days. You can keep using Veteran-Ops in the "
         "meantime." + _SIGNOFF
     )
-    await _send(to, "Confirm your Rating Raider email", body)
+    await _send(to, "Confirm your Veteran-Ops email", body)
 
 
 async def send_password_reset_email(to: str, link: str) -> None:
     body = (
-        "We received a request to reset your Rating Raider password.\n\n"
+        "We received a request to reset your Veteran-Ops password.\n\n"
         f"Set a new password:\n\n{link}\n\n"
         "This link expires in one hour. If you didn't ask for this, no action is "
         "needed — your password stays the same." + _SIGNOFF
     )
-    await _send(to, "Reset your Rating Raider password", body)
+    await _send(to, "Reset your Veteran-Ops password", body)
 
 
 async def send_org_invite_email(to: str, org_name: str, inviter: str, link: str) -> None:
     who = f"{inviter} invited you" if inviter else "You've been invited"
     body = (
-        f"{who} to join the “{org_name}” team on Rating Raider.\n\n"
+        f"{who} to join the “{org_name}” team on Veteran-Ops.\n\n"
         f"Accept the invitation:\n\n{link}\n\n"
         "You'll need to sign in (or create a free account) with THIS email address to "
         "accept." + _SIGNOFF
@@ -178,7 +178,7 @@ async def send_deadline_digest(
         "or dependency window.\n\n"
         f"{deadlines_summary_text}"
         "\n\nOpen Rating Raider → Deadlines for the full list and what to do next."
-        " Rating Raider never files anything for you."
+        " Veteran-Ops never files anything for you."
         + _SIGNOFF
     )
     return await _send(to, subject or "Rating Raider: deadline reminders", body)

@@ -6,7 +6,7 @@ with confidence (name, email, service dates, the conditions being claimed and ho
 each relates to service). We NEVER fill SSN, VA file number, date of birth, mailing
 address, or the signature — the app doesn't collect those, and they are the
 veteran's to complete. The output is a DRAFT (stamped in the PDF Title metadata and
-the download filename); Rating Raider does not file it.
+the download filename); Veteran-Ops does not file it.
 
 The template is VA Form 21-526EZ, JAN 2026 (OMB 2900-0747), 15 pages / 357 AcroForm
 fields, introspected & verified 2026-07-06. Field names below are copied exactly from

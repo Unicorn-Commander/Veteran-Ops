@@ -8,7 +8,7 @@ import type { BuddyDraft, BuddyDraftInput } from '../types'
 // Standalone print view for the buddy/lay statement (VA Form 21-10210). Same
 // pattern as RecordsPrintViews.tsx: no Shell chrome, one print button, refined
 // letterhead document. The draft is handed over via sessionStorage
-// (BUDDY_DRAFT_KEY) by pages/Buddy.tsx. Rating Raider never submits — the
+// (BUDDY_DRAFT_KEY) by pages/Buddy.tsx. Veteran-Ops never submits — the
 // WITNESS reads this, edits it into their own words, and SIGNS it.
 
 function readState(): BuddyPrintState | null {
@@ -79,7 +79,7 @@ function StatementBody({ draft, inputs }: { draft: BuddyDraft; inputs: BuddyDraf
         {draft.form} — {draft.form_title}
       </h1>
       <p className="rr-sans mt-1.5 text-sm text-muted">
-        A draft for the witness to review, put in their own words, and sign. Rating Raider never submits it — you (or
+        A draft for the witness to review, put in their own words, and sign. Veteran-Ops never submits it — you (or
         your VSO) attach it to the claim as evidence.
       </p>
 

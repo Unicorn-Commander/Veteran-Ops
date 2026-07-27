@@ -69,7 +69,7 @@ _STATE_TTL = timedelta(minutes=15)
 
 SYNC_DISCLAIMER = (
     "This is a read-only preview of what VA has on file for you. Nothing in "
-    "your Rating Raider workspace changes unless you choose to apply it."
+    "your Veteran-Ops workspace changes unless you choose to apply it."
 )
 
 

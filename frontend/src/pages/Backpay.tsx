@@ -408,7 +408,7 @@ function Results({ result }: { result: BackpayResult }) {
       </div>
 
       <p className="text-center text-xs text-faint">
-        Estimates only — VA's award letter and payment history are authoritative. Rating Raider is self-help
+        Estimates only — VA's award letter and payment history are authoritative. Veteran-Ops is self-help
         educational software, not a benefits determination.
       </p>
     </div>
