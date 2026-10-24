@@ -256,7 +256,7 @@ def test_every_form_fills_identity_but_never_ssn_or_signature():
     }
     dependents = [{
         "relationship": "spouse", "full_name": "Jordan Example",
-        "date_of_birth": "1982-06-07", "marriage_date": "2010-06-01",
+        "date_of_birth": "1982-06-07", "marriage_date": "2003-04-05",
         "marriage_location": "Charleston SC",
     }]
     for form_id, spec in REGISTRY.items():
