@@ -3,6 +3,10 @@
 All notable changes to Rating Raider (veteran-ops platform). Format follows
 [Keep a Changelog](https://keepachangelog.com/); this project uses semantic versioning.
 
+## [Unreleased]
+
+- Licence: Apache-2.0 (was AGPL-3.0-or-later).
+
 ## [1.9.33] — 2026-07-27
 
 ### Added

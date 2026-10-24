@@ -10,7 +10,7 @@
 
 <p>
   <a href="https://github.com/Unicorn-Commander/veteran-ops-oss/stargazers"><img src="https://img.shields.io/github/stars/Unicorn-Commander/veteran-ops-oss?style=for-the-badge&color=E4B83D" alt="GitHub stars" /></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-AGPL--3.0--or--later-7C5CFC?style=for-the-badge" alt="AGPL-3.0-or-later" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-7C5CFC?style=for-the-badge" alt="License: Apache-2.0" /></a>
 </p>
 
 <p><em>Open-source, self-hostable educational software for organizing a VA disability claim.</em></p>
@@ -116,7 +116,7 @@ desktop sidebar — always one tap away, on every screen.
 - **One next move.** A ranked plan with a single top item, so the file stops being a wall.
 - **Better appointments.** Printable provider briefs and a case brief, so a 20-minute visit is spent well.
 - **Understanding the rules.** Plain-language explanations of criteria and trade-offs, with the regulation cited so you can check it yourself.
-- **Keeping your own copy.** Self-hostable, AGPL-licensed. Your records can stay on your own machine.
+- **Keeping your own copy.** Self-hostable, Apache-2.0-licensed. Your records can stay on your own machine.
 
 ### What it does not do
 
@@ -368,7 +368,7 @@ name belongs to the agent surface only. See [docs/BRANDING.md](docs/BRANDING.md)
 
 ## License
 
-Veteran-Ops is released under the [GNU Affero General Public License v3.0 or later](LICENSE).
+Veteran-Ops is licensed under the [Apache License 2.0](LICENSE). You can use, change and redistribute it, including commercially, under its terms. Our names and logos are covered by [TRADEMARKS.md](TRADEMARKS.md).
 
 <div align="center">
 

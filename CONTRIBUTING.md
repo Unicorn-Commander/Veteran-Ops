@@ -44,6 +44,10 @@ Please include:
 
 Changes involving claim guidance, ranking, evidence language, or Rating Raider prompts need extra review for educational wording, non-fabrication, and no-outcome-promise behavior.
 
+## License
+
+Contributions are made under the Apache License 2.0, the same licence as the repository (section 5). By opening a pull request you confirm you wrote the change or have the right to submit it under that licence.
+
 ## Local checks
 
 ```bash
